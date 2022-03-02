@@ -22,15 +22,23 @@
         <td width =10%; valign = top; style ="background-color:#C1BCBC; font-size:20px;">
             <a href="createAccount.php">create Account</a><br><br>
             <a href="#">Edit Account</a><br><br>
-            <a href="approvePost.php">Approve post</a><br><br>
+            <a href="#">Approve post</a><br><br>
             <a href="#">Approve paper</a><br><br>
             <a href="#">control deal</a><br><br>
         </td>
         <!-- output of user -->
         <td valign = top style ="background-color:#F5F2F1 ">
 
-            <h1 align = center>welcome,name</h1><hr>
-            
+            <h1 align = center>Approve Blooger post</h1><hr>
+            <h3>Blogger name:Tanvir</h3>
+            <textarea id="post" name="bloogerPost" rows="12" cols="180"></textarea><br>
+            <a href="#">Approve |</a>
+            <a href="#">reject</a>
+            <br>
+            <h3>Blogger name:Soikot</h3>
+            <textarea id="post" name="bloogerPost" rows="12" cols="180"></textarea><br>
+            <a href="#">Approve |</a>
+            <a href="#">reject</a>
 
 
         </td>
