@@ -21,27 +21,34 @@
  <!-- Menubar of adviser -->
     <tr height="700px">
         <td width="10%"; valign="top">
-             <a href="ReadFarmer`sPost.php">Read Farmer`s Post ||</a><br><br>
-            <a href="Problems.php">  Problems ||</a><br><br>
-            <a href="GuideFarmers.php">  Guide Farmers ||</a><br><br>
-            <a href="UploadContents.php">  Upload Contents ||</a><br><br>
+             <a href="ReadFarmer`sPost.php">Read Farmer`s Post |</a><br><br>
+            <a href="SolveProblems.php">  Solve Problems |</a><br><br>
+            <a href="GuideFarmers.php">  Guide Farmers |</a><br><br>
+            <a href="UploadContents.php">  Upload Machinaries Contents</a><br><br>
         </td>
         <!-- Output -->
         <td valign="top">
             <!-- Farmers post -->
-            <h1 align="center">Welcome To Read Farmer`s Post</h1> <hr>
+            <h1 align="center">Welcome To Farmer`s Post</h1> <hr>
+            <input type="radio" id="Plantation" name="Farmer_type1" value="plantation">
+            <label for="Plantation">Plantation</label>
+            <input type="radio" id="Husbandary" name="Farmer_type2" value="husbandary">
+            <label for="Husbandary">Husbandary</label>
+            <input type="radio" id="Fisheries" name="Farmer_type3" value="fisheries">
+            <label for="Fisheries">Fisheries</label>
+
 
             <h3>Farmer's Name : Brownies</h3>
             <textarea id ="post" name="farmerpost" rows="12" cols="180"></textarea><br>
             <a href="#">  Mark as Read |</a>
             <a href="#">  Report as Spam |</a>
-            <a href="Problems.php">  Solve This Problem</a>
+            <a href="SolveProblems.php">  Solve This Problem</a>
 
             <h3>Farmer's Name : Daddy Shark</h3>
             <textarea id ="post" name="farmerpost" rows="12" cols="180"></textarea><br>
             <a href="#">  Mark as Read |</a>
             <a href="#">  Report as Spam |</a>
-            <a href="Problems.php">  Solve This Problem</a>
+            <a href="SolveProblems.php">  Solve This Problem</a>
         </td>
     </tr>
     <!-- Footer Part -->

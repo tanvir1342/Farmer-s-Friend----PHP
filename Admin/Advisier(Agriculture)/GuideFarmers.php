@@ -21,14 +21,19 @@
  <!-- Menubar of adviser -->
     <tr height="700px">
         <td width="10%"; valign="top">
-        <a href="ReadFarmer`sPost.php">Read Farmer`s Post ||</a><br><br>
-            <a href="Problems.php">  Problems ||</a><br><br>
-            <a href="GuideFarmers.php">  Guide Farmers ||</a><br><br>
-            <a href="UploadContents.php">  Upload Contents ||</a><br><br>
+        <a href="ReadFarmer`sPost.php">Read Farmer`s Post |</a><br><br>
+            <a href="SolveProblems.php">  Solve Problems |</a><br><br>
+            <a href="GuideFarmers.php">  Guide Farmers |</a><br><br>
+            <a href="UploadContents.php">  Upload Machinaries Contents</a><br><br>
         </td>
         <!-- Output -->
         <td valign="top">
             <h1 align="center">Welcome To Guide Farmers</h1> <hr>
+            <h3>Adviser Name : Soikot</h3>
+            <textarea id ="guide" name="guide" rows="12" cols="180"></textarea><br>
+            
+            <a href="#">  Post This Guideline|</a>
+            <a href="#">  Cancel</a>
         </td>
     </tr>
     <!-- Footer Part -->
