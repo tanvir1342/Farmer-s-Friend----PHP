@@ -27,31 +27,24 @@
 		
 		</td>
 		<td valign="top">
-			<h1 align="center">Write content about farming</h1><hr>
+			<h1 align="center">Publish Your Research Paper</h1><hr>
 
+			<label for="domain"><b>Domain Name:</b></label>
+			<input type="text" name="domain" required><br><br>
 
-			<label for="fname"><b>Write a Post:</b></label><br>
+			<label for="thesis"><b>Thesis Topic:</b></label>
+			<input type="text" name="thesis" required><br><br>
+
+			<label for="researchpaper"><b>Publish Your Research Paper:</b></label><br>
 			<textarea rows="8" cols="100">
 				
 			</textarea><hr>
 			
 			<div class="clearfix">
 				<button type="button" class="cancelbtn">Cancel</button>
-				<button type="submit" class="signupbtn">Post</button>
-			</div><br><br>
-
-			<label for="recent"><b>Recent Posts:</b></label><br>
-
-			<textarea rows="8" cols="100">
-				Recent posts will show here!
-				
-			</textarea><hr>
-
-			<div class="clearfix">
-				<button type="button" class="Reply">Edit Post</button>
-				<button type="submit" class="delete">Delete Post</button>
-			</div><br><br>
-
+				<button type="submit" class="submitbtn">Submit</button>
+			</div>
+			
 
 
 

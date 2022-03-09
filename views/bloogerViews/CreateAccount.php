@@ -33,24 +33,24 @@
 <hr>
 
 <label for="username"><b>Username</b></label>
-<input type="text" placeholder="Enter Username" name="username" required><br>
+<input type="text" placeholder="Enter Username" name="username" required><br><br>
 
 <label for="gender"><b>Gender</b></label>
 			<input type="radio" name="gender" value="" required>Male
 			<input type="radio" name="gender" value="" required>Female
 			<input type="radio" name="gender" value="" required>Other
-			<hr>
+			<br><br>
 		
 
 
-<label for="email"><b>Email</b></label>
-<input type="text" placeholder="Enter Email" name="email" required>
+<label for="email"><b>Email:</b></label>
+<input type="text" placeholder="Enter Email" name="email" required><br><br>
 
-<label for="psw"><b>Password</b></label>
-<input type="password" placeholder="Enter Password" name="psw" required>
+<label for="psw"><b>Password:</b></label>
+<input type="password" placeholder="Enter Password" name="psw" required><br><br>
 
-<label for="psw-repeat"><b>Repeat Password</b></label>
-<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+<label for="psw-repeat"><b>Confirm Password:</b></label>
+<input type="password" placeholder="Confirm Password" name="psw-repeat" required>
 
 <label>
 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -78,7 +78,7 @@
 
 	</tr>
 	<tr height="50px" align="center">
-		<td colspan="3"> Copyright@2022</td>
+		<td colspan="3"> Copyright@2022, Created By Team Gallant</td>
 		
 
 	</tr>
