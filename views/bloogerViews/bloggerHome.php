@@ -18,7 +18,7 @@
 	</tr>
 	<tr height="700px"> 
 		<td width="10%" valign="top" align="center">
-		<a href="#">Create Account</a><br><br>
+		<a href="CreateAccount.php">Create Account</a><br><br>
 		<a href="#">Edit Account</a><br><br>
 		<a href="#">Write a Post</a><br><br>
 		<a href="#">Share Link</a><br><br>
