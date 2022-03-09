@@ -76,7 +76,7 @@
 				</select>
 			</td>
 		</tr>
-		<tr>
+		<!-- <tr>
 			<td>
 				Degree
 			</td>
@@ -86,7 +86,7 @@
 				<input type="checkbox" name="" >BSc.
 				<input type="checkbox" name="" >MSc.
 			</td>
-		</tr>
+		</tr> -->
 		<tr>
 			<td>Photo</td>
 			<td>
