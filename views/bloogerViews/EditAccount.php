@@ -20,8 +20,8 @@
 		<td width="10%" valign="top" align="center">
 		<a href="CreateAccount.php">Create Account</a><br><br>
 		<a href="EditAccount.php">Edit Account</a><br><br>
-		<a href="#">Write a Post</a><br><br>
-		<a href="#">Share Link</a><br><br>
+		<a href="WritePost.php">Write a Post</a><br><br>
+		<a href="ShareLink.php">Share Link</a><br><br>
 		
 		</td>
 		<td valign="top">

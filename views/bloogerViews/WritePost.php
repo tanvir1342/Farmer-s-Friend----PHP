@@ -9,7 +9,7 @@
 	<tr height="100px">
 		<td width="10%">Logo</td>
 		<td align="right">
-			<a href="0">Home</a>
+			<a href="bloggerHome.php">Home</a>
 			<a href="0">| About Us</a>
 			<a href="0">| Logout</a>
 		</td>
@@ -21,12 +21,22 @@
 		<a href="CreateAccount.php">Create Account</a><br><br>
 		<a href="EditAccount.php">Edit Account</a><br><br>
 		<a href="WritePost.php">Write a Post</a><br><br>
-		<a href="ShareLink.php">Share Link</a><br><br>
+		<a href="#">Share Link</a><br><br>
 		
 		</td>
 		<td valign="top">
-			<h1 align="center">Welcome To Blogger Dashboard</h1><hr>
+			<h1 align="center">Write content about farming</h1><hr>
+
+
+			<label for="fname">Write a Post:</label>
+			<textarea rows="8" cols="100">
+				
+			</textarea><hr>
 			
+			<div class="clearfix">
+				<button type="button" class="cancelbtn">Cancel</button>
+				<button type="submit" class="signupbtn">Post</button>
+			</div>
 
 
 

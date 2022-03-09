@@ -25,7 +25,7 @@
 		
 		</td>
 		<td valign="top">
-			<h1 align="center">Welcome To Blogger Dashboard</h1><hr>
+			<h1 align="center">Share Link</h1><hr>
 			
 
 
