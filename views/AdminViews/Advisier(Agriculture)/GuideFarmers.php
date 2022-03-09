@@ -21,7 +21,7 @@
  <!-- Menubar of adviser -->
     <tr height="700px">
         <td width="10%"; valign="top">
-        <a href="ReadFarmer`sPost.php">Read Farmer`s Post |</a><br><br>
+            <a href="ReadFarmer`sPost.php">Read Farmer`s Post |</a><br><br>
             <a href="SolveProblems.php">  Solve Problems |</a><br><br>
             <a href="GuideFarmers.php">  Guide Farmers |</a><br><br>
             <a href="UploadContents.php">  Upload Machinaries Contents</a><br><br>
