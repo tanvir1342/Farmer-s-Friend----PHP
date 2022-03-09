@@ -25,47 +25,38 @@
 		
 		</td>
 		<td valign="top">
-			<h1 align="center">Sign Up</h1><hr>
+			<h1 align="center">Edit Profile</h1><hr>
+
 			<form action="0" style="border:1px solid">
 <div class="container">
 
-<p>Please fill in this form to create an account.</p>
+<p>Please fill in this form to update your account Information.</p>
 <hr>
 
-<label for="username"><b>Username</b></label>
-<input type="text" placeholder="Enter Username" name="username" required><br>
+<label for="username"><b>Change Username</b></label>
+<input type="text" placeholder="Enter New Username" name="username" required>
 
-<label for="gender"><b>Gender</b></label>
-			<input type="radio" name="gender" value="" required>Male
-			<input type="radio" name="gender" value="" required>Female
-			<input type="radio" name="gender" value="" required>Other
-			<hr>
-		
+<label for="email"><b>Change Email</b></label>
+<input type="text" placeholder="Enter New Email" name="email" required>
 
+<label for="psw"><b>Change Password</b></label>
+<input type="password" placeholder="Enter New Password" name="psw" required>
 
-<label for="email"><b>Email</b></label>
-<input type="text" placeholder="Enter Email" name="email" required>
-
-<label for="psw"><b>Password</b></label>
-<input type="password" placeholder="Enter Password" name="psw" required>
-
-<label for="psw-repeat"><b>Repeat Password</b></label>
-<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+<label for="psw-repeat"><b>Confirm Password</b></label>
+<input type="password" placeholder="Confirm New Password" name="psw-repeat" required>
 
 <label>
 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
 </label>
 
-<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
 
 <div class="clearfix">
 <button type="button" class="cancelbtn">Cancel</button>
-<button type="submit" class="signupbtn">Sign Up</button>
+<button type="submit" class="signupbtn">Update</button>
 </div>
 </div>
 </form>
-
-			
 			
 
 
