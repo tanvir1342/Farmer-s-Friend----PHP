@@ -7,7 +7,7 @@
 </head>
 <body>
 <table width="100%"; border="1px">
-	<tr height = "100px">
+	<tr height = 100px style ="background-color:#C1BCBC ">
 		<td width="10%" align="center">
 			<img  width="80px"; height="80px"; src="logo.png";  >
 		</td>
@@ -18,12 +18,15 @@
 		</td>
 	</tr>
 	<tr height = "700px" valign="top" >
-		<td >
-			<!-- <a href="3.php">Post Request</a><br><br> -->
-			<a href="2. type selection.php">Type Select</a><br><br>
-			<a href="6. content.php">Content</a><br><br>
-			<a href="5. profile.php">Edit Profile</a><br>
-		</td>
+        <td width =15% bgcolor="C1BCBC" valign="top" align="center">
+            <a href="retailerEditAccount.php"> Edit Account </a><br><br> 
+            <a href="retailerUpdatePrice.php"> Update & Post Latest Prices </a><br><br>
+            <a href="dealWithFarmer.php"> Deal With Farmers </a><br><br>
+            <a href="retailerTransportHistory.php"> Transport Products </a><br><br>
+            <a href="retailerDealHistory.php"> Deal History </a><br><br>
+            <a href="govTax.php"> Payment For Tax </a><br><br>
+            <a href="makePayment.php"> Payment For Any Issue </a><br><br>        
+        </td>
 		<td valign="top"; align="center"><h1><u>Welcome To The Retailer Board</u></h1><hr>
 			<?php
 // define variables and set to empty values
@@ -114,7 +117,7 @@ function test_input($data) {
 
 </form>
 
- <?php
+<!-- 
 echo "<h2>Your Input:</h2>";
 echo $name;
 echo "<br>";
@@ -128,14 +131,16 @@ echo $comment;
 echo "<br>";
 echo $TypeOfFarmer;
 echo "<br>";
-echo $time;
-?> 
+echo $time; -->
+
 
 		 </td>
-	</tr>
-	<tr height = "100px">
-		<td colspan="2" , align="center">@Copyright 2022</td>
-	</tr>
+	 <!-- Footer Part -->
+   <tr  height = 100px;>
+        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
+           All Copyrights Reserve by Gallant ltd.
+        </td>
+    </tr>
 </table>
 </body>
 </html>
