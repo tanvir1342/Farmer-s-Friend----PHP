@@ -19,12 +19,14 @@
     </tr>
     <!-- daynamic menubar -->
     <tr  height = 700px>
-        <td width =10%; valign = top; style ="background-color:#C1BCBC; font-size:20px;">
-            <a href="listOfuser.php">user Account</a><br><br>
-            <a href="verifyDocument.php">verfiy ducument</a><br><br>
-            <a href="controlDeaL.php">control deal</a><br><br>
-            <a href="approvePost.php">Approve post</a><br><br>
-            <a href="EditProfile.php">Edit profile</a><br><br>
+        <td width =15% bgcolor="C1BCBC" valign="top" align="center">
+           <img src="proPic.jpg" width="150px" height="100px"><br>
+           <h2>Tanvir Mahmud</h2><br>
+           <p>Adviser(Economics)</p>
+           <p>age:25</p>
+           <p>gender:male</p>
+           <a href="EditProfile.php">Edit profile</a>
+       </td>
         </td>
         <!-- output of user -->
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
@@ -32,12 +34,12 @@
             <h1 align = center>welcome,name</h1><hr>
             <table  align="center" width="500px" >
                 <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="createFarmer.php">Farmer</a></td>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="createRetailer.php">Retailer</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="post.php">Post</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="CostingGuidline.php">Make guidline</a></td>
                 </tr>
                 <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="createAdviser(eco).php">Adviser(economic)</a></td>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="createAdviser(Agri).php">Adviser(agriculture)</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="bankingSupport.php">Banking support</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="ApplyForLeave.php">Apply for leave</a></td>
                 </tr>
             </table>
             
