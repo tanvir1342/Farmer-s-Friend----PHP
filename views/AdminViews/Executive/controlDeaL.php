@@ -20,16 +20,25 @@
     <!-- daynamic menubar -->
     <tr  height = 700px>
         <td width =10%; valign = top; style ="background-color:#C1BCBC; font-size:20px;">
-            <a href="createAccount.php">create Account</a><br><br>
-            <a href="#">Edit Account</a><br><br>
-            <a href="approvePost.php">Approve post</a><br><br>
-            <a href="#">Approve paper</a><br><br>
-            <a href="#">control deal</a><br><br>
+            <a href="#">user Account</a><br><br>
+            <a href="#">verfiy ducument</a><br><br>
+            <a href="approvePost.php">control deal</a><br><br>
+            <a href="#">Approve post</a><br><br>
+            <a href="#">Edit profile</a><br><br>
         </td>
         <!-- output of user -->
-        <td valign = top style ="background-color:#F5F2F1 ">
+        <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
 
-            <h1 align = center>welcome,name</h1><hr>
+            <h1 align = center>Control farmer and Retailer Dealing</h1><hr>
+            <table  align="center" width="500px" >
+                <tr>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="approveDeal.php">Approve Deal</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="cencelDeal.php">Cancel Deal</a></td>
+                </tr>
+                <tr>
+                    <td colspan="2" height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="HistoryDeal.php">History</a></td>
+                </tr>
+            </table>
             
 
 
