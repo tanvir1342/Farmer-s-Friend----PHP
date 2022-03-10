@@ -6,8 +6,10 @@
 <body>
 
 <table border="1" width="100%">
-	<tr height="100px">
-		<td width="10%">Logo</td>
+	<tr height="100px" style="background-color:#C1BCBC">
+		<td width="10%" align="center">
+			<img width="100px" height="100px" src="logo.png">
+		</td>
 		<td align="right">
 			<a href="bloggerHome.php">Home</a>
 			<a href="0">| About Us</a>
@@ -17,7 +19,7 @@
 
 	</tr>
 	<tr height="700px"> 
-		<td width="10%" valign="top" align="center">
+		<td width="10%" valign="top" align="center" bgcolor="C1BCBC">
 		
 		<a href="EditAccount.php">Edit Account</a><br><br>
 		<a href="WritePost.php">Write a Post</a><br><br>
@@ -39,17 +41,7 @@
 				<button type="submit" class="signupbtn">Post</button>
 			</div><br><br>
 
-			<label for="recent"><b>Recent Posts:</b></label><br>
-
-			<textarea rows="8" cols="100">
-				Recent posts will show here!
-				
-			</textarea><hr>
-
-			<div class="clearfix">
-				<button type="button" class="Reply">Edit Post</button>
-				<button type="submit" class="delete">Delete Post</button>
-			</div><br><br>
+	
 
 
 
@@ -63,7 +55,7 @@
 
 	</tr>
 	<tr height="50px" align="center">
-		<td colspan="3"> Copyright@2022, Created By Team Gallant</td>
+		<td colspan="3" style="background-color:black; color:white"> Copyright@2022, Created By Team Gallant</td>
 		
 
 	</tr>

@@ -50,9 +50,9 @@
         </td>
     </tr>
     <!-- footer section -->
-    <tr  height = 100px;>
-        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
-           coppyright @2022
+    <tr  height = 50px;>
+        <td colspan="2" style ="background-color:black; color:white;align = center " align="center">
+           Copyright@2022, Created By Team Gallant
         </td>
     </tr>
 </table>
