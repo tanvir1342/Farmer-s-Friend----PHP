@@ -39,13 +39,13 @@
 
             <table width = 20%; border = 1px>              
                 <td>
-                    <a href="#"> Read Machiniaries Guidelines</a>                   
+                    <a href="CheckGuidelines.php">Machiniaries Guidelines</a>                   
                 </td>               
             </table>
 
             <table width = 20%; border = 1px>              
                 <td>
-                    <a href="#"> Post For Support</a>                  
+                    <a href="PostSupport.php"> Post For Support</a>                  
                 </td>               
             </table>
 
