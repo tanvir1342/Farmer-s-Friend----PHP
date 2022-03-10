@@ -22,7 +22,6 @@
 		<a href="EditAccount.php">Edit Account</a><br><br>
 		<a href="WritePost.php">Write a Post</a><br><br>
 		<a href="ReadPost.php">Read Posts</a><br><br>
-		<a href="ShareLink.php">Share Content</a><br><br>
 		<a href="PublishResearchPaper.php">Research Paper</a><br><br>
 		
 		</td>
