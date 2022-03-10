@@ -27,17 +27,37 @@
             <a href="ApplyForLeave.php">Apply for leave</a><br>
        </td>
         </td>
-        <!-- Output -->
-        <td valign="top">
-            <h1 align="center">Make Guideline for Farmers</h1> <hr>
-            <h3>Adviser Name : Soikot</h3>
-            <textarea id ="guide" name="guide" rows="12" cols="180"></textarea><br>
-            
-            <a href="#">  Post This Guideline|</a>
-            <a href="#">  Cancel</a>
+        <!-- output of user -->
+        <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
+
+            <h1 align = center>Apply for Leave</h1><hr>
+            <form method="post">
+                <table border="1px" align="center">
+                <tr>
+                    <td>name</td>
+                    <td>Id</td>
+                    <td>Reasone for Leave</td>
+                    <td>Leaving Date</td>
+                    <td>Joining Date</td>
+                    <td>Total Days</td>
+
+                </tr>
+                <tr>
+                    <td><input type="name" name="name"></td>
+                    <td><input type="number" name="id"></td>
+                    <td><input type="text" name="reasoneForLeave"></td>
+                    <td><input type="date" name="Form"></td>
+                    <td><input type="date" name="to"></td>
+                    <td><input type="number" name="totalDays"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit"></td>
+                </tr>
+            </table>
+                
+            </form>
+
         </td>
-    </tr>
-    <!-- Footer Part -->
     </tr>
     <!-- footer section -->
     <tr  height = 100px;>

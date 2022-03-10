@@ -3,7 +3,7 @@
 
 <!-- Table Creation -->
 <table width = 100%; border = 1px>
-    <tr height = 100px>
+    <tr  height = 100px style ="background-color:#C1BCBC ">
         <td width= 10%; align = center>
             <img width = 100px; height = 100px src = "logo.png">
         </td> 
@@ -19,18 +19,14 @@
         </td>
     </tr>
  <!-- Dashboard of Retailer -->
-    <tr height="700px">
-
-        <td width="10%"; valign="top">
-            <a href="retailerEditAccount.php"> Edit Account |</a><br><br> 
-            <a href="retailerUpdatePost.php"> Update & Post Latest Prices |</a><br><br>
-            <a href="#"> Deal With Farmers |</a><br><br>
-            <a href="#"> Transport Products |</a><br><br>
-            <a href="#"> Deal History |</a><br><br>
-            <a href="#"> Market Prices |</a><br><br>
-            <a href="#"> Deal Cancel Request |</a><br><br>
-            <a href="#"> Payment For Tax |</a><br><br>
-            <a href="#"> Payment For Any Issue |</a><br><br>            
+         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
+             <a href="retailerEditAccount.php"> Edit Account </a><br><br> 
+            <a href="retailerUpdatePrice.php"> Update & Post Latest Prices </a><br><br>
+            <a href="dealWithFarmer.php"> Deal With Farmers </a><br><br>
+            <a href="retailerTransportHistory.php"> Transport Products </a><br><br>
+            <a href="retailerDealHistory.php"> Deal History </a><br><br>
+            <a href="govTax.php"> Payment For Tax </a><br><br>
+            <a href="makePayment.php"> Payment For Any Issue </a><br><br>           
         </td>
         <!-- Output -->
         <td valign="top">
@@ -55,9 +51,9 @@
         </td>
          
     <!-- Footer Part -->
-    <tr height="100px">
-        <td colspan="2"; align="center">
-            All Copyrights Reserve by Gallant ltd.
+   <tr  height = 100px;>
+        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
+           All Copyrights Reserve by Gallant ltd.
         </td>
     </tr>
 
