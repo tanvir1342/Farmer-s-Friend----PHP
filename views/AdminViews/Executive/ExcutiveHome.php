@@ -25,7 +25,7 @@
            <p>juniour excutive</p>
            <p>age:25</p>
            <p>gender:male</p>
-           <a href="#">Edit profile</a>
+           <a href="EditProfile.php">Edit profile</a>
        </td>
         </td>
         <!-- output of user -->
@@ -42,7 +42,7 @@
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="approvePost.php">approve post</a></td>
                 </tr>
                 <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="#">Edit profile</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="EditProfile.php">Edit profile</a></td>
                 </tr>
             </table>
             

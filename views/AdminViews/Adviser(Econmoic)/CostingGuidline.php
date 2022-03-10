@@ -22,22 +22,22 @@
         <td width =10% bgcolor="C1BCBC" align="center" style="font-size:20px">
             <a href="AddviserHome(eco).php">Home</a>
             <a href="Post.php">Post</a><br><br>
-            <a href="GuideFarmers.php">Make guidline</a><br><br>
-            <a href="UploadTutorials.php">Upload Tutorials</a><br><br>
+            <a href="CostingGuidline.php">Make guidline</a><br><br>
+            <a href="bankingSupport.php">Banking support</a><br><br>
             <a href="ApplyForLeave.php">Apply for leave</a><br>
        </td>
         </td>
-        <!-- Output -->
-        <td valign="top">
-            <h1 align="center">Make Guideline for Farmers</h1> <hr>
-            <h3>Adviser Name : Soikot</h3>
+        <!-- output of user -->
+        <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
+
+            <h1 align = center>write guidline about Costing side</h1><hr>
+            <h3>Adviser Name : Tanvir</h3>
             <textarea id ="guide" name="guide" rows="12" cols="180"></textarea><br>
             
             <a href="#">  Post This Guideline|</a>
             <a href="#">  Cancel</a>
+
         </td>
-    </tr>
-    <!-- Footer Part -->
     </tr>
     <!-- footer section -->
     <tr  height = 100px;>
