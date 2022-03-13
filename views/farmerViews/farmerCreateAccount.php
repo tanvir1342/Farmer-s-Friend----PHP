@@ -26,7 +26,7 @@
         <td valign="top">
             <h1 align="center"> Create Account For Farmer </h1> <hr>
             <table border="1" align="center">
-            <form method="POST" action="../../controllers/farmerControllers/regcheck.php">
+            <form method="POST">
                <table align="center" style="font-size:20px;">
                     <tr>
                         <td>Name:</td>
