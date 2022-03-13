@@ -46,6 +46,10 @@
             <td>ID</td>
             <td><input type="number" name="number" value=""></td>
         </tr>
+         <tr>
+            <td>Password</td>
+            <td><input type="number" name="number" value=""></td>
+        </tr>
         <tr>
             <td>Email</td>
             <td>
