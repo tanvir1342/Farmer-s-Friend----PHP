@@ -54,18 +54,13 @@
 		
 
 	</tr>
-	<tr height="50px" align="center">
-		<td colspan="3" style="background-color:black; color:white"> Copyright@2022, Created By Team Gallant</td>
-		
-
-	</tr>
-
-
-
+    <!-- Footer Part -->
+    <tr  height = 100px;>
+        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
+           All Copyrights @2022 Reserved by Gallant ltd.
+        </td>
+    </tr>
 </table>
-
-</body>
-
 
 
 </html>

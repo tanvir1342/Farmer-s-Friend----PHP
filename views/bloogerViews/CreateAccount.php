@@ -1,94 +1,88 @@
-
+<!DOCTYPE html>
 <html>
-<head>
-	<title>Blogger</title>
-</head>
-<body>
+<!-- Table creation -->
+<table width = 100%;>
+    <tr height = 100px style ="background-color:#C1BCBC ">
+        <td width =10%; align = center>
+            <img width = 100px; height = 100px src ="logo.png">
+        </td>
+        <td align = right >
+            <table >
+                <!-- center menubar -->
+                <tr style ="font-size:20px;">
+					<a href="bloggerHome.php">Home</a>
+					<a href="0">| About Us</a>
+					<a href="0">| Logout</a>
+                </tr>
+            </table>
+        </td>
+    </tr>
+     <!-- Dashboard of Blogger -->
+   <tr  height = 700px>
+        <td width =15% bgcolor="C1BCBC" valign="top" align="center">
 
-<table border="1" width="100%">
-	<tr height="100px">
-		<td width="10%">Logo</td>
-		<td align="right">
-			<a href="bloggerHome.php">Home</a>
-			<a href="0">| About Us</a>
-			<a href="0">| Logout</a>
-		</td>
-		
+        </td>
+        <!-- Output -->
+        <td valign="top">
+            <h1 align="center"> Create Account For Blogger </h1> <hr>
+            <table border="1" align="center">
+            <form method="POST">
+               <table align="center" style="font-size:20px;">
+                    <tr>
+                        <td>Name:</td>
+                        <td width="300px "><input type="name" name="name" value=""></td>
+                        <td>Email:</td>
+                        <td><input type="email" name="email" value=""></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Username:</td>
+                        <td width="300px "><input type="name" name="name" value=""></td>
+                        <td>ID:</td>
+                        <td><input type="email" name="email" value=""></td>
+                    </tr>
 
-	</tr>
-	<tr height="700px"> 
-		<td width="10%" valign="top" align="center">
-		<a href="CreateAccount.php">Create Account</a><br><br>
-		<a href="EditAccount.php">Edit Account</a><br><br>
-		<a href="#">Write a Post</a><br><br>
-		<a href="#">Share Link</a><br><br>
-		
-		</td>
-		<td valign="top">
-			<h1 align="center">Sign Up</h1><hr>
-			<form action="0" style="border:1px solid">
-<div class="container">
+                    <tr>
+                        <td>Phone Number:</td>
+                        <td width="300px "><input type="number" name="phoneNumber" value=""></td>
+                        <td>Photo:</td>
+                        <td><input type="file" name=""></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Gender:</td>
+                        <td width="300px "><input type="radio" name="gen" > Male <input type="radio" name="gen" > Female <input type="radio" name="gen" > Other </td>
+                                          
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td width="300px "><input type="name" name="name" value=""></td>
+                        <td>Confirm Password:</td>
+                        <td><input type="email" name="email" value=""></td>
+                    </tr> 
+                    
+                    <!-- <table align="center" > -->
+                            <tr align="center" width=100%>
+                                <td colspan="3">
+                                  <input type="submit" name="submit" value="Submit">   
+                                  <input type="reset" name="reset" value="Reset">
+                                </td>
+                            </tr>
+                    <!-- </table> -->
+                
 
-<p>Please fill in this form to create an account.</p>
-<hr>
-
-<label for="username"><b>Username</b></label>
-<input type="text" placeholder="Enter Username" name="username" required><br><br>
-
-<label for="gender"><b>Gender</b></label>
-			<input type="radio" name="gender" value="" required>Male
-			<input type="radio" name="gender" value="" required>Female
-			<input type="radio" name="gender" value="" required>Other
-			<br><br>
-		
-
-
-<label for="email"><b>Email:</b></label>
-<input type="text" placeholder="Enter Email" name="email" required><br><br>
-
-<label for="psw"><b>Password:</b></label>
-<input type="password" placeholder="Enter Password" name="psw" required><br><br>
-
-<label for="psw-repeat"><b>Confirm Password:</b></label>
-<input type="password" placeholder="Confirm Password" name="psw-repeat" required>
-
-<label>
-<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-</label>
-
-<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-<div class="clearfix">
-<button type="button" class="cancelbtn">Cancel</button>
-<button type="submit" class="signupbtn">Sign Up</button>
-</div>
-</div>
-</form>
-
-			
-			
-
-
-
-
-
-
-		</td>
-		
-
-	</tr>
-	<tr height="50px" align="center">
-		<td colspan="3"> Copyright@2022, Created By Team Gallant</td>
-		
-
-	</tr>
-
-
-
+                </table>
+                    
+            </form> 
+        </td>
+    </tr>
+    <!-- Footer Part -->
+    <tr  height = 100px;>
+        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
+           All Copyrights @2022 Reserved by Gallant ltd.
+        </td>
+    </tr>
 </table>
-
-</body>
-
 
 
 </html>

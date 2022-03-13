@@ -49,10 +49,10 @@
 
         </td>
     </tr>
-    <!-- footer section -->
-    <tr  height = 50px;>
-        <td colspan="2" style ="background-color:black; color:white;align = center " align="center">
-           Copyright@2022, Created By Team Gallant
+    <!-- Footer Part -->
+    <tr  height = 100px;>
+        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
+           All Copyrights @2022 Reserved by Gallant ltd.
         </td>
     </tr>
 </table>

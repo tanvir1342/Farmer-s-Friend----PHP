@@ -20,8 +20,8 @@
  <!-- Dashboard of Farmer -->
   <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
-           <img src="babe.jpg" width="150px" height="150px"><br>
-           <h2>Pop & Squish</h2><br>
+           <img src="samantha.jpg" width="150px" height="150px"><br>
+           <h2>Samantha</h2><br>
            <p>Farmer</p>
            <p>age:25</p>
            <p>Type : Plantation</p>
@@ -42,7 +42,7 @@
                 <tr>
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmerMachinariesGuidelines.php">Machiniaries Guidelines</a></td>
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmingGuideline.php">Farming Guidelines</a></td>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="#">Banking Guidelines</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="#">Get Support From Bank</a></td>
                 </tr>
                 <tr>
                     
@@ -52,8 +52,8 @@
                 </tr>
 
                 <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="#">Water Payments</a></td>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="#">General Payments</a></td> 
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmerWaterPayments.php">Water Payments</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmerGeneralPayments.php">General Payments</a></td> 
                 </tr>
                  <tr>
                     

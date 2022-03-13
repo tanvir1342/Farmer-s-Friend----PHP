@@ -20,17 +20,17 @@
  <!-- Dashboard of Farmer -->
   <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
-                        <a href="farmerEditAccount.php"> Edit Account |</a><br><br> 
-            <a href="farmerPostProblems.php"> Post For Problem |</a><br><br>
-            <a href="farmerMachinariesGuidelines.php"> Machiniaries Guidelines |</a><br><br>
-            <a href="veterinarianSupport.php"> Veterinarian Support |</a><br><br>
-            <a href="farmingGuideline.php"> Farming Guidelines |</a><br><br>
-            <a href="farmerMarketPrices.php"> Market Prices |</a><br><br>
-            <a href="farmerCheckWeather.php"> Check Weather |</a><br><br>
-            <a href="farmerDealsWithRetailer.php"> Deal With Retailers |</a><br><br>
-            <a href="farmerBankingGuideline.php"> Banking Guidelines |</a><br><br>
-            <a href="farmerGeneralPayments.php"> General Payments |</a><br><br>
-            <a href="farmerWaterPayments.php"> Water Payments |</a><br>
+            <a href="farmerEditAccount.php"> Edit Account </a><br><br> 
+            <a href="farmerPostProblems.php"> Post For Problem </a><br><br>
+            <a href="farmerMachinariesGuidelines.php"> Machiniaries Guidelines </a><br><br>
+            <a href="veterinarianSupport.php"> Veterinarian Support </a><br><br>
+            <a href="farmingGuideline.php"> Farming Guidelines </a><br><br>
+            <a href="farmerMarketPrices.php"> Market Prices </a><br><br>
+            <a href="farmerCheckWeather.php"> Check Weather </a><br><br>
+            <a href="farmerDealsWithRetailer.php"> Deal With Retailers </a><br><br>
+            <a href="farmerBankingGuideline.php"> Get Support From Bank </a><br><br>
+            <a href="farmerGeneralPayments.php"> General Payments </a><br><br>
+            <a href="farmerWaterPayments.php"> Water Payments </a><br>
 
         </td>
         <!-- Output -->
@@ -40,36 +40,44 @@
             <form method="POST">
                <table align="center" style="font-size:20px;">
                     <tr>
-                        <td>Name:</td>
-                        <td width="300px "><input type="name" name="name" value=""></td>
-                        <td>Email:</td>
-                        <td><input type="email" name="email" value=""></td>
+                        <td>Change Name:</td>
+                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter New Name"></td>
+                        <td>Change Email:</td>
+                        <td><input type="email" name="email" value="" placeholder="Enter New Email"></td>
                     </tr>
                     <br>
                     <tr>
-                        <td>Phone Number:</td>
-                        <td width="300px "><input type="number" name="phoneNumber" value=""></td>
-                        <td>Photo:</td>
-                        <td><input type="file" name=""></td>
+                        <td>Change Username:</td>
+                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter New Username"></td>
+                        <td>Change ID:</td>
+                        <td><input type="email" name="email" value="" placeholder="Enter New ID"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Change Phone Number:</td>
+                        <td width="300px "><input type="number" name="phoneNumber" value="" placeholder="Enter New Phone Number"></td>
+                        <td>Change Photo:</td>
+                        <td><input type="file" name="" placeholder="Enter New Photo"></td>
                     </tr>
                     <br>
                     <tr>
-                        <td>Farmer Type:</td>
+                        <td>Change Farmer Type:</td>
                         <td width="300px "><select> <option>Plantation</option><option>Husbandary</option><option>Fisheries</option> </select></td>
-                        <td>NID number:</td>
-                        <td><input type="number" name="nidNumber" value=""></td>                        
+                        <td>Change NID number:</td>
+                        <td><input type="number" name="nidNumber" value=""placeholder="Enter New NID"></td>                        
                     </tr>
                     <tr>
-                        <td>Gender:</td>
-                        <td width="300px "><input type="radio" name="gen" > Male <input type="radio" name="gen" > Female <input type="radio" name="gen" > Other </td>
-                                          
-                    </tr>
+                        <td>Password:</td>
+                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter New Password"></td>
+                        <td>Confirm Password:</td>
+                        <td><input type="email" name="email" value="" placeholder="Confirm New Password"></td>
+                    </tr> 
                     
                     <!-- <table align="center" > -->
                             <tr align="center" width=100%>
                                 <td colspan="3">
-                                  <input type="submit" name="submit" value="submit">   
-                                  <input type="reset" name="reset" value="Reset">
+                                  <input type="submit" name="submit" value="Update">   
+                                  <input type="reset" name="reset" value="Cancel">
                                 </td>
                             </tr>
                     <!-- </table> -->
