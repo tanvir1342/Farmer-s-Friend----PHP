@@ -19,7 +19,7 @@
     </tr>
     <!-- daynamic menubar -->
     <tr  height = 700px>
-        <td width =10% bgcolor="C1BCBC" align="center" style="font-size:20px">
+       <td width =10% bgcolor="C1BCBC" align="center" style="font-size:20px">
             <a href="AddviserHome(eco).php">Home</a>
             <a href="Post.php">Post</a><br><br>
             <a href="GuideFarmers.php">Make guidline</a><br><br>
@@ -29,17 +29,15 @@
         </td>
         <!-- Output -->
         <td valign="top">
-            <h1 align="center">Make Guideline for Farmers</h1> <hr>
-            <h3>Adviser Name : Soikot</h3>
-            <textarea id ="guide" name="guide" rows="12" cols="180"></textarea><br>
-            
-            <a href="#">  Post This Guideline|</a>
-            <a href="#">  Cancel</a>
-        </td>
+            <h1 align="center">Upload Machinaries Contents</h1> <hr>
+        <table  align="center" width="500px" >
+                <tr>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="textTutorials.php">Text Tutorials</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="videoTutorials.php">Videos Tutorials</a></td>
+                </tr>
+            </table>
     </tr>
     <!-- Footer Part -->
-    </tr>
-    <!-- footer section -->
     <tr  height = 100px;>
         <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
            coppyright @2022

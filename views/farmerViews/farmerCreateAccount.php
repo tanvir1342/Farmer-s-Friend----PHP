@@ -20,22 +20,11 @@
  <!-- Dashboard of Farmer -->
   <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
-            <a href="farmerEditAccount.php"> Edit Account |</a><br><br> 
-            <a href="farmerPostProblems.php"> Post For Problem |</a><br><br>
-            <a href="farmerMachinariesGuidelines.php"> Machiniaries Guidelines |</a><br><br>
-            <a href="veterinarianSupport.php"> Veterinarian Support |</a><br><br>
-            <a href="farmingGuideline.php"> Farming Guidelines |</a><br><br>
-            <a href="farmerMarketPrices.php"> Market Prices |</a><br><br>
-            <a href="#"> Check Weather |</a><br><br>
-            <a href="#"> Deal With Retailers |</a><br><br>
-            <a href="#"> Banking Guidelines |</a><br><br>
-            <a href="#"> General Payments |</a><br><br>
-            <a href="#"> Water Payments |</a><br>
 
         </td>
         <!-- Output -->
         <td valign="top">
-            <h1 align="center"> Edit Your Account </h1> <hr>
+            <h1 align="center"> Create Account For Farmer </h1> <hr>
             <table border="1" align="center">
             <form method="POST">
                <table align="center" style="font-size:20px;">

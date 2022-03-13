@@ -18,13 +18,14 @@
         </td>
     </tr>
     <!-- daynamic menubar -->
-    <tr  height = 700px>
+   <tr  height = 700px>
+        <tr  height = 700px>
         <td width =10%; valign = top; style ="background-color:#C1BCBC; font-size:20px;">
-            <a href="#">user Account</a><br><br>
-            <a href="#">verfiy ducument</a><br><br>
-            <a href="approvePost.php">control deal</a><br><br>
-            <a href="#">Approve post</a><br><br>
-            <a href="#">Edit profile</a><br><br>
+            <a href="listOfuser.php">user Account</a><br><br>
+            <a href="verifyDocument.php">verfiy ducument</a><br><br>
+            <a href="controlDeaL.php">control deal</a><br><br>
+            <a href="approvePost.php">Approve post</a><br><br>
+            <a href="EditProfile.php">Edit profile</a><br><br>
         </td>
         <!-- output of user -->
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
