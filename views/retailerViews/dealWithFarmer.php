@@ -63,15 +63,14 @@ img {
 							</tr>
 						</table>
 				</tr>
-			</table>
 
-		</td>
-	</tr>
-	<tr  height = 100px;>
+    <!-- Footer Part -->
+    <tr  height = 100px;>
         <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
-           All Copyrights Reserve by Gallant ltd.
+           All Copyrights @2022 Reserved by Gallant ltd.
         </td>
     </tr>
 </table>
-</body>
+
+
 </html>

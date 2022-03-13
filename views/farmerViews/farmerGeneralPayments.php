@@ -20,7 +20,7 @@
  <!-- Dashboard of Farmer -->
   <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
-            <a href="farmerEditAccount.php"> Edit Account |</a><br><br> 
+                        <a href="farmerEditAccount.php"> Edit Account |</a><br><br> 
             <a href="farmerPostProblems.php"> Post For Problem |</a><br><br>
             <a href="farmerMachinariesGuidelines.php"> Machiniaries Guidelines |</a><br><br>
             <a href="veterinarianSupport.php"> Veterinarian Support |</a><br><br>
@@ -33,32 +33,61 @@
             <a href="farmerWaterPayments.php"> Water Payments |</a><br>
 
         </td>
-        <!-- Output -->
-        <td valign="top">
-            <h1 align="center"> Post For Problems </h1> <hr>
-            
-            <table>
+        <td valign="top"; align="center"><h1><u>General Payments</u></h1><hr>
+            <table >
                 <tr>
-                    <td>Select Type</td>
-                         <td>
-                                <select>
-                                    <option>Agriculture Related</option>
-                                    <option>Agriculture Costing Related</option>
-                                    <option>Treatment Request</option>
-                                </select>
-                         </td>
-                 </tr>
-
+                    <td>Payment Method:</td>
+                    <td height="100">
+                        
+                <select>
+                    <option></option>
+                    <option>Bkash</option>
+                    <option>Dabit</option>
+                    <option>Credit</option>
+                    <option>Bank</option>
+                </select>
+            </td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td>
+                     <input type="number" name="Phone:">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Amount: </td>
+                    <td>
+                    <input type="number" name="Amount">
+                    </td>
+                </tr>
+                <tr>
+                    <td>City/District: </td>
+                    <td>
+                    <input type="text" name="Amount">
+                    </td>
+                </tr>
+                <tr>
+                    <td>ID: </td>
+                    <td>
+                    <input type="number" name="Amount">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pin/Pass Code: </td>
+                    <td>
+                    <input type="number" name="number">
+                    </td>
+                </tr>
+                <tr >
+                    <td >
+                         <br><input type="submit" value="Pay">
+                    </td>
+                </tr>
             </table>
-
-            <h3>Farmer's Name : UngaBunga</h3>
-            <textarea id ="guide" name="guide" rows="12" cols="180"></textarea><br>
             
-            <a href="#">  Post This Problem|</a>
-            <a href="#">  Cancel</a>
-             
         </td>
     </tr>
+
     <!-- Footer Part -->
     <tr  height = 100px;>
         <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>

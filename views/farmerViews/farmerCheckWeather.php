@@ -30,35 +30,27 @@
             <a href="farmerDealsWithRetailer.php"> Deal With Retailers |</a><br><br>
             <a href="farmerBankingGuideline.php"> Banking Guidelines |</a><br><br>
             <a href="farmerGeneralPayments.php"> General Payments |</a><br><br>
-            <a href="farmerWaterPayments.php"> Water Payments |</a><br>
-
-        </td>
-        <!-- Output -->
-        <td valign="top">
-            <h1 align="center"> Post For Problems </h1> <hr>
-            
+            <a href="farmerWaterPayments.php"> Water Payments |</a><br>		
+		</td>
+		<td valign="top">
+			<h1 align="center"> Check Weather </h1><hr>
             <table>
-                <tr>
-                    <td>Select Type</td>
-                         <td>
-                                <select>
-                                    <option>Agriculture Related</option>
-                                    <option>Agriculture Costing Related</option>
-                                    <option>Treatment Request</option>
-                                </select>
-                         </td>
-                 </tr>
+			<tr>
+                        <td> Select Location</td>
+                        <td width="300px "><select> <option>Jessore</option><option>Rangpur</option><option>Dhaka</option><option>Chittagang</option>
+                        <option>Sylhet</option><option>Khulna</option><option>Rajshahi</option><option>Mymensingh</option></select></td>
+                        
+                        <!-- <td><input type="number" name="nidNumber" value=""></td>  -->
+                                                                  
+            </tr>
+            <tr align="center">
+                <td>Temperature:</td>
+                <td>Weather:</td>  
+            </tr>
+        </table>
+		</td>	
 
-            </table>
-
-            <h3>Farmer's Name : UngaBunga</h3>
-            <textarea id ="guide" name="guide" rows="12" cols="180"></textarea><br>
-            
-            <a href="#">  Post This Problem|</a>
-            <a href="#">  Cancel</a>
-             
-        </td>
-    </tr>
+	</tr>
     <!-- Footer Part -->
     <tr  height = 100px;>
         <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>

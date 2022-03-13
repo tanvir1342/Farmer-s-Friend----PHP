@@ -47,8 +47,8 @@
                 <tr>
                     
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmerMarketPrices.php">Market Prices</a></td>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="#">Deal With Retailer</a></td> 
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="#">Check Weather</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmerDealsWithRetailer.php">Deal With Retailer</a></td> 
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmerCheckWeather.php">Check Weather</a></td>
                 </tr>
 
                 <tr>

@@ -26,11 +26,11 @@
             <a href="veterinarianSupport.php"> Veterinarian Support |</a><br><br>
             <a href="farmingGuideline.php"> Farming Guidelines |</a><br><br>
             <a href="farmerMarketPrices.php"> Market Prices |</a><br><br>
-            <a href="#"> Check Weather |</a><br><br>
-            <a href="#"> Deal With Retailers |</a><br><br>
-            <a href="#"> Banking Guidelines |</a><br><br>
-            <a href="#"> General Payments |</a><br><br>
-            <a href="#"> Water Payments |</a><br>			
+            <a href="farmerCheckWeather.php"> Check Weather |</a><br><br>
+            <a href="farmerDealsWithRetailer.php"> Deal With Retailers |</a><br><br>
+            <a href="farmerBankingGuideline.php"> Banking Guidelines |</a><br><br>
+            <a href="farmerGeneralPayments.php"> General Payments |</a><br><br>
+            <a href="farmerWaterPayments.php"> Water Payments |</a><br>		
 		</td>
 		<td valign="top">
 			<h1 align="center">Veterinarian Support</h1><hr>
