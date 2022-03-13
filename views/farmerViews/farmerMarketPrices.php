@@ -20,7 +20,7 @@
  <!-- Dashboard of Farmer -->
   <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
-            <a href="farmerEditAccount.php"> Edit Account |</a><br><br> 
+            <a href="farmerEditAccount.php"> Edit Account</a><br><br> 
             <a href="farmerPostProblems.php"> Post For Problem |</a><br><br>
             <a href="farmerMachinariesGuidelines.php"> Machiniaries Guidelines |</a><br><br>
             <a href="veterinarianSupport.php"> Veterinarian Support |</a><br><br>

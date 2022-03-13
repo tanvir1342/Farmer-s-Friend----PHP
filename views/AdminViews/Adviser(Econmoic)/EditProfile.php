@@ -1,3 +1,6 @@
+<?php 
+    require('header.php');
+?>
 <!DOCTYPE html>
 <html>
 <!-- center table creation -->
