@@ -13,7 +13,7 @@
                 <tr style ="font-size:20px;">
                     <td><a href="#">Home  |</a></td>
                     <td><a href="#"> About us  |</a></td>
-                    <td><a href="../../../controllers/adminControllers/excecutiveControllers/logout.php"> logout</a></td>
+                    <td><a href="../../../controllers/adminControllers/adviserControllers(eco)/logout.php"> logout</a></td>
                 </tr>
             </table>
         </td>
@@ -24,7 +24,7 @@
         <td colspan="3" valign = top style ="background-color:#F5F2F1 ">
 
             <h1 align = center>Login Form</h1><hr>
-        <form method="POST" action="../../../controllers/adminControllers/excecutiveControllers/excutiveLogincheck.php">
+        <form method="POST" action="../../../controllers/adminControllers/adviserControllers(eco)/ecoLogincheck.php">
               <table align="center">
                 <tr>
                     <td>Username: </td>
