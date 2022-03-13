@@ -1,6 +1,3 @@
-<?php 
-    require('header.php');
-?>
 <!DOCTYPE html>
 <html>
 <!-- center table creation -->
@@ -15,7 +12,7 @@
                 <tr style ="font-size:20px;">
                     <td><a href="#">Home  |</a></td>
                     <td><a href="#"> About us  |</a></td>
-                    <td><a href="../../../controllers/adminControllers/excecutiveControllers/logout.php"> logout</a></td>
+                    <td><a href="#"> logout</a></td>
                 </tr>
             </table>
         </td>
@@ -37,15 +34,12 @@
             <h1 align = center>welcome,name</h1><hr>
             <table  align="center" width="500px" >
                 <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="listOfuser.php">user account</a></td>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="verifyDocument.php">verify document</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="FarmerPost.php">Farmer Post</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="history.php">History</a></td>
                 </tr>
                 <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="controlDeaL.php">control deal</a></td>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="approvePost.php">approve post</a></td>
-                </tr>
-                <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="#">Edit profile</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="Editprofile.php">Edit Profile</a></td>
+                    
                 </tr>
             </table>
             

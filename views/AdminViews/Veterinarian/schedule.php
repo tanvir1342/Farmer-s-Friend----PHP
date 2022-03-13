@@ -27,35 +27,16 @@
         <!-- output of user -->
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
 
-            <form action="0" style="border:1px solid">
-<div class="container">
-
-<p>Please fill in this form to update your account Information.</p>
-<hr>
-
-<label for="username"><b>Change Username:</b></label>
-<input type="text" placeholder="Enter New Username" name="username" required><br><br>
-
-<label for="email"><b>Change Email:</b></label>
-<input type="text" placeholder="Enter New Email" name="email" required><br><br>
-
-<label for="psw"><b>Change Password:</b></label>
-<input type="password" placeholder="Enter New Password" name="psw" required><br><br>
-
-<label for="psw-repeat"><b>Confirm Password:</b></label>
-<input type="password" placeholder="Confirm New Password" name="psw-repeat" required><br><br>
-
-<label>
-<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-</label><br><br>
-
-
-
-<div class="clearfix">
-<button type="button" class="cancelbtn">Cancel</button>
-<button type="submit" class="updatebtn">Update</button><br><br>
-</div>
-</form>
+            <h1 align = center>Give Tratment</h1><hr>
+            <h3>Famer id:</h3>
+            <h3>Animal type:</h3>
+            <h3>Discription:</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus magna, vestibulum non molestie ac, sagittis ornare dui. Nam sit amet vulputate tortor, ac vestibulum risus. Maecenas feugiat est eu arcu venenatis, nec imperdiet dolor vehicula. Etiam diam orci, molestie ac convallis vel, commodo vitae tortor. Donec quis egestas nisi. Integer diam nisi, ornare at dui a, eleifend suscipit orci. Etiam vestibulum nulla a nulla interdum iaculis. Nam feugiat auctor arcu sit amet volutpat. Sed porttitor purus id felis auctor iaculis. Etiam volutpat lorem ut efficitur bibendum. In dictum tincidunt velit id fermentum. Nam at nisi in est pretium sodales. Curabitur laoreet ante eu dui ullamcorper, at porta sapien lobortis. Praesent aliquam lectus ex, a malesuada est finibus ut. Quisque eget erat ornare, finibus diam at, ornare nisl. Fusce nec consequat lorem.
+            </p>
+            <h3>Set time and date</h3>
+            <input type="datetime-local" id="" name="schedule"><br><br>
+            <input type="submit">
         </td>
     </tr>
     <!-- footer section -->
