@@ -30,29 +30,42 @@
                <table align="center" style="font-size:20px;">
                     <tr>
                         <td>Name:</td>
-                        <td width="300px "><input type="name" name="name" value=""></td>
+                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter Name"></td>
                         <td>Email:</td>
-                        <td><input type="email" name="email" value=""></td>
+                        <td><input type="email" name="email" value=""placeholder="Enter Email"></td>
                     </tr>
                     <br>
                     <tr>
+                        <td>Username:</td>
+                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter Username"></td>
+                        <td>ID:</td>
+                        <td><input type="email" name="email" value=""placeholder="Enter ID"></td>
+                    </tr>
+
+                    <tr>
                         <td>Phone Number:</td>
-                        <td width="300px "><input type="number" name="phoneNumber" value=""></td>
+                        <td width="300px "><input type="number" name="phoneNumber" value="" placeholder="Enter Phone Number"></td>
                         <td>Photo:</td>
-                        <td><input type="file" name=""></td>
+                        <td><input type="file" name="" placeholder="Enter Photo"></td>
                     </tr>
                     <br>
                     <tr>
                         <td>Farmer Type:</td>
                         <td width="300px "><select> <option>Plantation</option><option>Husbandary</option><option>Fisheries</option> </select></td>
                         <td>NID number:</td>
-                        <td><input type="number" name="nidNumber" value=""></td>                        
+                        <td><input type="number" name="nidNumber" value="" placeholder="Enter NID"></td>                        
                     </tr>
                     <tr>
                         <td>Gender:</td>
                         <td width="300px "><input type="radio" name="gen" > Male <input type="radio" name="gen" > Female <input type="radio" name="gen" > Other </td>
                                           
                     </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter Password"></td>
+                        <td>Confirm Password:</td>
+                        <td><input type="email" name="email" value=""placeholder="Confirm Password"></td>
+                    </tr> 
                     
                     <!-- <table align="center" > -->
                             <tr align="center" width=100%>
