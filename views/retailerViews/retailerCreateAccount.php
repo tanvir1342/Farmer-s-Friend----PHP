@@ -1,3 +1,6 @@
+<?php 
+    require('header.php');
+?>
 <!DOCTYPE html>
 <html>
 <!-- Table creation -->
@@ -26,7 +29,7 @@
         <td valign="top">
             <h1 align="center"> Create Account For Retailer </h1> <hr>
             <table border="1" align="center">
-            <form method="POST">
+            <form method="POST" action="../../controllers/retailerControllers/regcheck.php">
                <table align="center" style="font-size:20px;">
                     <tr>
                         <td>Name:</td>
@@ -37,9 +40,9 @@
                     <br>
                     <tr>
                         <td>Username:</td>
-                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter Username"></td>
+                        <td width="300px "><input type="username" name="username" value="" placeholder="Enter Username"></td>
                         <td>ID:</td>
-                        <td><input type="email" name="email" value=""placeholder="Enter ID"></td>
+                        <td><input type="number" name="id" value=""placeholder="Enter ID"></td>
                     </tr>
 
                     <tr>
@@ -64,9 +67,9 @@
                     </tr>
                     <tr>
                         <td>Password:</td>
-                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter Password"></td>
+                        <td width="300px "><input type="pasword" name="pasword" value="" placeholder="Enter Password"></td>
                         <td>Confirm Password:</td>
-                        <td><input type="email" name="email" value=""placeholder="Confirm Password"></td>
+                        <td><input type="password" name="pasword_extra" value=""placeholder="Confirm Password"></td>
                     </tr> 
                     
                     <!-- <table align="center" > -->

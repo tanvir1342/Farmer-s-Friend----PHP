@@ -1,3 +1,6 @@
+<?php 
+    require('header.php');
+?>
 <!DOCTYPE html>
 <html>
 <!-- center table creation -->
@@ -12,7 +15,7 @@
                 <tr style ="font-size:20px;">
                     <td><a href="#">Home  |</a></td>
                     <td><a href="#"> About us  |</a></td>
-                    <td><a href="#"> logout</a></td>
+                    <td><a href="../../controllers/retailerControllers/logout.php"> logout</a></td>
                 </tr>
             </table>
         </td>

@@ -1,3 +1,6 @@
+<?php 
+    require('header.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +16,7 @@
                 <tr>
                     <td><a href="retailerHome.php">Home|</a></td>
                     <td><a href="#">  About US |</a></td>
-                    <td><a href="#">  Logout</a></td>
+                    <td><a href="../../controllers/retailerControllers/logout.php">  Logout</a></td>
                 </tr>
             </table>
         </td>

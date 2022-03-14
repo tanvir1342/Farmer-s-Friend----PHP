@@ -1,3 +1,6 @@
+<?php 
+    require('header.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +17,7 @@
 		<td align="right">
 			<a href="a">Home | </a>
 			<a href="a">About Us | </a>
-			<a href="a">Log Out</a>
+			<a href="../../controllers/retailerControllers/logout.php">Log Out</a>
 		</td>
 	</tr>
     <tr height = "700px" valign="top" >
