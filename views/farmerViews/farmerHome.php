@@ -23,13 +23,13 @@
  <!-- Dashboard of Farmer -->
   <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
-           <img src="samantha.jpg" width="150px" height="150px"><br>
-           <h2>Samantha</h2><br>
+           <img src="jjjjj.jpg" width="150px" height="150px"><br>
+           <h2>mhsoikot402</h2><br>
            <p>Farmer</p>
            <p>age:25</p>
            <p>Type : Plantation</p>
-           <p>Gender: Female</p>
-           <a href="#">Edit profile</a>
+           <p>Gender: Male</p>
+           <a href="farmerEditAccount.php">Edit profile</a>
        </td>
         </td>
         <!-- output of user -->
@@ -45,7 +45,7 @@
                 <tr>
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmerMachinariesGuidelines.php">Machiniaries Guidelines</a></td>
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmingGuideline.php">Farming Guidelines</a></td>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="#">Get Support From Bank</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmerBankingGuideline.php">Get Support From Bank</a></td>
                 </tr>
                 <tr>
                     
