@@ -14,8 +14,8 @@
         </td>
         <td align = right >
            <a href="">Home |</a>
-           <a href="views/loginList.php"> Login |</a>
-           <a href="views/signuplist.php"> signup |</a>
+           <a href=""> Login |</a>
+           <a href=""> signup |</a>
            <a href=""> Logout </a>
         </td>
     </tr>
@@ -23,14 +23,16 @@
     <tr  height = 700px style="background-color:#95afc0;">
     	<td colspan="3">
     		<table align="center">
-    			<tr>
-    				<td><h1 style="font-size: 50px;">We are Farmer's<br><span style="font-size: 40px;color:#eb4d4b;">Friends</span></h1></td>
-    			</tr>
-    			<tr>
-    				<td><button style="width:90px;height:30px;color:white;background-color:#eb4d4b;">Click here</button></td>
-    			</tr>
-    		</table>
-
+                <tr bgcolor="#6ab04c" align="center">
+                    <td height="50px" width="50px"><a href="farmerViews/farmerCreateAccount.php">Farmer</a></td>
+                </tr>
+                <tr bgcolor="#6ab04c" align="center">
+                    <td height="50px" width="50px"><a href="">Retailer</a></td>
+                </tr> 
+                <tr bgcolor="#6ab04c" align="center">
+                    <td height="50px" width="50px"><a href="">Blogger</a></td>
+                </tr>   
+            </table>
     	</td>
         
        

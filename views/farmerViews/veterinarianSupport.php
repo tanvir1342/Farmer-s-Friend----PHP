@@ -1,3 +1,6 @@
+<?php 
+    require('header.php');
+?>
 <!DOCTYPE html>
 <html>
 <!-- Table creation -->
@@ -12,7 +15,7 @@
                 <tr style ="font-size:20px;">
                     <td><a href="farmerHome.php">Home  |</a></td>
                     <td><a href="#"> About us  |</a></td>
-                    <td><a href="#"> logout</a></td>
+                    <td><a href="../../controllers/farmerControllers/logout.php"> logout</a></td>
                 </tr>
             </table>
         </td>
