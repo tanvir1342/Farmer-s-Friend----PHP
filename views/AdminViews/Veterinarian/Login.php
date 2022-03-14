@@ -22,29 +22,28 @@
     </tr>
     <!-- daynamic menubar -->
     <tr  height = 700px>
-        <td width =15% bgcolor="C1BCBC" valign="top" align="center">
-           <img src="proPic.jpg" width="150px" height="100px"><br>
-           <h2>Tanvir Mahmud</h2><br>
-           <p>juniour excutive</p>
-           <p>age:25</p>
-           <p>gender:male</p>
-           <a href="#">Edit profile</a>
-       </td>
-        </td>
         <!-- output of user -->
-        <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
+        <td colspan="3" valign = top style ="background-color:#F5F2F1 ">
 
-            <h1 align = center>welcome,name</h1><hr>
-            <table  align="center" width="500px" >
+            <h1 align = center>Login Form</h1><hr>
+        <form method="POST" action="../../../controllers/adminControllers/VeterinarianControllers/vatLogincheck.php">
+              <table align="center">
                 <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="FarmerPost.php">Farmer Post</a></td>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="history.php">History</a></td>
+                    <td>Username: </td>
+                    <td><input type="username" name="username" placeholder="Enter your Username"></td>
                 </tr>
                 <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="Editprofile.php">Edit Profile</a></td>
-                    
+                    <td>Password: </td>
+                    <td><input type="password" name="password" placeholder="Enter your Password"></td>
                 </tr>
-            </table>
+                <br>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Login"></td>
+                </tr>
+            </table>  
+        </form>
+            
             
 
 
@@ -57,6 +56,9 @@
         </td>
     </tr>
 </table>
+<a href="../../../models/home.html">clicl</a>
+
+
 
 
 </html>

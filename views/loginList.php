@@ -33,7 +33,7 @@
                     <td height="50px" width="50px"><a href="AdminViews/Advisier(Agriculture)/Login.php">Adviser(Agriculture)</a></td>
                 </tr> 
                 <tr bgcolor="#6ab04c" align="center">
-                    <td height="50px" width="50px"><a href="">Vetrian</a></td>
+                    <td height="50px" width="50px"><a href="AdminViews/Veterinarian/Login.php">Vetrian</a></td>
                 </tr> 
                 <tr bgcolor="#6ab04c" align="center">
                     <td height="50px" width="50px"><a href="farmerViews/Login.php">Farmer</a></td>
