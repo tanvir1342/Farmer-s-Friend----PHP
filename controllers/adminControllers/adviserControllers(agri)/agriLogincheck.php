@@ -19,7 +19,7 @@ if(isset($_REQUEST['submit']))
 
 			if(trim($abc[0]) == $username && trim($abc[1]) == $password){
 				setcookie('status', 'true', time()+300, '/');
-				header('location: ../../../views/AdminViews/Adviser(Econmoic)/AddviserHome(eco).php');
+				header('location: ../../../views/AdminViews/Advisier(Agriculture)/AddviserHome(agri).php');
 			}
 		}
 		

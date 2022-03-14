@@ -10,7 +10,7 @@ if(isset($_REQUEST['submit']))
 	if($username != null && $password != null){
 		
 
-		$file = fopen('../../../models/Ecologin.txt', 'r');
+		$file = fopen('../../../models/adlogin.txt', 'r');
 
 
 		while (!feof($file)) {

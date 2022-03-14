@@ -30,7 +30,7 @@
                     <td height="50px" width="50px"><a href="AdminViews/Adviser(Econmoic)/Login.php">Adviser(Economics)</a></td>
                 </tr> 
                 <tr bgcolor="#6ab04c" align="center">
-                    <td height="50px" width="50px"><a href="">Adviser(Agriculture)</a></td>
+                    <td height="50px" width="50px"><a href="AdminViews/Advisier(Agriculture)/Login.php">Adviser(Agriculture)</a></td>
                 </tr> 
                 <tr bgcolor="#6ab04c" align="center">
                     <td height="50px" width="50px"><a href="">Vetrian</a></td>

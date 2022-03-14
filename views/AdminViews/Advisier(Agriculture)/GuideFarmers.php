@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+
+<?php 
+    require('header.php');
+?><!DOCTYPE html>
 <html>
 <!-- center table creation -->
 <table width = 100%;>
@@ -12,7 +15,7 @@
                 <tr style ="font-size:20px;">
                     <td><a href="#">Home  |</a></td>
                     <td><a href="#"> About us  |</a></td>
-                    <td><a href="#"> logout</a></td>
+                    <td><a href="../../../controllers/adminControllers/adviserControllers(agri)/logout.php"> logout</a></td>
                 </tr>
             </table>
         </td>
