@@ -23,7 +23,7 @@
  <!-- Dashboard of Farmer -->
   <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
-<<<<<<< HEAD
+
             <a href="farmerEditAccount.php"> Edit Account </a><br><br> 
             <a href="farmerPostProblems.php"> Post For Problem </a><br><br>
             <a href="farmerMachinariesGuidelines.php"> Machiniaries Guidelines </a><br><br>
@@ -35,19 +35,7 @@
             <a href="farmerBankingGuideline.php"> Get Support From Bank </a><br><br>
             <a href="farmerGeneralPayments.php"> General Payments </a><br><br>
             <a href="farmerWaterPayments.php"> Water Payments </a><br>	
-=======
-            <a href="farmerEditAccount.php"> Edit Account</a><br><br> 
-            <a href="farmerPostProblems.php"> Post For Problem |</a><br><br>
-            <a href="farmerMachinariesGuidelines.php"> Machiniaries Guidelines |</a><br><br>
-            <a href="veterinarianSupport.php"> Veterinarian Support |</a><br><br>
-            <a href="farmingGuideline.php"> Farming Guidelines |</a><br><br>
-            <a href="farmerMarketPrices.php"> Market Prices |</a><br><br>
-            <a href="farmerCheckWeather.php"> Check Weather |</a><br><br>
-            <a href="farmerDealsWithRetailer.php"> Deal With Retailers |</a><br><br>
-            <a href="farmerBankingGuideline.php"> Banking Guidelines |</a><br><br>
-            <a href="farmerGeneralPayments.php"> General Payments |</a><br><br>
-            <a href="farmerWaterPayments.php"> Water Payments |</a><br>		
->>>>>>> c3a848682f1ab0666e534d26eac6f4e484150ddf
+
 		</td>
         <!-- Output -->
         <td valign="top">

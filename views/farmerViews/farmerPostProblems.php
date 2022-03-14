@@ -54,7 +54,7 @@
 
             </table>
 
-            <h3>Farmer's Name : UngaBunga</h3>
+            <h3>Farmer's Name : mhsoikot402</h3>
             <textarea id ="guide" name="guide" rows="12" cols="180"></textarea><br>
             
             <a href="#">  Post This Problem|</a>
