@@ -26,7 +26,7 @@
         <td valign="top">
             <h1 align="center"> Create Account For Blogger </h1> <hr>
             <table border="1" align="center">
-            <form method="POST">
+            <form method="POST" action="../../controllers/bloggerControllers/regcheck.php">
                <table align="center" style="font-size:20px;">
                     <tr>
                         <td>Name:</td>
@@ -37,9 +37,9 @@
                     <br>
                     <tr>
                         <td>Username:</td>
-                        <td width="300px "><input type="name" name="name" value=""></td>
+                        <td width="300px "><input type="username" name="username" value=""></td>
                         <td>ID:</td>
-                        <td><input type="email" name="email" value=""></td>
+                        <td><input type="number" name="id" value=""></td>
                     </tr>
 
                     <tr>
@@ -51,20 +51,20 @@
                     <br>
                     <tr>
                         <td>Gender:</td>
-                        <td width="300px "><input type="radio" name="gen" > Male <input type="radio" name="gen" > Female <input type="radio" name="gen" > Other </td>
+                        <td width="300px "><input type="radio" name="gen" value="male"> Male <input type="radio" name="gen" value="Female" > Female <input type="radio" name="gen" value="other" > Other </td>
                                           
                     </tr>
                     <tr>
                         <td>Password:</td>
-                        <td width="300px "><input type="name" name="name" value=""></td>
+                        <td width="300px "><input type="pasword" name="pasword" value=""></td>
                         <td>Confirm Password:</td>
-                        <td><input type="email" name="email" value=""></td>
+                        <td><input type="pasword" name="pasword_extra" value=""></td>
                     </tr> 
                     
                     <!-- <table align="center" > -->
                             <tr align="center" width=100%>
                                 <td colspan="3">
-                                  <input type="submit" name="submit" value="Submit">   
+                                  <input type="submit" name="submit" value="submit">   
                                   <input type="reset" name="reset" value="Reset">
                                 </td>
                             </tr>

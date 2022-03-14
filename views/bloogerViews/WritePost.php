@@ -1,4 +1,6 @@
-
+<?php 
+    require('header.php');
+?>
 <html>
 <head>
 	<title>Blogger</title>

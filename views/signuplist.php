@@ -30,7 +30,7 @@
                     <td height="50px" width="50px"><a href="retailerViews/retailerCreateAccount.php">Retailer</a></td>
                 </tr> 
                 <tr bgcolor="#6ab04c" align="center">
-                    <td height="50px" width="50px"><a href="">Blogger</a></td>
+                    <td height="50px" width="50px"><a href="bloogerViews/CreateAccount.php">Blogger</a></td>
                 </tr>   
             </table>
     	</td>

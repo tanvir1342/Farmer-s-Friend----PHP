@@ -1,6 +1,4 @@
-<?php 
-    require('header.php');
-?>
+
 <!DOCTYPE html>
 <html>
 <!-- Table creation -->

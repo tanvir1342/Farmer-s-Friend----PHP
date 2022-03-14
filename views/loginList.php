@@ -36,13 +36,13 @@
                     <td height="50px" width="50px"><a href="">Vetrian</a></td>
                 </tr> 
                 <tr bgcolor="#6ab04c" align="center">
-                    <td height="50px" width="50px"><a href="">Farmer</a></td>
+                    <td height="50px" width="50px"><a href="farmerViews/Login.php">Farmer</a></td>
                 </tr>
                 <tr bgcolor="#6ab04c" align="center">
-                    <td height="50px" width="50px"><a href="">Retailer</a></td>
+                    <td height="50px" width="50px"><a href="retailerViews/Login.php">Retailer</a></td>
                 </tr> 
                 <tr bgcolor="#6ab04c" align="center">
-                    <td height="50px" width="50px"><a href="">Blogger</a></td>
+                    <td height="50px" width="50px"><a href="bloogerViews/Login.php">Blogger</a></td>
                 </tr>   
             </table>
     	</td>
