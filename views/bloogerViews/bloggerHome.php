@@ -23,7 +23,7 @@
            <img src="ProfileImage.jpg" width="200px" height="200px"><br>
            <h2>Rahat Anjum Atto</h2><br>
            <p>Blogger</p>
-           <p>Age: 25</p>
+           <p>Agee: 25</p>
            <p>Gender: Male</p>
            <a href="EditAccount.php">Edit Profile</a>
        </td>

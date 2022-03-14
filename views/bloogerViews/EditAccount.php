@@ -24,7 +24,7 @@
    <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
 
-		<a href="EditAccount.php">Edit Account</a><br><br>
+		<a href="EditAccount.php">Editt Account</a><br><br>
 		<a href="WritePost.php">Write a Post</a><br><br>
 		<a href="ReadPost.php">Read Posts</a><br><br>
 		<a href="PublishResearchPaper.php">Research Paper</a><br><br>

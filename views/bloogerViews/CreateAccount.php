@@ -29,7 +29,7 @@
             <form method="POST" action="../../controllers/bloggerControllers/regcheck.php">
                <table align="center" style="font-size:20px;">
                     <tr>
-                        <td>Name:</td>
+                        <td>Naame:</td>
                         <td width="300px "><input type="name" name="name" value=""></td>
                         <td>Email:</td>
                         <td><input type="email" name="email" value=""></td>
