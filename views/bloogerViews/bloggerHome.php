@@ -12,7 +12,7 @@
                 <tr style ="font-size:20px;">
                     <td><a href="bloggerHome.php">Home  |</a></td>
                     <td><a href="#"> About us  |</a></td>
-                    <td><a href="#"> Logout</a></td>
+                    <td><a href="../../controllers/bloggerControllers/logout.php"> Logout</a></td>
                 </tr>
             </table>
         </td>

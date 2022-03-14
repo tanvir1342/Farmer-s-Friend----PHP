@@ -15,7 +15,7 @@
 		<td align="right">
 			<a href="bloggerHome.php">Home</a>
 			<a href="0">| About Us</a>
-			<a href="0">| Logout</a>
+			<a href="../../controllers/bloggerControllers/logout.php">">| Logout</a>
 		</td>
 		
 
