@@ -32,7 +32,7 @@
         </td>
         <!-- Output -->
         <td valign="top">
-            <h1 align="center"> Create Account For Blogger </h1> <hr>
+            <h1 align="center">Edit Account For Blogger </h1> <hr>
             <table border="1" align="center">
             <form method="POST">
                <table align="center" style="font-size:20px;">
