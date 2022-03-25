@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../../models/Executive_info.php');
 
 if(isset($_REQUEST['submit']))
 {
@@ -8,9 +9,22 @@ if(isset($_REQUEST['submit']))
 	$password = $_REQUEST['password'];
 
 	if($username != null && $password != null){
+		$status = login($username,$password);
+		if($status)
+		{
+			$_SESSION['status'] = "true";
+			setcookie('status', 'true', time()+300, '/');
+			header('location: ../../../views/AdminViews/Executive/ExcutiveHome.php');
+		}
+		else
+		{
+			header('location: ../../../views/ExcutiveHome.php');
+		}
+
+
 		
 
-		$file = fopen('../../../models/Exlogin.txt', 'r');
+		/*$file = fopen('../../../models/Exlogin.txt', 'r');
 
 
 		while (!feof($file)) {
@@ -24,7 +38,7 @@ if(isset($_REQUEST['submit']))
 		}
 		
 		echo "Invalid username/password";
-
+*/
 	}
 	else{
 		echo "null submission ....";
