@@ -17,12 +17,6 @@ if(isset($_REQUEST['submit'])){
 	if($username != null && $password != null && $name != null && $email != null && $phoneNumber != null && $farmer_type !=null && $gen != null && $nid !=null)
 	{
 
-		/*$user =$name."|".$email."|".$username."|".$pasword."|".$phoneNumber."|".$gen."\r\n";
-		$file = fopen('../../models/farmerlogin.txt', 'w');
-		fwrite($file, $user);
-		
-		header('location: ../../views/farmerViews/login.php');*/
-
 		$status = create ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid);
 		if($status)
 		{

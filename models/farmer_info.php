@@ -33,19 +33,21 @@ function create($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,
 		return false;
 	}
 }
-function edit($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid)
-{
-    $con = mysqli_connect('localhost','root','','webtech');
-    $sql = "update farmer_login set username='$username', password='$password', name='$name' , email='$email', phone_number='$phoneNumber', farmer_type='$farmer_type', gender='$gen', nid='$nid' where username='$username'";
 
-    if(mysqli_query($con ,$sql))
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
+//edit account
+function edit ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid)
+{
+	$con = mysqli_connect('localhost','root','','webtech');
+	$sql = "update farmer_login set username='$username', password='$password', name='$name' , email='$email', phone_number='$phoneNumber', farmer_type='$farmer_type', gender='$gen', nid='$nid' where username='$username'";
+	
+	if(mysqli_query($con ,$sql))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 
