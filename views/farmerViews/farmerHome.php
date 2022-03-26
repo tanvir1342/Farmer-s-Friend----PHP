@@ -1,6 +1,13 @@
 <?php 
     require('header.php');
     $username = $_SESSION['Farmer_username'];
+    $msg = "";
+    if(isset($_GET['msg']))
+    {
+        if ($_GET['msg']== "updated") {
+            $msg = "updated successful";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,6 +44,8 @@
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
 
             <h1 align = center>Welcome,"Farmer's Name"</h1><hr>
+            <h3 align = center><?=$msg?></h3>
+
             <table  align="center" width="500px" >
                 <tr>
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmerEditAccount.php">Edit Account</a></td>

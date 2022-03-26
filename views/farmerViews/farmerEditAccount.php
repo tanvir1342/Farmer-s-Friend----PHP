@@ -41,7 +41,7 @@
         <td valign="top">
             <h1 align="center"> Edit Your Account </h1> <hr>
             <table border="1" align="center">
-            <form method="POST">
+            <form method="POST" action="../../controllers/farmerControllers/updateCheck.php" >
                <table align="center" style="font-size:20px;">
                     <tr>
                         <td>Change Name:</td>
@@ -52,7 +52,7 @@
                     <br>
                     <tr>
                         <td>Change Username:</td>
-                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter New Username"></td>
+                        <td width="300px "><input type="name" name="username" value="" placeholder="Enter New Username"></td>
                         <td>Change NID Number:</td>
                         <td><input type="number" name="nidNumber" value="" placeholder="Enter NID"></td>
                     </tr>
@@ -73,9 +73,9 @@
                     </tr>
                     <tr>
                         <td>Password:</td>
-                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter New Password"></td>
+                        <td width="300px "><input type="password" name="password" value="" placeholder="Enter New Password"></td>
                         <td>Confirm Password:</td>
-                        <td><input type="email" name="email" value="" placeholder="Confirm New Password"></td>
+                        <td><input type="password" name="pass" value="" placeholder="Confirm New Password"></td>
                     </tr> 
                     
                     <!-- <table align="center" > -->

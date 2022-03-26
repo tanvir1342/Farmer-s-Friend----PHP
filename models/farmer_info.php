@@ -35,10 +35,10 @@ function create($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,
 }
 
 //edit account
-function edit ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid)
+function edit ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid,$usernameold)
 {
 	$con = mysqli_connect('localhost','root','','webtech');
-	$sql = "update farmer_login set username='$username', password='$password', name='$name' , email='$email', phone_number='$phoneNumber', farmer_type='$farmer_type', gender='$gen', nid='$nid' where username='$username'";
+	$sql = "update farmer_login set username='$username', password='$password', name='$name' , email='$email', phone_number='$phoneNumber', farmer_type='$farmer_type', gender='$gen', nid='$nid' where username='$usernameold'";
 	
 	if(mysqli_query($con ,$sql))
 	{

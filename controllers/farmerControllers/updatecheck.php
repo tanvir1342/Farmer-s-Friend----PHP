@@ -1,6 +1,7 @@
 <?php 
 session_start();
 require('../../models/farmer_info.php');
+$usernameold = $_SESSION['Farmer_username'];
 
 if(isset($_REQUEST['submit'])){
 	
@@ -17,10 +18,11 @@ if(isset($_REQUEST['submit'])){
 	if($username != null && $password != null && $name != null && $email != null && $phoneNumber != null && $farmer_type !=null && $gen != null && $nid !=null)
 	{
 
-		$status = edit ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid);
+		$status = edit ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid,$usernameold);
 		if($status)
 		{
-			header('location: ../../views/farmerViews/farmerHome.php?msg=success');
+			$_SESSION['Farmer_username'] = $username;
+			header('location: ../../views/farmerViews/farmerHome.php?msg=updated');
 		}
 		else
 		{
