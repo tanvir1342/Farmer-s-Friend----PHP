@@ -17,14 +17,14 @@ if(isset($_REQUEST['submit'])){
 	if($username != null && $password != null && $name != null && $email != null && $phoneNumber != null && $farmer_type !=null && $gen != null && $nid !=null)
 	{
 
-		$status = create ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid);
+		$status = edit ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid);
 		if($status)
 		{
-			header('location: ../../views/farmerViews/login.php?msg=success');
+			header('location: ../../views/farmerViews/farmerHome.php?msg=success');
 		}
 		else
 		{
-			header('location: ../../views/farmerViews/farmerCreateAccount.php');
+			header('location: ../../views/farmerViews/farmerHome.php');
 		}
 
 

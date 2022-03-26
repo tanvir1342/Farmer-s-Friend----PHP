@@ -52,8 +52,8 @@
                     <tr>
                         <td>Change Username:</td>
                         <td width="300px "><input type="name" name="name" value="" placeholder="Enter New Username"></td>
-                        <td>Change ID:</td>
-                        <td><input type="email" name="email" value="" placeholder="Enter New ID"></td>
+                        <td>Change NID Number:</td>
+                        <td><input type="number" name="nidNumber" value="" placeholder="Enter NID"></td>
                     </tr>
 
                     <tr>
@@ -64,10 +64,11 @@
                     </tr>
                     <br>
                     <tr>
-                        <td>Change Farmer Type:</td>
-                        <td width="300px "><select> <option>Plantation</option><option>Husbandary</option><option>Fisheries</option> </select></td>
-                        <td>Change NID number:</td>
-                        <td><input type="number" name="nidNumber" value=""placeholder="Enter New NID"></td>                        
+                         <td>Gender:</td>
+                        <td width="300px "><input type="radio" name="gen" value="male" > Male 
+                        <input type="radio" name="gen" value="female" > Female <input type="radio" name="gen" > Other </td>
+                        <td>Farmer Type:</td>                        
+                        <td width="300px "><input type="radio" name="farmerType" value="plantation" > Plantation <input type="radio" name="farmerType" value="Husbandry" > Husbandary <input type="radio" name="farmerType" value="Fisheries" > Fisheries </td>                         
                     </tr>
                     <tr>
                         <td>Password:</td>

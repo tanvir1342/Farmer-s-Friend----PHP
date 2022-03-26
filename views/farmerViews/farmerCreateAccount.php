@@ -39,8 +39,8 @@
                     <tr>
                         <td>Username:</td>
                         <td width="300px "><input type="username" name="username" value="" placeholder="Enter Username"></td>
-                        <td>ID:</td>
-                        <td><input type="number" name="id" value=""placeholder="Enter ID"></td>
+                        <td>NID Number:</td>
+                        <td><input type="number" name="nidNumber" value="" placeholder="Enter NID"></td> 
                     </tr>
 
                     <tr>
@@ -51,19 +51,13 @@
                     </tr>
                     <br>
                     <tr>
-                        <td>Farmer Type:</td>                        
-                        <td width="300px "><input type="radio" name="farmerType" value="plantation" > Plantation 
-                        <input type="radio" name="farmerType" value="Husbandry" > Husbandary <input type="radio" name="farmerType" value="Fisheries" > Fisheries </td>
-
-                        <td>NID number:</td>
-                        <td><input type="number" name="nidNumber" value="" placeholder="Enter NID"></td>                        
-                    </tr>
-                    <tr>
                         <td>Gender:</td>
                         <td width="300px "><input type="radio" name="gen" value="male" > Male 
                         <input type="radio" name="gen" value="female" > Female <input type="radio" name="gen" > Other </td>
-                                          
+                        <td>Farmer Type:</td>                        
+                        <td width="300px "><input type="radio" name="farmerType" value="plantation" > Plantation <input type="radio" name="farmerType" value="Husbandry" > Husbandary <input type="radio" name="farmerType" value="Fisheries" > Fisheries </td>                 
                     </tr>
+                    <br>
                     <tr>
                         <td>Password:</td>
                         <td width="300px "><input type="password" name="password" value="" placeholder="Enter Password"></td>
