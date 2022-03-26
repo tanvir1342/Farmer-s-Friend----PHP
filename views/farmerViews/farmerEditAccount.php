@@ -1,5 +1,6 @@
 <?php 
     require('header.php');
+     $username = $_SESSION['Farmer_username'];
 ?>
 <!DOCTYPE html>
 <html>
