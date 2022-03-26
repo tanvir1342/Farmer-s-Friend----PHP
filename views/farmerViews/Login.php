@@ -11,7 +11,7 @@
             <table >
                 <!-- center menubar -->
                 <tr style ="font-size:20px;">
-                    <td><a href="#">Home  |</a></td>
+                    <td><a href="../../index.php">Home  |</a></td>
                     <td><a href="#"> About us  |</a></td>
                     <td><a href="../../controllers/farmerControllers/logout.php"> logout</a></td>
                 </tr>
@@ -38,6 +38,7 @@
                 <tr>
                     <td></td>
                     <td><input type="submit" name="submit" value="Login"></td>
+                 
                 </tr>
             </table>  
         </form>

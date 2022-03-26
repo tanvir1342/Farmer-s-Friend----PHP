@@ -51,8 +51,10 @@
                     </tr>
                     <br>
                     <tr>
-                        <td>Farmer Type:</td>
-                        <td width="300px "><select> <option>Plantation</option><option>Husbandary</option><option>Fisheries</option> </select></td>
+                        <td>Farmer Type:</td>                        
+                        <td width="300px "><input type="radio" name="farmerType" value="plantation" > Plantation 
+                        <input type="radio" name="farmerType" value="Husbandry" > Husbandary <input type="radio" name="farmerType" value="Fisheries" > Fisheries </td>
+
                         <td>NID number:</td>
                         <td><input type="number" name="nidNumber" value="" placeholder="Enter NID"></td>                        
                     </tr>
@@ -64,7 +66,7 @@
                     </tr>
                     <tr>
                         <td>Password:</td>
-                        <td width="300px "><input type="password" name="pasword" value="" placeholder="Enter Password"></td>
+                        <td width="300px "><input type="password" name="password" value="" placeholder="Enter Password"></td>
                         <td>Confirm Password:</td>
                         <td><input type="password" name="password_extra" value=""placeholder="Confirm Password"></td>
                     </tr> 
