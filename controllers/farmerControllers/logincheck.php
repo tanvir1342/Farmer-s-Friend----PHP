@@ -18,7 +18,7 @@ if(isset($_REQUEST['submit']))
 			$abc = explode('|', $user);
 
 			if(trim($abc[2]) == $username && trim($abc[3]) == $password){
-				setcookie('status', 'true', time()+300, '/');
+				setcookie('status', 'true', time()+900, '/');
 				header('location: ../../views/farmerViews/farmerHome.php');
 			}
 		}

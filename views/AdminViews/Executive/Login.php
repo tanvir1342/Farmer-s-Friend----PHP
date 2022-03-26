@@ -1,4 +1,16 @@
+<?php
+    $error = "";
 
+    if(isset($_GET['msg']))
+    {
+        if($_GET['msg']  == 'error'){
+            $error = "invaild username or password";
+        }
+        
+    }
+
+
+?>
 <!DOCTYPE html>
 <html>
 <!-- center table creation -->
@@ -24,6 +36,9 @@
         <td colspan="3" valign = top style ="background-color:#F5F2F1 ">
 
             <h1 align = center>Login Form</h1><hr>
+            <h3 align = center> <?=$error?></h3>
+
+           
         <form method="POST" action="../../../controllers/adminControllers/excecutiveControllers/excutiveLogincheck.php">
               <table align="center">
                 <tr>
@@ -54,7 +69,7 @@
         </td>
     </tr>
 </table>
-<a href="../../../models/home.html">clicl</a>
+
 
 
 

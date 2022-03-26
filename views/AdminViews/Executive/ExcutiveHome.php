@@ -1,5 +1,14 @@
 <?php 
     require('header.php');
+    require('../../../models/Executive_info.php');
+    $username = $_SESSION['Executive_username'];
+    $user = getuserinfo($username);
+    
+    //echo $user['Name'];
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,17 +33,17 @@
     <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
            <img src="proPic.jpg" width="150px" height="100px"><br>
-           <h2>Tanvir Mahmud</h2><br>
-           <p>juniour excutive</p>
-           <p>age:25</p>
-           <p>gender:male</p>
+           <h2></h2><br>
+           <p><?=$user['Name']?></p>
+           <p><?=$user['gender']?></p>
+           <p><?=$user['age']?></p>
            <a href="EditProfile.php">Edit profile</a>
        </td>
         </td>
         <!-- output of user -->
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
 
-            <h1 align = center>welcome,name</h1><hr>
+            <h1 align = center>welcome,<?=$user['Name']?></h1><hr>
             <table  align="center" width="500px" >
                 <tr>
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="listOfuser.php">user account</a></td>

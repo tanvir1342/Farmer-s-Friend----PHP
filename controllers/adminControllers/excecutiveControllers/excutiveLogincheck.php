@@ -13,12 +13,14 @@ if(isset($_REQUEST['submit']))
 		if($status)
 		{
 			$_SESSION['status'] = "true";
+			$_SESSION['Executive_username'] = $username;
 			setcookie('status', 'true', time()+300, '/');
 			header('location: ../../../views/AdminViews/Executive/ExcutiveHome.php');
 		}
 		else
 		{
-			header('location: ../../../views/ExcutiveHome.php');
+			header('location: ../../../views/AdminViews/Executive/Login.php?msg=error');
+
 		}
 
 
