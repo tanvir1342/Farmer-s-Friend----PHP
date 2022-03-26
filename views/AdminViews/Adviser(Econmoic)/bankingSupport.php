@@ -1,5 +1,12 @@
 <?php 
     require('header.php');
+    $msg = "";
+    if (isset($_GET['msg'])) {
+
+        if ($_GET['msg'] == 'done') {
+                $msg = "approved";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,61 +40,35 @@
         <!-- output of user -->
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
 
+            <h1 align = center><?=$msg?></h1>
             <h1 align = center>Banking Support</h1><hr>
             <table border="1px" align="center" width="98%">
             	<tr>
             		<td>Farmer name</td>
-            		<td>Id</td>
+            		<td>username</td>
             		<td>Land Property status</td>
             		<td>Yearly Income</td>
             		<td align="center">Resone for Loan</td>
             		<td>Amount of loan</td>
             		<td>Officials permit</td>
             	</tr>
-            	<tr>
-            		<td>Safi sikdar</td>
-            		<td>2000</td>
-            		<td>66 Kata</td>
-            		<td>7 lack</td>
-            		<td><p>
-            			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed non enim non nulla scelerisque tristique. Aenean a finibus magna. Phasellus vitae neque dui. Fusce eleifend a quam a ultricies. Quisque mattis mattis sapien ut hendrerit. Sed pretium odio non tortor gravida maximus. Curabitur vel lectus ac diam condimentum tincidunt. Proin euismod orci non massa tincidunt, ut blandit ligula pulvinar. Donec facilisis, eros non tempus pretium, nisi neque tincidunt nisi, vestibulum egestas augue risus nec mi. Integer bibendum efficitur orci, in dictum quam accumsan in. Phasellus nec lorem metus. Sed a leo sollicitudin, varius justo vitae, consectetur nisi. Sed dignissim sagittis diam a tincidunt. Proin sit amet viverra ante, at dictum leo. Vestibulum sed dui eget sapien ultrices finibus.
-            		</p></td>
-            		<td>2 lack</td>
-            		<td><a href="#">Pending</a></td>
-            	</tr>
-            	<tr>
-            		<td>Safi sikdar</td>
-            		<td>2000</td>
-            		<td>66 Kata</td>
-            		<td>7 lack</td>
-            		<td><p>
-            			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed non enim non nulla scelerisque tristique. Aenean a finibus magna. Phasellus vitae neque dui. Fusce eleifend a quam a ultricies. Quisque mattis mattis sapien ut hendrerit. Sed pretium odio non tortor gravida maximus. Curabitur vel lectus ac diam condimentum tincidunt. Proin euismod orci non massa tincidunt, ut blandit ligula pulvinar. Donec facilisis, eros non tempus pretium, nisi neque tincidunt nisi, vestibulum egestas augue risus nec mi. Integer bibendum efficitur orci, in dictum quam accumsan in. Phasellus nec lorem metus. Sed a leo sollicitudin, varius justo vitae, consectetur nisi. Sed dignissim sagittis diam a tincidunt. Proin sit amet viverra ante, at dictum leo. Vestibulum sed dui eget sapien ultrices finibus.
-            		</p></td>
-            		<td>2 lack</td>
-            		<td><a href="#">Pending</a></td>
-            	</tr>
-            	<tr>
-            		<td>Safi sikdar</td>
-            		<td>2000</td>
-            		<td>66 Kata</td>
-            		<td>7 lack</td>
-            		<td><p>
-            			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed non enim non nulla scelerisque tristique. Aenean a finibus magna. Phasellus vitae neque dui. Fusce eleifend a quam a ultricies. Quisque mattis mattis sapien ut hendrerit. Sed pretium odio non tortor gravida maximus. Curabitur vel lectus ac diam condimentum tincidunt. Proin euismod orci non massa tincidunt, ut blandit ligula pulvinar. Donec facilisis, eros non tempus pretium, nisi neque tincidunt nisi, vestibulum egestas augue risus nec mi. Integer bibendum efficitur orci, in dictum quam accumsan in. Phasellus nec lorem metus. Sed a leo sollicitudin, varius justo vitae, consectetur nisi. Sed dignissim sagittis diam a tincidunt. Proin sit amet viverra ante, at dictum leo. Vestibulum sed dui eget sapien ultrices finibus.
-            		</p></td>
-            		<td>2 lack</td>
-            		<td><a href="#">Pending</a></td>
-            	</tr>
-            	<tr>
-            		<td>Safi sikdar</td>
-            		<td>2000</td>
-            		<td>66 Kata</td>
-            		<td>7 lack</td>
-            		<td><p>
-            			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed non enim non nulla scelerisque tristique. Aenean a finibus magna. Phasellus vitae neque dui. Fusce eleifend a quam a ultricies. Quisque mattis mattis sapien ut hendrerit. Sed pretium odio non tortor gravida maximus. Curabitur vel lectus ac diam condimentum tincidunt. Proin euismod orci non massa tincidunt, ut blandit ligula pulvinar. Donec facilisis, eros non tempus pretium, nisi neque tincidunt nisi, vestibulum egestas augue risus nec mi. Integer bibendum efficitur orci, in dictum quam accumsan in. Phasellus nec lorem metus. Sed a leo sollicitudin, varius justo vitae, consectetur nisi. Sed dignissim sagittis diam a tincidunt. Proin sit amet viverra ante, at dictum leo. Vestibulum sed dui eget sapien ultrices finibus.
-            		</p></td>
-            		<td>2 lack</td>
-            		<td><a href="#">Pending</a></td>
-            	</tr>
+            	
+                <form method="POST" action="../../../controllers/adminControllers/adviserControllers(eco)/bank_supportcheck.php">
+                    <tr>
+                    <td><input width="10px" type="name" name="name" value="Safi sikdar"></td>
+                    <td><input type="username" name="username" value="Safi125"></td>
+                    <td><input type="text" name="land_Property_status" value="S66 Kata"></td>
+                    <td><input type="text" name="yearly_income" value="7 lack"></td>
+                    <td><input type="text" name="Amount_of_loan" value="2 lack"></td>
+                    <td><textarea id ="guide" name="reason" rows="5" cols="20" >
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada 
+                        fames ac turpis egestas. Sed non enim non nulla scelerisque tristique
+        
+                    </textarea><br></td>
+                    <td><input type="submit" name="submit" value="approve"></td>
+                </tr>
+                </form>
+            	
             </table>
             
         </td>

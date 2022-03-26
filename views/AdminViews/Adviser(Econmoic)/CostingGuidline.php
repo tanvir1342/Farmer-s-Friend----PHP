@@ -1,5 +1,12 @@
 <?php 
     require('header.php');
+    $msg = "";
+    if (isset($_GET['msg'])) {
+        if ($_GET['msg'] == "done") {
+            $msg = "posted";
+        }
+        
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,11 +40,14 @@
         <!-- output of user -->
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
 
+            <h1 align = center><?=$msg?></h1>
             <h1 align = center>write guidline about Costing side</h1><hr>
             <h3>Adviser Name : Tanvir</h3>
-            <textarea id ="guide" name="guide" rows="12" cols="180"></textarea><br>
+            <form method="POST" action="../../../controllers/adminControllers/adviserControllers(eco)/postchechk.php">
+                 <textarea id ="guide" name="guide" rows="12" cols="180"></textarea><br>
+                 <input type="submit" name="submit" value="Post this problem">
+            </form>
             
-            <a href="#">  Post This Guideline|</a>
             <a href="#">  Cancel</a>
 
         </td>

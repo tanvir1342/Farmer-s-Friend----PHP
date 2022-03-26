@@ -1,5 +1,8 @@
 <?php 
     require('header.php');
+    require('../../../models/adviser(eco)_info.php');
+    $username =$_SESSION['adviser_eco_username'];
+    $user = getuserinfo($username);
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,17 +27,17 @@
     <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
            <img src="proPic.jpg" width="150px" height="100px"><br>
-           <h2>Tanvir Mahmud</h2><br>
+           <h2>Name: <?=$user['Name']?></h2><br>
            <p>Adviser(Economics)</p>
-           <p>age:25</p>
-           <p>gender:male</p>
+           <p>Age:<?=$user['age']?></p>
+           <p>gender: <?=$user['gender']?></p>
            <a href="EditProfile.php">Edit profile</a>
        </td>
         </td>
         <!-- output of user -->
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
 
-            <h1 align = center>welcome,name</h1><hr>
+            <h1 align = center>welcome,<?=$user['Name']?></h1><hr>
             <table  align="center" width="500px" >
                 <tr>
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="post.php">Post</a></td>

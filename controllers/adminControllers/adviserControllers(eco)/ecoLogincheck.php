@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../../models/adviser(eco)_info.php');
 
 if(isset($_REQUEST['submit']))
 {
@@ -9,19 +10,15 @@ if(isset($_REQUEST['submit']))
 
 	if($username != null && $password != null){
 		
+		   $status = login($username,$password);
 
-		$file = fopen('../../../models/adlogin.txt', 'r');
-
-
-		while (!feof($file)) {
-			$user = fgets($file);
-			$abc = explode('|', $user);
-
-			if(trim($abc[0]) == $username && trim($abc[1]) == $password){
+		   if($status)
+		    {
+				$_SESSION['status'] = "true";
+				$_SESSION['adviser_eco_username'] = $username;
 				setcookie('status', 'true', time()+300, '/');
 				header('location: ../../../views/AdminViews/Adviser(Econmoic)/AddviserHome(eco).php');
-			}
-		}
+		    }
 		
 		echo "Invalid username/password";
 

@@ -3,6 +3,17 @@
     require('../../../models/farmer_info.php');
     $user = getuser();
     //print_r($user);
+    $msg = "";
+    if (isset($_GET['msg'])) {
+        if($_GET['msg'] == 'done')
+        {
+            $msg = "created account";
+        }
+        if($_GET['msg'] == 'failed')
+        {
+            $msg = "created account failed";
+        }
+    }
 
 ?>
 <!DOCTYPE html>
@@ -50,6 +61,7 @@
                 </tr>
                 <?php
 
+                if($user!=null){
                 foreach ($user as $user) {
 
 
@@ -68,41 +80,63 @@
                 <?php
                     
                 }
+                }
 
                 ?>
             </table><br>
 
             <!-- creat new user account  -->
+            <h3 align="center"><?=$msg?></h3><br>
             <h3 align="center">Creat new user</h3><br>
-            <form method="POST">
+            <form method="POST" action="../../../controllers/adminControllers/excecutiveControllers/FarmerCreatAccount.php">
                <table align="center" style="font-size:20px;">
-                <tr>
-                    <td>Name:</td>
-                    <td width="300px "><input type="name" name="name" value=""></td>
-                    <td>Email:</td>
-                    <td><input type="email" name="email" value=""></td>
-                </tr>
-                <br>
-                <tr>
-                    <td>phone number:</td>
-                    <td width="300px "><input type="number" name="phoneNumber" value=""></td>
-                    <td>Adress:</td>
-                    <td><input type="text" name="adress" value=""></td>
-                </tr>
-                <br>
-                <tr>
-                    <td>Farmer type:</td>
-                    <td width="300px "><input type="text" name="farmerType" value=""></td>
-                    <td>NID number:</td>
-                    <td><input type="number" name="nidNumber" value=""></td>
-                    <td><input type="submit" name="submit" value="submit"></td>
-                </tr>
-                <tr align="center">
-                    <td colspan="3">
-                      <input type="submit" name="submit" value="submit">   
-                    </td>
-                </tr>
-            </table>
+                    <tr>
+                        <td>Name:</td>
+                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter Name"></td>
+                        <td>Email:</td>
+                        <td><input type="email" name="email" value=""placeholder="Enter Email"></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Username:</td>
+                        <td width="300px "><input type="username" name="username" value="" placeholder="Enter Username"></td>
+                        <td>NID Number:</td>
+                        <td><input type="number" name="nidNumber" value="" placeholder="Enter NID"></td> 
+                    </tr>
+
+                    <tr>
+                        <td>Phone Number:</td>
+                        <td width="300px "><input type="number" name="phoneNumber" value="" placeholder="Enter Phone Number"></td>
+                        <td>Photo:</td>
+                        <td><input type="file" name="" placeholder="Enter Photo"></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Gender:</td>
+                        <td width="300px "><input type="radio" name="gen" value="male" > Male 
+                        <input type="radio" name="gen" value="female" > Female <input type="radio" name="gen" > Other </td>
+                        <td>Farmer Type:</td>                        
+                        <td width="300px "><input type="radio" name="farmerType" value="plantation" > Plantation <input type="radio" name="farmerType" value="Husbandry" > Husbandary <input type="radio" name="farmerType" value="Fisheries" > Fisheries </td>                 
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Password:</td>
+                        <td width="300px "><input type="password" name="password" value="" placeholder="Enter Password"></td>
+                        <td>Confirm Password:</td>
+                        <td><input type="password" name="cpassword" value=""placeholder="Confirm Password"></td>
+                    </tr> 
+                    
+                    <!-- <table align="center" > -->
+                            <tr align="center" width=100%>
+                                <td colspan="3">
+                                  <input type="submit" name="submit" value="submit">   
+                                  <input type="reset" name="reset" value="Reset">
+                                </td>
+                            </tr>
+                    <!-- </table> -->
+                
+
+                </table>
                     
             </form>
             
