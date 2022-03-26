@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../models/farmer_info.php');
 
 if(isset($_REQUEST['submit']))
 {
@@ -7,6 +8,7 @@ if(isset($_REQUEST['submit']))
 	$username = $_REQUEST['username'];
 	$password = $_REQUEST['password'];
 
+<<<<<<< HEAD
 	if($username != null && $password != null){
 		
 
@@ -21,12 +23,25 @@ if(isset($_REQUEST['submit']))
 				setcookie('status', 'true', time()+900, '/');
 				header('location: ../../views/farmerViews/farmerHome.php');
 			}
+=======
+	if($username != null && $password != null)
+	{
+		$status = login ($username,$password);
+		if($status)
+		{
+			$_SESSION['status'] = "true";
+			setcookie('status', 'true', time()+300, '/');
+			header('location: ../../views/farmerViews/farmerHome.php');
 		}
-		
-		echo "Invalid username/password";
+		else
+		{
+			header('location: ../../views/farmerViews/farmerHome.php');
+>>>>>>> 6d766b814c8383f6a6a05dac1a731bdeac1e2e4b
+		}
 
 	}
-	else{
+	else
+	{
 		echo "null submission ....";
 	}
 }
