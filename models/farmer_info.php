@@ -35,7 +35,7 @@ function create($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,
 }
 
 //edit account
-function edit ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid,$usernameold)
+function edit($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid,$usernameold)
 {
 	$con = mysqli_connect('localhost','root','','webtech');
 	$sql = "update farmer_login set username='$username', password='$password', name='$name' , email='$email', phone_number='$phoneNumber', farmer_type='$farmer_type', gender='$gen', nid='$nid' where username='$usernameold'";
@@ -48,6 +48,17 @@ function edit ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$
 	{
 		return false;
 	}
+}
+function getuser()
+{
+	$con = mysqli_connect('localhost','root','','webtech');
+	$sql = "select *from farmer_login";
+	$result = mysqli_query($con ,$sql);
+	if ($result->num_rows > 0){
+		$row = mysqli_fetch_all($result);
+		return $row;
+	}
+	
 }
 
 

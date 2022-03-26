@@ -1,5 +1,9 @@
 <?php 
     require('header.php');
+    require('../../../models/farmer_info.php');
+    $user = getuser();
+    //print_r($user);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,33 +39,37 @@
             <h3 align = center>Farmer user List</h3>
             <table border="1px" align="center" width="80%">
                 <tr>
+                    <td>username</td>
                     <td>Name</td>
                     <td>Email</td>
                     <td>Phone number</td>
-                    <td>Farmer type</td>
-                    <td>NID</td>
+                    <td>Farmer Type</td>
+                    <td>gender</td>
+                    <td>Nid</td>
+                    <td>Photo</td>
                 </tr>
+                <?php
+
+                foreach ($user as $user) {
+
+
+                    ?>
+
                 <tr>
-                    <td>Tomal</td>
-                    <td>tomal@gmail.com</td>
-                    <td>01777777777777</td>
-                    <td>Plantetion</td>
-                    <td>441341564445q36626</td>
+                    <td><?=$user['0']?></td>
+                    <td><?=$user['2']?></td>
+                    <td><?=$user['3']?></td>
+                    <td><?=$user['4']?></td>
+                    <td><?=$user['5']?></td>
+                    <td><?=$user['6']?></td>
+                    <td><?=$user['7']?></td>
+                    <td>null</td>
                 </tr>
-                <tr>
-                    <td>Tomal</td>
-                    <td>tomal@gmail.com</td>
-                    <td>01777777777777</td>
-                    <td>Plantetion</td>
-                    <td>441341564445q36626</td>
-                </tr>
-                <tr>
-                    <td>Tomal</td>
-                    <td>tomal@gmail.com</td>
-                    <td>01777777777777</td>
-                    <td>Plantetion</td>
-                    <td>441341564445q36626</td>
-                </tr>
+                <?php
+                    
+                }
+
+                ?>
             </table><br>
 
             <!-- creat new user account  -->
