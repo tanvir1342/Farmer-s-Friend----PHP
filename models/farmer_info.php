@@ -21,9 +21,10 @@ function login($username,$password)
 function create($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid)
 {
 	$con = mysqli_connect('localhost','root','','webtech');
-	$sql = "INSERT INTO farmer_login (`username`, `password`, `name`, `email`, `phone_number`, `farmer_type`, `gender`, `nid`) VALUES ('{$username}','{$password}','{$name}','{$email}','{$phoneNumber}','{$farmer_type}','{$gen}','{$nid}'";
-	$result = mysqli_query($con ,$sql);
-	if($result)
+	$sql = "insert into farmer_login (username,password,name,email,phone_number,farmer_type,gender,nid) values ('$username','$password','$name','$email','$phoneNumber',
+	'$farmer_type','$gen','$nid')";
+	
+	if(mysqli_query($con ,$sql))
 	{
 		return true;
 	}

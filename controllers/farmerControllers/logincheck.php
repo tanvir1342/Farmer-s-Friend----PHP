@@ -19,7 +19,7 @@ if(isset($_REQUEST['submit']))
 		}
 		else
 		{
-			header('location: ../../views/farmerViews/farmerHome.php');
+			header('location: ../../views/farmerViews/Login.php?msg=error');
 
 		}
 

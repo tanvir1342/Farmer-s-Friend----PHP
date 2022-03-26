@@ -1,4 +1,18 @@
+<?php
+$msg = "";
+if(isset($_GET['msg']))
+{
+    if($_GET['msg'] == "success")
+    {
+        $msg = "Registration successfull";
+    }
+    if($_GET['msg'] == "error")
+    {
+        $msg = "invalid username or password";
+    }
+}
 
+?>
 <!DOCTYPE html>
 <html>
 <!-- center table creation -->
@@ -24,6 +38,7 @@
         <td colspan="3" valign = top style ="background-color:#F5F2F1 ">
 
             <h1 align = center>Login Form</h1><hr>
+            <h1 align = center><?=$msg?></h1>
         <form method="POST" action="../../controllers/farmerControllers/logincheck.php">
               <table align="center">
                 <tr>
@@ -55,7 +70,7 @@
         </td>
     </tr>
 </table>
-<a href="../../../models/home.html">clicl</a>
+
 
 
 

@@ -26,7 +26,7 @@ if(isset($_REQUEST['submit'])){
 		$status = create ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid);
 		if($status)
 		{
-			header('location: ../../views/farmerViews/login.php');
+			header('location: ../../views/farmerViews/login.php?msg=success');
 		}
 		else
 		{
