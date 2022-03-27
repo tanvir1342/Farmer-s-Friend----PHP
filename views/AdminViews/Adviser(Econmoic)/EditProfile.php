@@ -1,5 +1,8 @@
 <?php 
     require('header.php');
+    require('../../../models/adviser(eco)_info.php');
+    $username =$_SESSION['adviser_eco_username'];
+    $user = getuserinfo($username);
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,7 +36,40 @@
         <!-- output of user -->
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
 
-            <h1 align = center>Farmer's Posts</h1><hr>
+            <h1 align = center>Edit Profile</h1><hr>
+            <form method="POST" action="../../../controllers/adminControllers/adviserControllers(eco)/editProfileChechk.php">
+                <table align="center">
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="name" name="name" value="<?=$user['Name']?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="username" name="username" value="<?=$user['username']?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password" value="<?=$user['password']?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="email" value="<?=$user['email']?>"></td>
+                    </tr>
+                     <tr>
+                        <td>Gender</td>
+                        <td><input type="text" name="gender" value="<?=$user['gender']?>"></td>
+                    </tr>
+                     <tr>
+                        <td>Age</td>
+                        <td><input type="text" name="age" value="<?=$user['age']?>"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" name="submit" value="Edit Profile"></td>
+                    </tr>
+                    
+                </table>
+
+            </form>
 
         </td>
     </tr>

@@ -1,5 +1,15 @@
 <?php 
     require('header.php');
+    require('../../../models/adviser(eco)_info.php');
+    $username =$_SESSION['adviser_eco_username'];
+    $user = getuserinfo($username);
+    $msg ="";
+    if (isset($_GET['msg'])) {
+        if ($_GET['msg'] == "applied") {
+            $msg = "Appplied successfully";
+        
+    }
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,11 +44,12 @@
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
 
             <h1 align = center>Apply for Leave</h1><hr>
-            <form method="post">
+             <h3 align = center><?=$msg?></h3>
+            <form method="post" action="../../../controllers/adminControllers/adviserControllers(eco)/applyleave.php">
                 <table border="1px" align="center">
                 <tr>
                     <td>name</td>
-                    <td>Id</td>
+                    <td>Username</td>
                     <td>Reasone for Leave</td>
                     <td>Leaving Date</td>
                     <td>Joining Date</td>
@@ -46,15 +57,15 @@
 
                 </tr>
                 <tr>
-                    <td><input type="name" name="name"></td>
-                    <td><input type="number" name="id"></td>
+                    <td><input type="name" name="name" value="<?=$user['Name']?>"></td>
+                    <td><input type="username" name="username" value="<?=$user['username']?>"></td>
                     <td><input type="text" name="reasoneForLeave"></td>
                     <td><input type="date" name="Form"></td>
                     <td><input type="date" name="to"></td>
                     <td><input type="number" name="totalDays"></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" name="submit"></td>
+                    <td><input type="submit" name="submit" value="Apply"></td>
                 </tr>
             </table>
                 

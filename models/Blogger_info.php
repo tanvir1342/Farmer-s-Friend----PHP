@@ -1,9 +1,5 @@
 <?php
 
-
-
-
-
 function login($username,$password)
 {
 	$con = mysqli_connect('localhost','root','','webtech');
