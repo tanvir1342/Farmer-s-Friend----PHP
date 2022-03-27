@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../models/Blogger_info.php');
 
 if(isset($_REQUEST['submit']))
 {
@@ -7,10 +8,22 @@ if(isset($_REQUEST['submit']))
 	$username = $_REQUEST['username'];
 	$password = $_REQUEST['password'];
 
-	if($username != null && $password != null){
-		
+	if($username != null && $password != null)
+	{
+		$status = login($username,$password);
+		if($status)
+		{
+			$_SESSION['status'] = true;
+			$_SESSION['Blogger_username'] = $username;
+			setcookie('status', 'true', time()+300, '/');
+			header('location: ../../views/bloogerViews/bloggerHome.php');
+		}
+		else
+		{
+			header('location: ../../../views/bloggerHome.php');
+		}
 
-		$file = fopen('../../models/bloglogin.txt', 'r');
+		/*$file = fopen('../../models/bloglogin.txt', 'r');
 
 		while (!feof($file)) {
 			$user = fgets($file);
@@ -25,12 +38,9 @@ if(isset($_REQUEST['submit']))
 		echo "Invalid username/password";
 
 	}
-	else{
-		echo "null submission ....";
+	*/
+}else{
+			echo "null submission";
+		}
 	}
-}
-else{
-	echo "Enter username name and password 1st";
-}
-
 ?>

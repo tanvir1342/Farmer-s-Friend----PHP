@@ -42,7 +42,7 @@ img {
 			<table width="100%">
 				<tr align="left">
 					<td>
-						<img src="komi.png" style="width:150px">
+						<img src="" style="width:150px">
 						<h1>Name: Komi Chan</h1>
 					</td>
 				</tr>

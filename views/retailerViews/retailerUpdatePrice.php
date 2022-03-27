@@ -45,11 +45,23 @@
                     
                 </tr>
                 <tr align="center">
+                    <td>Wheat</td>
+                    <td>70</td>
+                    <td>71</td>
+                    <td><a href="#">Update</a></td>
+                 </tr>  
+                <tr align="center">
+                    <td>Potato</td>
+                    <td>70</td>
+                    <td>71</td>
+                    <td><a href="#">Update</a></td>
+                 </tr>  
+                <tr align="center">
                     <td>Rice</td>
                     <td>70</td>
                     <td>71</td>
                     <td><a href="#">Update</a></td>
-                    
+                 </tr>   
             </table>
         </td>
          

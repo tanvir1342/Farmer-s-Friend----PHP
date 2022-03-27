@@ -1,3 +1,14 @@
+<?php 
+    require('header.php');
+    $username = $_SESSION['Blogger_username'];
+    $msg = "";
+    if(isset($_GET['msg']))
+    {
+        if ($_GET['msg']== "updated") {
+            $msg = "update successful";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html>
 <!-- center table creation -->
