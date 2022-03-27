@@ -39,35 +39,38 @@
         <!-- Output -->
         <td valign="top">
             <h1 align="center"> Post For Problems </h1> <hr>
-            
-            <table>
-                <tr>
-                    <td>Select Type</td>
-                         <td>
-                                <select>
-                                    <option>Agriculture Related</option>
-                                    <option>Agriculture Costing Related</option>
-                                    <option>Treatment Request</option>
-                                </select>
-                         </td>
-                 </tr>
+            <form method="POST" action="../../controllers/farmerControllers/postProblemCheck.php">
+                <table>
+                    <tr>
+                            <td>Select Problem Type:</td>                        
+                            <td width="300px "><input type="radio" name="problemType" value="Agriculture Related" > Agriculture Related <input type="radio" name="problemType" value="Agriculture Costing Related" > Agriculture Costing Related <input type="radio" name="problemType" value="Treatment Request" > Treatment Request </td> 
+                            <td>Username:</td>
+                            <td width="300px "><input type="username" name="username" value="" placeholder="Enter Username"></td>
+                     </tr>
 
-            </table>
+                </table>
+                <table>
 
-            <h3>Farmer's Name : mhsoikot402</h3>
-            <textarea id ="guide" name="guide" rows="12" cols="180"></textarea><br>
-            
-            <a href="#">  Post This Problem|</a>
-            <a href="#">  Cancel</a>
-             
+                <textarea id ="guide" name="problem" rows="12" cols="180"></textarea><br>
+                
+               <tr align="center" width=100%>
+                    <td colspan="3">
+                        <input type="submit" name="submit" value="Post This Problem">   
+                        <input type="reset" name="reset" value="Cancel">
+                    </td>
+                </tr>
+                <table>
+             <form>
         </td>
     </tr>
     <!-- Footer Part -->
+
     <tr  height = 100px;>
         <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
            All Copyrights @2022 Reserved by Gallant ltd.
         </td>
     </tr>
+
 </table>
 
 
