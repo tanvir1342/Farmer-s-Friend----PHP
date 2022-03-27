@@ -23,7 +23,7 @@
 	<tr height="700px"> 
 		<td width="10%" valign="top" align="center" bgcolor="C1BCBC">
 		
-		<a href="EditAccount.php">Editt Account</a><br><br>
+		<a href="EditAccount.php">Edit Account</a><br><br>
 		<a href="WritePost.php">Write a Post</a><br><br>
 		<a href="ReadPost.php">Read Posts</a><br><br>
 		<a href="PublishResearchPaper.php">Research Paper</a><br><br>
@@ -39,8 +39,8 @@
 			</textarea><hr>
 			
 			<div class="clearfix">
-				<button type="button" class="cancelbtn">Cancel</button>
-				<button type="submit" class="signupbtn">Post</button>
+				<button type="button" class="cancel">Cancel</button>
+				<button type="submit" class="submit">Post</button>
 			</div><br><br>
 
 	

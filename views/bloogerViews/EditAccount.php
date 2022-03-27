@@ -1,5 +1,6 @@
 <?php 
     require('header.php');
+    //$username = $_SESSION['Blogger_username'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +25,7 @@
    <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
 
-		<a href="EditAccount.php">Editt Account</a><br><br>
+		<a href="EditAccount.php">Edit Account</a><br><br>
 		<a href="WritePost.php">Write a Post</a><br><br>
 		<a href="ReadPost.php">Read Posts</a><br><br>
 		<a href="PublishResearchPaper.php">Research Paper</a><br><br>
@@ -34,7 +35,7 @@
         <td valign="top">
             <h1 align="center">Edit Account For Blogger </h1> <hr>
             <table border="1" align="center">
-            <form method="POST">
+             <form method="POST" action="../../controllers/bloggerControllers/updatecheck.php" >
                <table align="center" style="font-size:20px;">
                     <tr>
                         <td>Name:</td>
@@ -45,28 +46,27 @@
                     <br>
                     <tr>
                         <td>Username:</td>
-                        <td width="300px "><input type="name" name="name" value=""></td>
-                        <td>ID:</td>
-                        <td><input type="email" name="email" value=""></td>
+                        <td width="300px "><input type="username" name="username" value=""></td>
+                        
                     </tr>
 
                     <tr>
                         <td>Phone Number:</td>
-                        <td width="300px "><input type="number" name="phoneNumber" value=""></td>
+                        <td width="300px "><input type="number" name="phone" value=""></td>
                         <td>Photo:</td>
                         <td><input type="file" name=""></td>
                     </tr>
                     <br>
                     <tr>
                         <td>Gender:</td>
-                        <td width="300px "><input type="radio" name="gen" > Male <input type="radio" name="gen" > Female <input type="radio" name="gen" > Other </td>
+                        <td width="300px "><input type="radio" name="gender" > Male <input type="radio" name="gender" > Female <input type="radio" name="gender" > Other </td>
                                           
                     </tr>
                     <tr>
                         <td>Password:</td>
-                        <td width="300px "><input type="name" name="name" value=""></td>
+                        <td width="300px "><input type="password" name="password" value=""></td>
                         <td>Confirm Password:</td>
-                        <td><input type="email" name="email" value=""></td>
+                        <td><input type="password" name="confirm_password" value=""></td>
                     </tr> 
                     
                     <!-- <table align="center" > -->
