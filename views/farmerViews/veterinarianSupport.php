@@ -37,20 +37,27 @@
 		</td>
 		<td valign="top">
 			<h1 align="center">Veterinarian Support</h1><hr>
+            <form method="POST" action="../../controllers/farmerControllers/vetSupportCheck.php">
 
-			<label>Farmer's Name:</label><br><br>
-			<input type="text" name="name" value=""><br><br>
+        			<label>Userame:</label><br><br>
+        			<input type="text" name="name" value=""><br><br>
 
-			<label>Email:</label><br><br>
-			<input type="email" name="email" value=""><br><br>
+        			<label>Farmer Name :</label><br><br>
+        			<input type="name" name="fname" value=""><br><br>
 
-			<label>Message:</label><br><br>
-			<textarea rows="8" cols="100">Write about your concerns....</textarea><br><br>			
+                    <label>Animal Type : </label><br><br>
+                    <input type="animaltype" name="animaltype" value=""><br><br>
 
-			<div class="clearfix">
-				<button type="button" class="cancel">Cancel</button>
-				<button type="button" class="Submit">Submit</button>
-				
+        			<label>Description :</label><br><br>
+        			<textarea id ="des" name="description" rows="12" cols="180"></textarea><br>			
+
+        			<tr align="center" width=100%>
+                    <td colspan="3">
+                        <input type="submit" name="submit" value="submit">   
+                        <input type="reset" name="reset" value="Cancel">
+                    </td>
+                </tr>
+			<Form>	
 			</div><br><br>
 
 			<label for="response">Check Responses:</label><br><br>
