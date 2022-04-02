@@ -1,5 +1,18 @@
 <?php 
     require('header.php');
+    require('../../../models/adviser(agri)_info.php');
+    $user = getuser();
+    $msg = "";
+    if (isset($_GET['msg'])) {
+        if($_GET['msg'] == 'done')
+        {
+            $msg = "created account";
+        }
+        if($_GET['msg'] == 'failed')
+        {
+            $msg = "created account failed";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,75 +45,89 @@
         <!-- output of user -->
         <td valign = top style ="background-color:#F5F2F1 ">
 
-            <h3 align = center>Adviser(Agriculture) user List</h3>
+            <h3 align = center>Adviser(Economics) user List</h3>
             <table border="1px" align="center" width="80%">
                 <tr>
                     <td>Name</td>
-                    <td>Email</td>
-                    <td>Phone number</td>
-                    <td>Adress</td>
-                    <td>NID</td>
+                    <td>username</td>
+                    <td>email</td>
+                    <td>gender</td>
+                    <td>Age</td>
+                    <td>salary</td>
+                    <td>joining Date</td>
+                    <td>photo</td>
                 </tr>
+                <?php
+
+                if($user!=null){
+                foreach ($user as $user) {
+
+
+                    ?>
+
                 <tr>
-                    <td>Tomal</td>
-                    <td>tomal@gmail.com</td>
-                    <td>01777777777777</td>
-                    <td>41/3,Mohkhali,Dhaka</td>
-                    <td>441341564445q36626</td>
+                    <td><?=$user['0']?></td>
+                    <td><?=$user['1']?></td>
+                    <td><?=$user['3']?></td>
+                    <td><?=$user['4']?></td>
+                    <td><?=$user['5']?></td>
+                    <td><?=$user['6']?></td>
+                    <td><?=$user['7']?></td>
+                    <td>null</td>
                 </tr>
-                <tr>
-                    <td>Tomal</td>
-                    <td>tomal@gmail.com</td>
-                    <td>01777777777777</td>
-                    <td>41/3,Mohkhali,Dhaka</td>
-                    <td>441341564445q36626</td>
-                </tr>
-                <tr>
-                    <td>Tomal</td>
-                    <td>tomal@gmail.com</td>
-                    <td>01777777777777</td>
-                    <td>41/3,Mohkhali,Dhaka</td>
-                    <td>441341564445q36626</td>
-                </tr>
+                <?php
+                    
+                }
+                }
+
+                ?>
+                
             </table><br>
 
             <!-- creat new user account  -->
+            <h3 align="center"><?=$msg?></h3><br>
             <h3 align="center">Create new user</h3><br>
-            <form method="POST">
-               <table align="center" style="font-size:20px;">
-                <tr>
-                    <td>Name:</td>
-                    <td width="300px "><input type="name" name="name" value=""></td>
-                    <td>Email:</td>
-                    <td><input type="email" name="email" value=""></td>
-                </tr>
-                <br>
-                <tr>
-                    <td>phone number:</td>
-                    <td width="300px "><input type="number" name="phoneNumber" value=""></td>
-                    <td>Adress:</td>
-                    <td><input type="text" name="adress" value=""></td>
-                </tr>
-                <br>
-                <tr>
-                    <td>NID number:</td>
-                    <td width="300px "><input type="text" name="adress" value=""></td>
-                    <td>User Name:</td>
-                    <td><input type="username" name="username" value=""></td>
-                </tr>
-                <tr>
-                    <td>Pasword:</td>
-                    <td width="300px "><input type="text" name="pasword" value=""></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr align="center">
-                    <td colspan="3">
-                      <input type="submit" name="submit" value="submit">   
-                    </td>
-                </tr>
-            </table>
+
+            <form method="POST" action="../../../controllers/adminControllers/excecutiveControllers/agricreataccount.php">
+                <table align="center">
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="name" name="name" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="username" name="username" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="email" value=""></td>
+                    </tr>
+                     <tr>
+                        <td>Gender</td>
+                        <td><input type="text" name="gender" value=""></td>
+                    </tr>
+                     <tr>
+                        <td>Age</td>
+                        <td><input type="text" name="age" value=""></td>
+                    </tr>
+                    <tr>
+                        <tr>
+                        <td>salary</td>
+                        <td><input type="number" name="salary" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>joining date</td>
+                        <td><input type="date" name="join" value=""></td>
+                    </tr>
+                        <td colspan="2"><input type="submit" name="submit" value="create user"></td>
+                    </tr>
                     
+                </table>
+
             </form>
             
 

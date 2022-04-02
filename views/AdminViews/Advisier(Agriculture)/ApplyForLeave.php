@@ -1,5 +1,8 @@
 <?php 
     require('header.php');
+    require('../../../models/adviser(agri)_info.php');
+    $username = $_SESSION['adviser_agri_username'];
+    $user = getuserinfo($username);
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,11 +37,11 @@
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
 
             <h1 align = center>Apply for Leave</h1><hr>
-            <form method="post">
+            <form method="post" action="../../../controllers/adminControllers/adviserControllers(agri)/Applyleave.php">
                 <table border="1px" align="center">
                 <tr>
                     <td>name</td>
-                    <td>Id</td>
+                    <td>Username</td>
                     <td>Reasone for Leave</td>
                     <td>Leaving Date</td>
                     <td>Joining Date</td>
@@ -46,15 +49,15 @@
 
                 </tr>
                 <tr>
-                    <td><input type="name" name="name"></td>
-                    <td><input type="number" name="id"></td>
+                    <td><input type="name" name="name" value="<?=$user['Name']?>"></td>
+                    <td><input type="username" name="username" value="<?=$user['username']?>"></td>
                     <td><input type="text" name="reasoneForLeave"></td>
                     <td><input type="date" name="Form"></td>
                     <td><input type="date" name="to"></td>
                     <td><input type="number" name="totalDays"></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" name="submit"></td>
+                    <td><input type="submit" name="submit" value="Apply"></td>
                 </tr>
             </table>
                 

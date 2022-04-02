@@ -1,5 +1,11 @@
 <?php 
     require('header.php');
+    require('../../models/Retailer_info.php');
+    require('../../models/marketPrice.php');
+    $username = $_SESSION['Retailer_username'];
+    $user = getoneuser($username);
+    $pricelist = getIN($username);
+    //print_r($pricelist);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,32 +43,59 @@
 
             <table width="100%"; border="1px">
                 <tr>
-                    <th>Product Name</th>
-                    <th>Previous Price(tk)/kg</th>
-                    <th>Latest Price(tk)/kg</th>
-                    <th>Status</th>
-                    
-                    
+                    <th>Retailer Name</th>
+                    <th>username</th>
+                    <th>Product name</th>
+                    <th>Price</th>
+                    <th>Status</th>    
                 </tr>
-                <tr align="center">
-                    <td>Wheat</td>
-                    <td>70</td>
-                    <td>71</td>
-                    <td><a href="#">Update</a></td>
-                 </tr>  
-                <tr align="center">
-                    <td>Potato</td>
-                    <td>70</td>
-                    <td>71</td>
-                    <td><a href="#">Update</a></td>
-                 </tr>  
-                <tr align="center">
-                    <td>Rice</td>
-                    <td>70</td>
-                    <td>71</td>
-                    <td><a href="#">Update</a></td>
-                 </tr>   
+                <?php
+
+                    if ($pricelist!=null) {
+                        foreach($pricelist as $pricelist)
+                    {
+                ?>
+                <form method="POST" action="../../controllers/retailerControllers/updatefilechechk.php?prn=<?=$pricelist['2']?>">
+                    <tr>
+                    <td><input type="name" name="retailer_name" value="<?=$pricelist['0']?>" readonly="readonly"></td>
+                    <td><input type="name" name="retailer_username" value="<?=$pricelist['1']?>" readonly="readonly"></td>
+                    <td><input type="name" name="product_name" value="<?=$pricelist['2']?>"></td>
+                    <td><input type="name" name="price" value="<?=$pricelist['3']?>"></td>
+                    <td><input type="submit" name="submit" value="update"></td>
+                </tr>
+                </form>
+                <?php
+            }
+        }?>
+                
+                   
             </table>
+            <br>
+            <h2 align="center">Insert new Data</h2>
+            <form method="POST" action="../../controllers/retailerControllers/insertprice.php">
+                <table align="center">
+                    <tr>
+                        <td>Retailer name:</td>
+                        <td><input type="name" name="retailer_name" value="<?=$user['name']?>" readonly="readonly"></td>
+                    </tr>
+                    <tr>
+                        <td>Retailer username:</td>
+                        <td><input type="name" name="retailer_username" value="<?=$user['username']?>" readonly="readonly"></td>
+                    </tr>
+                    <tr>
+                        <td>Product name:</td>
+                        <td><input type="name" name="product_name" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Price:</td>
+                        <td><input type="name" name="price" value=""></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" name="submit" value="insert"></td>
+                    </tr>
+                </table>
+            </form>
         </td>
          
     <!-- Footer Part -->

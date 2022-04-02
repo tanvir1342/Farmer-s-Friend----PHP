@@ -1,7 +1,14 @@
-
 <?php 
     require('header.php');
-?><!DOCTYPE html>
+    $msg = "";
+    if (isset($_GET['msg'])) {
+        if ($_GET['msg'] == "done") {
+            $msg = "posted";
+        }
+        
+    }
+?>
+<!DOCTYPE html>
 <html>
 <!-- center table creation -->
 <table width = 100%;>
@@ -23,24 +30,27 @@
     <!-- daynamic menubar -->
     <tr  height = 700px>
         <td width =10% bgcolor="C1BCBC" align="center" style="font-size:20px">
-            <a href="AddviserHome(eco).php">Home</a>
+            <a href="AddvisierHome(Agriculture).php">Home</a>
             <a href="Post.php">Post</a><br><br>
-            <a href="GuideFarmers.php">Make guidline</a><br><br>
-            <a href="UploadTutorials.php">Upload Tutorials</a><br><br>
+            <a href="GuidFarmer.php">Make guidline</a><br><br>
+            <a href="bankingSupport.php">Banking support</a><br><br>
             <a href="ApplyForLeave.php">Apply for leave</a><br>
        </td>
         </td>
-        <!-- Output -->
-        <td valign="top">
-            <h1 align="center">Make Guideline for Farmers</h1> <hr>
-            <h3>Adviser Name : Soikot</h3>
-            <textarea id ="guide" name="guide" rows="12" cols="180"></textarea><br>
+        <!-- output of user -->
+        <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
+
+            <h1 align = center><?=$msg?></h1>
+            <h1 align = center>write guidline about Costing side</h1><hr>
+            <h3>Adviser Name : Tanvir</h3>
+            <form method="POST" action="../../../controllers/adminControllers/adviserControllers(agri)/postchechk.php">
+                 <textarea id ="guide" name="guide" rows="12" cols="180"></textarea><br>
+                 <input type="submit" name="submit" value="Post this problem">
+            </form>
             
-            <a href="#">  Post This Guideline|</a>
             <a href="#">  Cancel</a>
+
         </td>
-    </tr>
-    <!-- Footer Part -->
     </tr>
     <!-- footer section -->
     <tr  height = 100px;>

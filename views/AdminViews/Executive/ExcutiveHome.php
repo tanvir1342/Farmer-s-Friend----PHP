@@ -47,7 +47,7 @@
             <table  align="center" width="500px" >
                 <tr>
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="listOfuser.php">user account</a></td>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="verifyDocument.php">verify document</a></td>
+                    <td><td>
                 </tr>
                 <tr>
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="controlDeaL.php">control deal</a></td>

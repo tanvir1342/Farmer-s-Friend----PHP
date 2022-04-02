@@ -1,5 +1,9 @@
 <?php 
     require('header.php');
+    require('../../models/Retailer_info.php');
+    $username = $_SESSION['Retailer_username'];
+    $user = getoneuser($username);
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,30 +40,40 @@
         <!-- Output -->
         <td valign="top">
             <h1 align="center"> Edit Your Account </h1> <hr>
-            <table border="1" align="center">
+            <table  align="center">
         <tr align="center" height="100px">
             <th colspan="2" width="400px">
                 Fill Up Your Details
             </th>
         </tr>
+        <form method="POST" action="../../controllers/retailerControllers/retailer_edit.php" >
         <tr>
             <td>Name</td>
-            <td><input type="text" name="name" value=""></td>
+            <td><input type="text" name="name" value="<?=$user['name']?>" ></td>
         </tr>
         <tr>
-            <td>ID</td>
-            <td><input type="number" name="number" value=""></td>
+            <td>Username</td>
+            <td><input type="text" name="username" value="<?=$user['username']?>"></td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="password" value="<?=$user['password']?>"></td>
+        </tr>
+        <tr>
+            <td>NID Number</td>
+            <td><input type="number" name="nidnumber" value="<?=$user['nidNumber']?>"></td>
         </tr>
         <tr>
             <td>Email</td>
             <td>
-                <input type="email" name="email" value="">
+                <input type="email" name="email" value="<?=$user['email']?>">
             </td>
         </tr>
         <tr>
             <td>Phone Number</td>
             <td>
-                <input type="phone" name="phone" value="">
+                <input type="number" name="phoneNumber" value="<?=$user['phone_Number']?>">
             </td>
         </tr>
         <tr>
@@ -71,15 +85,14 @@
         <tr>
             <td>Gender</td>
             <td>
-                <input type="radio" name="gen" > Male
-                <input type="radio" name="gen" > Female
-                <input type="radio" name="gen" > Other
+                <input type="text" name="gen" value="<?=$user['name']?>" >
+              
             </td>
         </tr> 
         <tr>
             <td>Trade License Number</td>
             <td>
-                <input type="number" name="licnumber" value="">
+                <input type="number" name="licNumber" value="<?=$user['trade_License_Number']?>">
             </td>
         </tr>
 
@@ -97,6 +110,7 @@
             <td colspan="2"><input type="submit" name="submit" value="Submit">
                 <input type="reset" name="reset" value="Reset"></td>
         </tr>
+    </form>
         
 
     </table>

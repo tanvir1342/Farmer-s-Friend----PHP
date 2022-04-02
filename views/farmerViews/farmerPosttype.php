@@ -39,28 +39,14 @@
         <!-- Output -->
         <td valign="top">
             <h1 align="center"> Post For Problems </h1> <hr>
-            <form method="POST" action="../../controllers/farmerControllers/postProblemCheck.php">
-                <table>
-                    <tr>
-                            <td>Select Problem Type:</td>                        
-                            <td width="300px "><input type="radio" name="problemType" value="Agriculture Related" > Agriculture Related <input type="radio" name="problemType" value="Agriculture Costing Related" > Agriculture Costing Related <input type="radio" name="problemType" value="Treatment Request" > Treatment Request </td> 
-                            <td>Username:</td>
-                            <td width="300px "><input type="username" name="username" value="" placeholder="Enter Username"></td>
-                     </tr>
-
-                </table>
-                <table>
-
-                <textarea id ="guide" name="problem" rows="12" cols="180"></textarea><br>
-                
-               <tr align="center" width=100%>
-                    <td colspan="3">
-                        <input type="submit" name="submit" value="Post This Problem">   
-                        <input type="reset" name="reset" value="Cancel">
-                    </td>
+            <table border="1px" align="center">
+                <tr>
+                    <td><a href="postproblemagri.php">Agriculture related</a></td>
                 </tr>
-                <table>
-             <form>
+                <tr>
+                    <td><a href="postproblemeco.php">Agriculture costing related</a></td>
+                </tr>
+            </table>
         </td>
     </tr>
     <!-- Footer Part -->

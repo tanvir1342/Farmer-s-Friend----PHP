@@ -38,23 +38,44 @@
         </td>
         <td valign="top"; >
             <h1 align="center"><u>Get Support From Bank</u></h1><hr>
-        <table style="font-size:20px;">
-            <label>Farmer's Name:</label><br><br>
-            <input type="text" name="name" value=""><br><br>
+            <form method="POST" action="../../controllers/farmerControllers/getSupportfromBankCheck.php">                
+                        <table >
+                             <tr>
+                                    <td>Username:</td>
+                                    <td width="300px "><input type="username" name="username" value="" placeholder="Enter Username"></td>
+                             </tr>
+                              <tr>
+                                    <td>Farmer's name:</td>
+                                    <td width="300px "><input type="text" name="farmer_name" value="" placeholder="Enter Farmer Name"></td>
+                             </tr>
+                             
+                              <tr>
+                                    <td>Land Property:</td>
+                                    <td width="300px "><input type="landproperty" name="land_property" value="" placeholder="Enter Property Details"></td>
+                             </tr>
+                             <tr>
+                                    <td>Yearly Income:</td>
+                                    <td width="300px "><input type="number" name="income" value="" placeholder="Enter Yearly Income"></td>
+                             </tr>
 
-            <label>Email:</label><br><br>
-            <input type="email" name="email" value=""><br><br>
+                              <tr>
+                                    <td>Amount of Loan:</td>
+                                    <td width="300px "><input type="number" name="amount" value="" placeholder="Enter Loan Amount"></td>
+                             </tr>
 
-            <label>Message:</label><br><br>
-            <textarea rows="8" cols="100"></textarea><br><br>          
-
-            <div class="clearfix">
-                <button type="button" class="cancel">Cancel</button>
-                <button type="button" class="Submit">Submit</button>
-                
-            </div><br><br>
-        </table>
-
+                            <tr>
+                                    <td>Reason For Loan:</td>
+                                    <td><textarea id ="reason" name="reason_for_loan" rows="12" cols="180"></textarea></td>
+                             </tr>
+                            <tr >
+                                <td >
+                                     <br><input type="submit" name="submit" value="Submit">
+                                </td>
+                            </tr>
+                        </table>
+            </form>
+        </td>
+    </tr>
 
     <!-- Footer Part -->
     <tr  height = 100px;>

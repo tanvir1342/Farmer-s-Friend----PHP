@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 function post_guidline($username,$post)
 {
@@ -13,5 +13,17 @@ function post_guidline($username,$post)
         return false;
     }
 }
+function getallguidline()
+{
+    $con = mysqli_connect('localhost','root','','webtech');
+    $sql = "select *from guidline_eco";
+    $result = mysqli_query($con ,$sql);
+    if($row = mysqli_fetch_all($result))
+    {
+        return $row;
+    }
+    
+}
+
 
 ?>

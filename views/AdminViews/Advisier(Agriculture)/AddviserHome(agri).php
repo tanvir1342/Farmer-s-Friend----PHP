@@ -1,5 +1,9 @@
 <?php 
     require('header.php');
+    require('../../../models/adviser(agri)_info.php');
+    $username = $_SESSION['adviser_agri_username'];
+    $user = getuserinfo($username);
+    //print_r($user);
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,7 +45,7 @@
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="GuideFarmers.php">Make guidline</a></td>
                 </tr>
                 <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="UploadTutorials.php">Upload Tutorial</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="UploadTutorials.php">Upload Tutorial(mechinaries)</a></td>
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="ApplyForLeave.php">Apply for leave</a></td>
                 </tr>
             </table>

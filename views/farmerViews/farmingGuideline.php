@@ -39,66 +39,15 @@
         <td valign="top">
             <!-- Farmers post -->
             <h1 align="center">Farming Guideline</h1> <hr>
-        <form>  
-            <table>
+            <table align="center" border="1px">
                 <tr>
-                    <td></td>
-                    <td>Types Of Guideline</td>
-                    <td>
-                        <select>
-                            <option></option>
-                            <option>Plantation</option>
-                            <option>Husbandary</option>
-                            <option>Fisheries</option>                    
-                        </select>
-                    </td>
-
+                    <td><a href="agricultureguidline.php">Agriculture Guideline</a></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td><a href="ecoguidline.php">Economics Guideline</a></td>
                 </tr>
-
             </table>
-        </form>
-
-                                <h3>Topic Name : Plantation</h3>
-                                <p>What’s in this guide to starting a small farm?<br>
-                                    The state of small farm business in the BD.
-                                    Why do you want to start a small farm?
-                                    What to do if you’ve never farmed before<br>
-                                    Step 1: Identify your niche<br>
-                                    Step 2: Find the land<br>
-                                    Step 3: Get financed<br>
-                                    Step 4: Planning a farm for success<br>
-                                    Step 5: Marketing your farm and products<br></p>
-                                <a href="#">  Like |</a>
-                                <a href="#">  Comment |</a>
-
-                                <h3>Topic Name : Husbandary</h3>
-                                <p>What’s in this guide to starting a small farm?<br>
-                                    The state of small farm business in the BD.
-                                    Why do you want to start a small farm?
-                                    What to do if you’ve never farmed before<br>
-                                    Step 1: Identify your niche<br>
-                                    Step 2: Find the land<br>
-                                    Step 3: Get financed<br>
-                                    Step 4: Planning a farm for success<br>
-                                    Step 5: Marketing your farm and products<br></p>
-                                <a href="#">  Like |</a>
-                                <a href="#">  Comment |</a>
-
-                                <h3>Topic Name : Fisheries</h3>
-                                <p>What’s in this guide to starting a small farm?<br>
-                                    The state of small farm business in the BD.
-                                    Why do you want to start a small farm?
-                                    What to do if you’ve never farmed before<br>
-                                    Step 1: Identify your niche<br>
-                                    Step 2: Find the land<br>
-                                    Step 3: Get financed<br>
-                                    Step 4: Planning a farm for success<br>
-                                    Step 5: Marketing your farm and products<br></p>
-                                <a href="#">  Like |</a>
-                                <a href="#">  Comment |</a>
+        
         </td>
     </tr>
     <!-- Footer Part -->

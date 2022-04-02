@@ -39,8 +39,8 @@
                     <tr>
                         <td>Username:</td>
                         <td width="300px "><input type="username" name="username" value="" placeholder="Enter Username"></td>
-                        <td>ID:</td>
-                        <td><input type="number" name="id" value=""placeholder="Enter ID"></td>
+                        <td></td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -65,7 +65,7 @@
                     </tr>
                     <tr>
                         <td>Password:</td>
-                        <td width="300px "><input type="pasword" name="pasword" value="" placeholder="Enter Password"></td>
+                        <td width="300px "><input type="password" name="password" value="" placeholder="Enter Password"></td>
                         <td>Confirm Password:</td>
                         <td><input type="password" name="pasword_extra" value=""placeholder="Confirm Password"></td>
                     </tr> 

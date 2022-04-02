@@ -1,5 +1,7 @@
 <?php 
     require('header.php');
+    require('../../models/marketPrice.php');
+    $pricelist = getall();
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,23 +45,27 @@
 
             <table width="100%"; border="1px">
                 <tr align="center">
-                    <th>Product Name</th>
                     <th>Retailer Name</th>
-                    <th>Price(tk)/kg</th>
-                    <th>Status</th>                       
+                    <th>Retailer username</th>
+                    <th>product_name</th>
+                    <th>price</th> 
+                    <th>Stutas</th>                      
                 </tr>
+                <?php
+                    if ($pricelist!=null) {
+                        foreach($pricelist as $pricelist){
+                            ?>
                 <tr align="center">
-                    <td>Rice</td>
-                    <td>MH Soikot</td>
-                    <td>71</td>
-                    <td><a href="farmerDealsWithRetailer.php">Deal</a></td>
-                </tr>
-                 <tr align="center">
-                    <td>Lentils</td>
-                    <td>Pop & Squish</td>
-                    <td>145</td>
-                    <td><a href="farmerDealsWithRetailer.php">Deal</a></td>                       
-                </tr>    
+                    <td><?=$pricelist[0]?></td>
+                    <td><?=$pricelist[1]?></td>
+                    <td><?=$pricelist[2]?></td>
+                    <td><?=$pricelist[3]?></td>
+                    <td><input type="submit" name="submit" value="deal"></td>
+                </tr> 
+                <?php
+                }
+                }
+                ?>  
             </table>
         </td>
          

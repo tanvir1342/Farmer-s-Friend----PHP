@@ -1,6 +1,7 @@
-
 <?php 
     require('header.php');
+    require('../../../models/farmer_post_problem_agri.php');
+    $post = getallpost_agri();
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,10 +25,10 @@
     <!-- daynamic menubar -->
     <tr  height = 700px>
         <td width =10% bgcolor="C1BCBC" align="center" style="font-size:20px">
-            <a href="AddviserHome(eco).php">Home</a>
+            <a href="AddviserHome(agri).php">Home</a>
             <a href="Post.php">Post</a><br><br>
-            <a href="GuideFarmers.php">Make guidline</a><br><br>
-            <a href="UploadTutorials.php">Upload Tutorials</a><br><br>
+            <a href="CostingGuidline.php">Make guidline</a><br><br>
+            <a href="bankingSupport.php">Banking support</a><br><br>
             <a href="ApplyForLeave.php">Apply for leave</a><br>
        </td>
         </td>
@@ -41,26 +42,28 @@
             <label for="Husbandary">Husbandary</label>
             <input type="radio" id="Fisheries" name="Farmer_type3" value="fisheries">
             <label for="Fisheries">Fisheries</label><br>
+            <?php
+            if ($post!= null) {
+                foreach($post as $post){
+            ?>
+            <form method="POST" action="../../../controllers/adminControllers/adviserControllers(agri)/sendsolve.php">
+                <input style="border: none;" type="user" name="farmer_username" value="<?=$post['0']?>" readonly="readonly">
+            <h3> Farmer type :<?=$post['1']?></h3>
             
-            <h3>Farmer's Name : Brownies</h3>
-            <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,<br> a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage
-            </p>
-            <textarea id ="solve" name="solveProblem" rows="12" cols="180"></textarea><br>
-            <a href="#">  Mark as spam |</a>
-            <a href="#">  Solve problem |</a>
-            <a href="#">  Cancel</a>
+               
+               <textarea style="background-color: black;color: white;" name="problem" rows="5" cols="180" readonly='readonly'><?=$post['2']?></textarea>
+            
+           
+                 <textarea id ="solve" name="solveProblem" rows="12" cols="180"></textarea><br>
+                 <input type="submit" name="submit" value="send to Farmer">
+            </form>
+            
             <br>
-            <h3>Farmer's Name : Brownies</h3>
-            <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,<br> a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage
-            </p>
-            <textarea id ="solve" name="solveProblem" rows="12" cols="180"></textarea><br>
-            <a href="#">  Mark as spam |</a>
-            <a href="#">  Solve problem |</a>
-            <a href="#">  Cancel</a>
-            <br>
+            <?php
 
+                }
+            }
+            ?>
 
         </td>
     </tr>

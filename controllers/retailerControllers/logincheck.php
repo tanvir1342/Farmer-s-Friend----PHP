@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../../models/Retailer_info.php');
 
 if(isset($_REQUEST['submit']))
 {
@@ -8,21 +9,18 @@ if(isset($_REQUEST['submit']))
 	$password = $_REQUEST['password'];
 
 	if($username != null && $password != null){
-		
-
-		$file = fopen('../../models/ritlogin.txt', 'r');
-
-		while (!feof($file)) {
-			$user = fgets($file);
-			$abc = explode('|', $user);
-
-			if(trim($abc[3]) == $username && trim($abc[4]) == $password){
-				setcookie('status', 'true', time()+300, '/');
-				header('location: ../../views/retailerViews/retailerHome.php');
-			}
+		$status = login($username,$password);
+      if ($status) {
+      	$_SESSION['Retailer_username'] = $username;
+      	$_SESSION['status'] = "true";
+			
+			setcookie('status', 'true', time()+300, '/');
+      	header('location: ../../views/retailerViews/retailerHome.php');
+      }
+		else{
+			echo "Invalid username/password";
 		}
 		
-		echo "Invalid username/password";
 
 	}
 	else{

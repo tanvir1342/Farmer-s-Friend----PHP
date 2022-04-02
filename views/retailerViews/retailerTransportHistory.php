@@ -1,5 +1,11 @@
 <?php 
     require('header.php');
+    require('../../models/transport.php');
+    require('../../models/Retailer_info.php');
+    $username = $_SESSION['Retailer_username'];
+    $usertransport = getonehistory($username);
+    $user = getoneuser($username);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,42 +40,82 @@
 			<h1><u>Transport History</u></h1><hr> 
 			<table width="100%"; border="1px">
 				<tr>
-					<th>Name</th>
+					<th>Retailer Name</th>
+					<th>username</th>
 					<th>From</th>
 					<th>To</th>
-					<th>Name Of Product</th>
+					<th>Product name</th>
+					<th>Wieght</th>
+					<th>date</th>
 					<th>Status</th>
-					<th>Request</th>
+				</tr>
+				<?php
+				if ($usertransport!=null) {
+					foreach($usertransport as $usertransport)
+					{
+
+					?>
+				<form>
+					<tr>
+					<td><input type="name" name="retailer_name" value="<?=$usertransport[0]?>" readonly="readonly"></td></td>
+					<td><input type="name" name="retailer_username" value="<?=$usertransport[1]?>" readonly="readonly"></td>
+					<td><input type="text" name="froms" value="<?=$usertransport[2]?>"></td>
+					<td><input type="text" name="too" value="<?=$usertransport[3]?>"></td>
+					<td><input type="text" name="product_name" value="<?=$usertransport[4]?>"></td>
+					<td><input type="text" name="weight" value="<?=$usertransport[5]?>"></td>
+					<td><input type="date" name="date" value="<?=$usertransport[6]?>"></td>
+					<td><input type="submit" name="submit" value="Cencel"></td>
 					
 				</tr>
-				<tr align="center">
-					<td>Tamal</td>
-					<td>Dhaka</td>
-					<td>Rangpur</td>
-					<td>Dhan er Bosta</td>
-					<td>Running</td>
-					<td><a href="retailerTransportHistoryCancelation.php">Cancel</a></td>
-					
-				</tr >
-				<tr align="center">
-					<td>Tamal</td>
-					<td>Dhaka</td>
-					<td>Rangpur</td>
-					<td>Dhan er Bosta</td>
-					<td>Running</td>
-					<td><a href="retailerTransportHistoryCancelation.php">Cancel</a></td>
-					
-				</tr>
-				<tr align="center">
-					<td>Tamal</td>
-					<td>Dhaka</td>
-					<td>Rangpur</td>
-					<td>Dhan er Bosta</td>
-					<td>Running</td>
-					<td><a href="retailerTransportHistoryCancelation.php">Cancel</a></td>
-					
-				</tr>
+
+
+				</form>
+				<?php
+			}
+		}
+		?>
+				
+
+				
 			</table>
+			<br>
+			<h1>Apply for transport</h1>
+			<form method="post" action="../../controllers/retailerControllers/transportcheck.php">
+				<table>
+					<tr>
+						<td>Retailer name</td>
+						<td><input type="name" name="retailer_name" value="<?=$user['name']?>"></td>
+					</tr>
+					<tr>
+						<td>Retailer username</td>
+						<td><input type="name" name="retailer_username" value="<?=$user['username']?>"></td>
+					</tr>
+					<tr>
+						<td>From</td>
+						<td><input type="text" name="froms"></td>
+					</tr>
+					<tr>
+						<td>To</td>
+						<td><input type="text" name="too"></td>
+					</tr>
+					<tr>
+						<td>Product name</td>
+						<td><input type="text" name="product_name"></td>
+					</tr>
+					<tr>
+						<td>Weight</td>
+						<td><input type="text" name="weight"></td>
+					</tr>
+					<tr>
+						<td>date</td>
+						<td><input type="date" name="date"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit" name="submit" value="Apply"></td>
+					</tr>
+				</table>
+			</form>
 		</td>
 	</tr>
 	 <!-- Footer Part -->

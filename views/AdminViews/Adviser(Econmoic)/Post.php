@@ -1,5 +1,7 @@
 <?php 
     require('header.php');
+    require('../../../models/farmer_post_problem_eco.php');
+    $post = getallpost_eco();
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,24 +42,28 @@
             <label for="Husbandary">Husbandary</label>
             <input type="radio" id="Fisheries" name="Farmer_type3" value="fisheries">
             <label for="Fisheries">Fisheries</label><br>
+            <?php
+            if ($post!= null) {
+                foreach($post as $post){
+            ?>
+            <form method="POST" action="../../../controllers/adminControllers/adviserControllers(eco)/sendsolve.php">
+                <input style="border: none;" type="user" name="farmer_username" value="<?=$post['0']?>" readonly="readonly">
+            <h3> Farmer type :<?=$post['1']?></h3>
             
-            <h3>Farmer's Name : Brownies</h3>
-            <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,<br> a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage
-            </p>
-            <textarea id ="solve" name="solveProblem" rows="12" cols="180"></textarea><br>
-            <a href="#">  Send To Farmer |</a>
-            <a href="#">  Cancel</a>
+               
+               <textarea style="background-color: black;color: white;" name="problem" rows="5" cols="180" readonly='readonly'><?=$post['2']?></textarea>
+            
+           
+                 <textarea id ="solve" name="solveProblem" rows="12" cols="180"></textarea><br>
+                 <input type="submit" name="submit" value="send to Farmer">
+            </form>
+            
             <br>
-            <h3>Farmer's Name : Brownies</h3>
-            <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,<br> a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage
-            </p>
-            <textarea id ="solve" name="solveProblem" rows="12" cols="180"></textarea><br>
-            <a href="#">  Send To Farmer |</a>
-            <a href="#">  Cancel</a>
-            <br>
+            <?php
 
+                }
+            }
+            ?>
 
         </td>
     </tr>

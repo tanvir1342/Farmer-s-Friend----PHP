@@ -121,15 +121,16 @@
                     <br>
                     <tr>
                         <td>Password:</td>
-                        <td width="300px "><input type="password" name="password" value="" placeholder="Enter Password"></td>
+                        <td width="300px "><input id="password1" type="password" name="password" value="" placeholder="Enter Password"></td>
                         <td>Confirm Password:</td>
-                        <td><input type="password" name="cpassword" value=""placeholder="Confirm Password"></td>
+                        <td><input type="password" id="password2" name="cpassword" value=""placeholder="Confirm Password" onkeyup ="passchechk()">
+                            <h3 id="msg"></h3></td>
                     </tr> 
                     
                     <!-- <table align="center" > -->
                             <tr align="center" width=100%>
                                 <td colspan="3">
-                                  <input type="submit" name="submit" value="submit">   
+                                  <input id="submited" type="submit" name="submit" value="submit">   
                                   <input type="reset" name="reset" value="Reset">
                                 </td>
                             </tr>
@@ -154,3 +155,22 @@
 
 
 </html>
+<script>
+    function passchechk()
+    {
+       let p1 = document.getElementById('password1').value;
+       let p2 = document.getElementById('password2').value;
+       if (p1!=p2)
+       {
+            document.getElementById('msg').innerHTML = "dont match";
+            document.getElementById('submited').style.display = "none";
+           //console.log("Fsfsdf");
+        }
+        else{
+            document.getElementById('msg').innerHTML = "matched";
+            document.getElementById('submited').style.display = "block";
+        }
+
+
+    }
+</script>

@@ -1,6 +1,9 @@
 <?php 
     require('header.php');
+    require('../../models/farmer_info.php');
      $username = $_SESSION['Farmer_username'];
+     $user = getoneuser($username);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,35 +48,34 @@
                <table align="center" style="font-size:20px;">
                     <tr>
                         <td>Change Name:</td>
-                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter New Name"></td>
+                        <td width="300px "><input type="name" name="name" value="<?=$user['name']?>" placeholder="Enter New Name"></td>
                         <td>Change Email:</td>
-                        <td><input type="email" name="email" value="" placeholder="Enter New Email"></td>
+                        <td><input type="email" name="email" value="<?=$user['email']?>" placeholder="Enter New Email"></td>
                     </tr>
                     <br>
                     <tr>
                         <td>Change Username:</td>
-                        <td width="300px "><input type="name" name="username" value="" placeholder="Enter New Username"></td>
+                        <td width="300px "><input type="name" name="username" value="<?=$user['username']?>" placeholder="Enter New Username"></td>
                         <td>Change NID Number:</td>
-                        <td><input type="number" name="nidNumber" value="" placeholder="Enter NID"></td>
+                        <td><input type="number" name="nidNumber" value="<?=$user['nid']?>" placeholder="Enter NID"></td>
                     </tr>
 
                     <tr>
                         <td>Change Phone Number:</td>
-                        <td width="300px "><input type="number" name="phoneNumber" value="" placeholder="Enter New Phone Number"></td>
+                        <td width="300px "><input type="number" name="phoneNumber" value="<?=$user['phone_number']?>" placeholder="Enter New Phone Number"></td>
                         <td>Change Photo:</td>
                         <td><input type="file" name="" placeholder="Enter New Photo"></td>
                     </tr>
                     <br>
                     <tr>
                          <td>Gender:</td>
-                        <td width="300px "><input type="radio" name="gen" value="male" > Male 
-                        <input type="radio" name="gen" value="female" > Female <input type="radio" name="gen" > Other </td>
+                        <td width="300px "><input type="text" name="gen" value="<?=$user['gender']?>">
                         <td>Farmer Type:</td>                        
-                        <td width="300px "><input type="radio" name="farmerType" value="plantation" > Plantation <input type="radio" name="farmerType" value="Husbandry" > Husbandary <input type="radio" name="farmerType" value="Fisheries" > Fisheries </td>                         
+                        <td width="300px "><input type="text" name="farmerType" value="<?=$user['farmer_type']?>" ></td>                         
                     </tr>
                     <tr>
                         <td>Password:</td>
-                        <td width="300px "><input type="password" name="password" value="" placeholder="Enter New Password"></td>
+                        <td width="300px "><input type="password" name="password" value="<?=$user['password']?>" placeholder="Enter New Password"></td>
                         <td>Confirm Password:</td>
                         <td><input type="password" name="pass" value="" placeholder="Confirm New Password"></td>
                     </tr> 

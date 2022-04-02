@@ -1,5 +1,8 @@
 <?php 
     require('header.php');
+    require('../../../models/Retailer_info.php');
+    $pendinguser = getpendinguser();
+    $user = getuser();
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,77 +35,143 @@
         <!-- output of user -->
         <td valign = top style ="background-color:#F5F2F1 ">
 
-            <h3 align = center>retailer user List</h3>
-            <table border="1px" align="center" width="80%">
+            <h3 align = center>retailer user pending list</h3>
+            <table border="1px">
                 <tr>
                     <td>Name</td>
+                    <td>username</td>
+                    <td>password</td>
+                    <td>NID Number</td>
                     <td>Email</td>
                     <td>Phone number</td>
-                    <td>trade license</td>
-                    <td>document</td>
-                    <td>NID</td>
+                    <td>Gender</td>
+                    <td>Trade License Number</td>
+                    <td>photo</td>
+                    <td>Status</td>
                 </tr>
+                <?php
+                if ($pendinguser!=null) {
+                    foreach($pendinguser as $pendinguser)
+                    {
+
+
+                ?>
                 <tr>
-                    <td>Tomal</td>
-                    <td>tomal@gmail.com</td>
-                    <td>01777777777777</td>
-                    <td>441414</td>
-                    <td>document</td>
-                    <td>441341564445q36626</td>
+                    <form method="POST" action="../../../controllers/adminControllers/excecutiveControllers/retailercreateAccount.php">
+                        <td><input type="name" name="name" value="<?=$pendinguser['0']?>"></td>
+                        <td><input type="username" name="username" value="<?=$pendinguser['1']?>"></td>
+                        <td><input type="password" name="password" value="<?=$pendinguser['2']?>"></td>
+                        <td><input type="number" name="nidNumber" value="<?=$pendinguser['3']?>"></td>
+                        <td><input type="email" name="email" value="<?=$pendinguser['4']?>"></td>
+                        <td><input type="number" name="phoneNumber" value="<?=$pendinguser['5']?>"></td>
+                        <td><input type="text" name="gen" value="<?=$pendinguser['6']?>"></td>
+                        <td><input type="lnumber" name="licNumber" value="<?=$pendinguser['7']?>"></td>
+                        <td>null</td>
+                        <td><input type="submit" name="submit" value="submit"></td>
+                    </form>
+                    
                 </tr>
+                <?php
+                    }
+                 }
+        ?>
+            </table>
+
+            <br>
+            <h1 align="center">User list</h1>
+            <table border="1px">
                 <tr>
-                    <td>Tomal</td>
-                    <td>tomal@gmail.com</td>
-                    <td>01777777777777</td>
-                    <td>441414</td>
-                    <td>document</td>
-                    <td>441341564445q36626</td>
+                    <td>Name</td>
+                    <td>username</td>
+                    <!-- <td>password</td>
+ -->                    <td>NID Number</td>
+                    <td>Email</td>
+                    <td>Phone number</td>
+                    <td>Gender</td>
+                    <td>Trade License Number</td>
+                    <td>photo</td>
                 </tr>
+                <?php
+                if ($user!=null) {
+                    foreach($user as $user)
+                    {
+
+
+                ?>
                 <tr>
-                    <td>Tomal</td>
-                    <td>tomal@gmail.com</td>
-                    <td>01777777777777</td>
-                    <td>441414</td>
-                    <td>document</td>
-                    <td>441341564445q36626</td>
+                    <td><?=$user['0']?></td>
+                    <td><?=$user['1']?></td>
+                   <!--  <td><?=$user['2']?></td> -->
+                    <td><?=$user['3']?></td>
+                    <td><?=$user['4']?></td>
+                    <td><?=$user['5']?></td>
+                    <td><?=$user['6']?></td>
+                    <td><?=$user['7']?></td>
+                    <td><?=$user['8']?></td>
                 </tr>
-            </table><br>
+                <?php
+                    }
+                 }
+        ?>
+            </table>
+
 
             <!-- creat new user account  -->
             <h3 align="center">Creat new user</h3><br>
-            <form method="POST">
+             <form method="POST" action="../../../controllers/adminControllers/excecutiveControllers/retailercreateAccount.php">
                <table align="center" style="font-size:20px;">
-                <tr>
-                    <td>Name:</td>
-                    <td width="300px "><input type="name" name="name" value=""></td>
-                    <td>Email:</td>
-                    <td><input type="email" name="email" value=""></td>
-                </tr>
-                <br>
-                <tr>
-                    <td>phone number:</td>
-                    <td width="300px "><input type="number" name="phoneNumber" value=""></td>
-                    <td>Adress:</td>
-                    <td><input type="text" name="adress" value=""></td>
-                </tr>
-                <br>
-                <tr>
-                    <td>Trade license:</td>
-                    <td width="300px "><input type="number" name="tradelicense" value=""></td>
-                    <td>NID number:</td>
-                    <td><input type="number" name="nidNumber" value=""></td>
-                    <td><input type="submit" name="submit" value="submit"></td>
-                </tr>
-                <tr>
-                    <td>Document:</td>
-                    <td colspan="3" width="300px "><input type="file" name="document" value=""></td>
-                </tr>
-                <tr align="center">
-                    <td colspan="3">
-                      <input type="submit" name="submit" value="submit">   
-                    </td>
-                </tr>
-            </table>
+                    <tr>
+                        <td>Name:</td>
+                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter Name"></td>
+                        <td>Email:</td>
+                        <td><input type="email" name="email" value=""placeholder="Enter Email"></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Username:</td>
+                        <td width="300px "><input type="username" name="username" value="" placeholder="Enter Username"></td>
+                        <td>ID:</td>
+                        <td><input type="number" name="id" value=""placeholder="Enter ID"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Phone Number:</td>
+                        <td width="300px "><input type="number" name="phoneNumber" value="" placeholder="Enter Phone Number"></td>
+                        <td>Photo:</td>
+                        <td><input type="file" name="" placeholder="Enter Photo"></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Trade License number:</td>
+                        <td><input type="lnumber" name="licNumber" value="" placeholder="Enter License Number"></td>   
+                        <td>Trade License Copy:</td>
+                        <td><input type="file" name="" placeholder="Enter License Copy"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td width="300px "><input type="radio" name="gen" > Male <input type="radio" name="gen" > Female <input type="radio" name="gen" > Other </td>
+                        <td>NID number:</td>
+                        <td><input type="number" name="nidNumber" value="" placeholder="Enter NID"></td>   
+                                          
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td width="300px "><input type="password" name="password" value="" placeholder="Enter Password"></td>
+                        <td>Confirm Password:</td>
+                        <td><input type="password" name="pasword_extra" value=""placeholder="Confirm Password"></td>
+                    </tr> 
+                    
+                    <!-- <table align="center" > -->
+                            <tr align="center" width=100%>
+                                <td colspan="3">
+                                  <input type="submit" name="submit" value="submit">   
+                                  <input type="reset" name="reset" value="Reset">
+                                </td>
+                            </tr>
+                    <!-- </table> -->
+                
+
+                </table>
                     
             </form>
             

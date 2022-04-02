@@ -49,7 +49,7 @@
             <table  align="center" width="500px" >
                 <tr>
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmerEditAccount.php">Edit Account</a></td>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmerPostProblems.php">Post For Problem</a></td>
+                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="farmerPosttype.php">Post For Problem</a></td>
                     <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="veterinarianSupport.php">Veterinarian Support</a></td>
                 </tr>
                 <tr>
