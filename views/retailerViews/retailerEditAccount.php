@@ -7,6 +7,12 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Profile</title> 
+</head>
+<body>
 
 <!-- Table Creation -->
 <table width = 100%; border = 1px>
@@ -46,7 +52,7 @@
                 Fill Up Your Details
             </th>
         </tr>
-        <form method="POST" action="../../controllers/retailerControllers/retailer_edit.php" >
+        <form name="validationn" method="POST" action="../../controllers/retailerControllers/retailer_edit.php" >
         <tr>
             <td>Name</td>
             <td><input type="text" name="name" value="<?=$user['name']?>" ></td>
@@ -67,14 +73,20 @@
         <tr>
             <td>Email</td>
             <td>
-                <input type="email" name="email" value="<?=$user['email']?>">
+                <input type="email" name="email" onblur ="validation()" onblur="submiton()"  value="<?=$user['email']?>">
+                
+
             </td>
+            <td><h1 id="eerror"></h1>
+       </td>
         </tr>
         <tr>
             <td>Phone Number</td>
             <td>
-                <input type="number" name="phoneNumber" value="<?=$user['phone_Number']?>">
+                <input type="number" name="phoneNumber" onblur ="phonevalidation()"  value="<?=$user['phone_Number']?>   ">
+               
             </td>
+            <td> <h1 id="nerror"></h1></td>
         </tr>
         <tr>
             <td>Photo</td>
@@ -125,4 +137,36 @@
     </tr>
 
 </table>
+</body>
 </html>
+
+<script>
+    function validation()
+    {
+        let email = document.validationn.email.value;
+        var pattern =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(email.match(pattern))
+        {
+            document.getElementById('eerror').innerHTML = "";
+            
+        }
+        else{
+            document.getElementById('eerror').innerHTML = "Invalid Email";
+        }
+        
+    }
+    function phonevalidation()
+    {
+        let phonenumber = document.validationn.phoneNumber.value;
+        var pnumber = /(^(\+8801|8801|01|008801))[1|3-9]{1}(\d){8}$/;
+        if(phonenumber.match(pnumber))
+        {
+            document.getElementById('nerror').innerHTML = "";
+            
+        }
+        else{
+            document.getElementById('nerror').innerHTML = "Invalid Phone Number";
+        }
+        
+    }
+</script>

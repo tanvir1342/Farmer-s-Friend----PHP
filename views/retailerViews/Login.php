@@ -28,7 +28,7 @@
               <table align="center">
                 <tr>
                     <td>Username: </td>
-                    <td><input type="username" name="username" placeholder="Enter your Username"></td>
+                    <td><input type="username" name="username" placeholder="Enter your Username" required></td>
                 </tr>
                 <tr>
                     <td>Password: </td>

@@ -3,6 +3,12 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Goverment Tax</title>  
+</head>
+<body>
 
 <!-- Table Creation -->
 <table width = 100%; border = 1px>
@@ -34,7 +40,7 @@
        <td valign="top">
             <h1 align="center"> Government Tax </h1> <hr>
             <table border="1" align="center">
-            <form method="POST" action="../../controllers/retailerControllers/govtextchechk.php">
+            <form name="validationn" method="POST" action="../../controllers/retailerControllers/govtextchechk.php">
                <table align="center" style="font-size:20px;">
                     <tr>
                         <td>Username:</td>
@@ -49,9 +55,11 @@
                     <br>
                     <tr>
                         <td>Phone Number:</td>
-                        <td width="300px "><input type="number" name="phone" value="" placeholder="Enter Phone Number"></td>
-                        <td>Amount:</td>
-                        <td><input type="number" name="amount" value=""placeholder="Enter Payment"></td>
+                        <td width="300px "><input type="number" name="phone" value=""  onblur ="phonevalidation()" placeholder="Enter Phone Number" >
+                            
+                        </td>
+                        <td></td>
+                        <td><h3 id="nerror"></h3></td>
                         
                     </tr>
 
@@ -64,7 +72,8 @@
                     </tr>
                     <br>
                     <tr>
-                        
+                        <td>Amount:</td>
+                        <td><input type="number" name="amount" value=""placeholder="Enter Payment"></td>
                                     
                     </tr>
                     <br>
@@ -96,4 +105,24 @@
     </tr>
 
 </table>
+</body>
 </html>
+
+<script>
+   
+   
+    function phonevalidation()
+    {
+        let phonenumber = document.validationn.phone.value;
+        var pnumber = /(^(\+8801|8801|01|008801))[1|3-9]{1}(\d){8}$/;
+        if(phonenumber.match(pnumber))
+        {
+            document.getElementById('nerror').innerHTML = "";
+            
+        }
+        else{
+            document.getElementById('nerror').innerHTML = "Invalid Phone Number";
+        }
+        
+    }
+</script>
