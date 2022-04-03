@@ -88,25 +88,28 @@
             <!-- creat new user account  -->
             <h3 align="center"><?=$msg?></h3><br>
             <h3 align="center">Creat new user</h3><br>
-            <form method="POST" action="../../../controllers/adminControllers/excecutiveControllers/FarmerCreatAccount.php">
+            <form name="validationn" method="POST" action="../../../controllers/adminControllers/excecutiveControllers/FarmerCreatAccount.php">
                <table align="center" style="font-size:20px;">
                     <tr>
                         <td>Name:</td>
                         <td width="300px "><input type="name" name="name" value="" placeholder="Enter Name"></td>
                         <td>Email:</td>
-                        <td><input type="email" name="email" value=""placeholder="Enter Email"></td>
+                        <td><input type="email" name="email" value=""placeholder="Enter Email" onblur ="validation()" onblur="submiton()"  ></td>
+                        <td><h1 id="eerror"></h1> </td>
                     </tr>
                     <br>
                     <tr>
                         <td>Username:</td>
                         <td width="300px "><input type="username" name="username" value="" placeholder="Enter Username"></td>
-                        <td>NID Number:</td>
-                        <td><input type="number" name="nidNumber" value="" placeholder="Enter NID"></td> 
+                        <td>Phone Number:</td>
+                        <td width="300px "><input type="number" name="phoneNumber" value="" placeholder="Enter Phone Number" onblur ="phonevalidation()" ></td>
+                        <td> <h1 id="nerror"></h1></td><br>
+
                     </tr>
 
                     <tr>
-                        <td>Phone Number:</td>
-                        <td width="300px "><input type="number" name="phoneNumber" value="" placeholder="Enter Phone Number"></td>
+                        <td>NID Number:</td>
+                        <td><input type="number" name="nidNumber" value="" placeholder="Enter NID"></td> 
                         <td>Photo:</td>
                         <td><input type="file" name="" placeholder="Enter Photo"></td>
                     </tr>
@@ -172,5 +175,33 @@
         }
 
 
+    }
+    function validation()
+    {
+        let email = document.validationn.email.value;
+        var pattern =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(email.match(pattern))
+        {
+            document.getElementById('eerror').innerHTML = "";
+            
+        }
+        else{
+            document.getElementById('eerror').innerHTML = "invalid email";
+        }
+        
+    }
+    function phonevalidation()
+    {
+        let phonenumber = document.validationn.phoneNumber.value;
+        var pnumber = /(^(\+8801|8801|01|008801))[1|3-9]{1}(\d){8}$/;
+        if(phonenumber.match(pnumber))
+        {
+            document.getElementById('nerror').innerHTML = "";
+            
+        }
+        else{
+            document.getElementById('nerror').innerHTML = "invalid phonenumber";
+        }
+        
     }
 </script>

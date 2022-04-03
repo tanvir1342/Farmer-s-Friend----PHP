@@ -37,7 +37,7 @@
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
 
             <h1 align = center>Edit Profile</h1><hr>
-            <form method="POST" action="../../../controllers/adminControllers/adviserControllers(eco)/editProfileChechk.php">
+            <form name="validationn" method="POST" action="../../../controllers/adminControllers/adviserControllers(eco)/editProfileChechk.php">
                 <table align="center">
                     <tr>
                         <td>Name</td>
@@ -53,7 +53,8 @@
                     </tr>
                     <tr>
                         <td>Email</td>
-                        <td><input type="email" name="email" value="<?=$user['email']?>"></td>
+                        <td><input type="email" name="email" value="<?=$user['email']?>" onblur ="validation()" onblur="submiton()"  ></td>
+                        <td><h1 id="eerror"></h1> </td>
                     </tr>
                      <tr>
                         <td>Gender</td>
@@ -83,3 +84,20 @@
 
 
 </html>
+
+<script>
+    function validation()
+    {
+        let email = document.validationn.email.value;
+        var pattern =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(email.match(pattern))
+        {
+            document.getElementById('eerror').innerHTML = "";
+            
+        }
+        else{
+            document.getElementById('eerror').innerHTML = "invalid email";
+        }
+        
+    }
+</script>

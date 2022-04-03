@@ -26,13 +26,13 @@
         <td valign="top">
             <h1 align="center"> Create Account For Blogger </h1> <hr>
             <table border="1" align="center">
-            <form method="POST" action="../../controllers/bloggerControllers/regcheck.php">
+            <form name="validationn" method="POST" action="../../controllers/bloggerControllers/regcheck.php">
                <table align="center" style="font-size:20px;">
                     <tr>
                         <td>Name:</td>
                         <td width="300px "><input type="name" name="name" value=""></td>
                         <td>Email:</td>
-                        <td><input type="email" name="email" value=""></td>
+                        <td><input type="email" name="email" value="" onblur ="validation()" onblur="submiton()"></td>
                     </tr>
                     <br>
                     <tr>
