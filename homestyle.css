@@ -81,3 +81,20 @@ body{
 
 }
 
+/*main part area start from here*/
+
+.mainpart{
+	width: 100%;
+	
+}
+.dashboard_button{
+	text-align: center;
+	background-color: #16a085;
+	color: white;
+	border: none;
+	width:150px;
+	height:50px;
+	padding: 10px;
+	margin:20px;
+	cursor: pointer;
+}

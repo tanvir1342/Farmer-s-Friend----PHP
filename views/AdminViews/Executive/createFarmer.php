@@ -88,14 +88,17 @@
             <!-- creat new user account  -->
             <h3 align="center"><?=$msg?></h3><br>
             <h3 align="center">Creat new user</h3><br>
+            <h3 id="eerror" style="width: 100%;background-color:#f8c291;color: white;text-align: center;"></h2>
+            <h3 id="nerror" style="width: 100%;background-color:#f8c291;color: white;text-align: center;"></h2>
+            <h3 id="msg" style="width: 100%;background-color:#f8c291;color: white;text-align: center;"></h2>
             <form name="validationn" method="POST" action="../../../controllers/adminControllers/excecutiveControllers/FarmerCreatAccount.php">
                <table align="center" style="font-size:20px;">
                     <tr>
                         <td>Name:</td>
                         <td width="300px "><input type="name" name="name" value="" placeholder="Enter Name"></td>
                         <td>Email:</td>
-                        <td><input type="email" name="email" value=""placeholder="Enter Email" onblur ="validation()" onblur="submiton()"  ></td>
-                        <td><h1 id="eerror"></h1> </td>
+                        <td><input type="email" name="email" value=""placeholder="Enter Email" onblur ="validation()"></td>
+                        <td></td>
                     </tr>
                     <br>
                     <tr>
@@ -103,7 +106,7 @@
                         <td width="300px "><input type="username" name="username" value="" placeholder="Enter Username"></td>
                         <td>Phone Number:</td>
                         <td width="300px "><input type="number" name="phoneNumber" value="" placeholder="Enter Phone Number" onblur ="phonevalidation()" ></td>
-                        <td> <h1 id="nerror"></h1></td><br>
+                        <td></td><br>
 
                     </tr>
 
@@ -127,7 +130,7 @@
                         <td width="300px "><input id="password1" type="password" name="password" value="" placeholder="Enter Password"></td>
                         <td>Confirm Password:</td>
                         <td><input type="password" id="password2" name="cpassword" value=""placeholder="Confirm Password" onkeyup ="passchechk()">
-                            <h3 id="msg"></h3></td>
+                        </td>
                     </tr> 
                     
                     <!-- <table align="center" > -->
@@ -165,12 +168,15 @@
        let p2 = document.getElementById('password2').value;
        if (p1!=p2)
        {
-            document.getElementById('msg').innerHTML = "dont match";
+            document.getElementById('msg').innerHTML = "password dont match";
+            document.getElementById('msg').style.backgroundColor = "#f8c291";
+
             document.getElementById('submited').style.display = "none";
            //console.log("Fsfsdf");
         }
         else{
-            document.getElementById('msg').innerHTML = "matched";
+            document.getElementById('msg').innerHTML = "password matched";
+            document.getElementById('msg').style.backgroundColor = "#78e08f";
             document.getElementById('submited').style.display = "block";
         }
 
