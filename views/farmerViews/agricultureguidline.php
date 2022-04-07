@@ -5,7 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-<!-- Table creation -->
+ Table creation -->
 <table width = 100%;>
     <tr height = 100px style ="background-color:#C1BCBC ">
         <td width =10%; align = center>
