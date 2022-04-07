@@ -1,6 +1,3 @@
-<?php 
-    require('header.php');
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +20,7 @@ img {
 		<td align="right">
 			<a href="a">Home | </a>
 			<a href="a">About Us | </a>
-			<a href="../../controllers/retailerControllers/logout.php">Log Out</a>
+			<a href="a">Log Out</a>
 		</td>
 	</tr>
 	<tr height = "700px" valign="top" >
@@ -33,8 +30,6 @@ img {
             <a href="dealWithFarmer.php"> Deal With Farmers </a><br><br>
             <a href="retailerTransportHistory.php"> Transport Products </a><br><br>
             <a href="retailerDealHistory.php"> Deal History </a><br><br>
-            
-           
             <a href="govTax.php"> Payment For Tax </a><br><br>
             <a href="makePayment.php"> Payment For Any Issue </a><br><br>            
         </td>
@@ -42,7 +37,7 @@ img {
 			<table width="100%">
 				<tr align="left">
 					<td>
-						<img src="" style="width:150px">
+						<img src="komi.png" style="width:150px">
 						<h1>Name: Komi Chan</h1>
 					</td>
 				</tr>
@@ -66,14 +61,15 @@ img {
 							</tr>
 						</table>
 				</tr>
+			</table>
 
-    <!-- Footer Part -->
-    <tr  height = 100px;>
+		</td>
+	</tr>
+	<tr  height = 100px;>
         <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
-           All Copyrights @2022 Reserved by Gallant ltd.
+           All Copyrights Reserve by Gallant ltd.
         </td>
     </tr>
 </table>
-
-
+</body>
 </html>
