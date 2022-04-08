@@ -1,6 +1,116 @@
 <?php 
     require('header.php');
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="farmer.css">
+</head>
+<body>
+       <!--  menubar start from here -->
+
+    <div class="menubar">
+        <div class="menubar-icon">
+            <img src="images/logo.png">
+        </div>
+        <div class="menubar-link">
+            <a href="">Home |</a>
+            <a href="#"> About us |</a>
+            <a href="#"> Contact us |</a>
+            <a href="../../controllers/farmerControllers/logout.php"> Logout </a>
+        </div>
+        
+    </div>
+
+       <!--  main panel -->
+    <div height="100%" class="main_panle">
+       <!--  side panel div start from here -->
+       <div  class="side_panel">      
+        
+            <div class="button_area_of_side_panel">
+            <button onclick="location.href='farmerPosttype.php';">Post For Problem</button>
+            <button onclick="location.href='veterinarianSupport.php';">Veteranian Support</button>
+            <button onclick="location.href='farmerMachinariesGuidelines.php';">Machinaries Guideline</button>
+            <button onclick="location.href='farmerBankingGuideline.php';">Farming Guideline</button>
+            <button onclick="location.href='farmerEditAccount.php';">Get Support From Bank</button>
+            <button onclick="location.href='farmerMarketPrices.php';" >Market Price</button>
+            <button onclick="location.href='farmerDealsWithRetailer.php';">Deal With Retailer</button>
+            <button onclick="location.href='farmerCheckWeather.php';">Check Weather</button>
+            <button onclick="location.href='farmerWaterPayments.php';">Water Payments</button>
+            <button onclick="location.href='farmerGeneralPayments.php';">General Payments</button>        
+
+
+        </div>
+    </div>
+
+    <!-- feature page -->
+
+    <div class="daynamic_area">
+        <h2 class="daynamic_area_heading_text">Farming Guidelines</h2><hr>
+            <div onclick="location.href='agricultureguidline.php';" class="function_area">
+                <img src="images/agricultureguideline.png">
+                <p>Agriculture Related</p>
+           </div>
+            <div onclick="location.href='farmerMachinariesGuidelinesVideo.php';" class="function_area">
+                <img src="images/ecoguideline.png">
+                <p>Costing Related</p>
+           </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <!-- Table creation -->

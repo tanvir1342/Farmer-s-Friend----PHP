@@ -14,7 +14,6 @@
 ?>
 
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -39,68 +38,66 @@
     </div>
 
        <!--  main panel -->
-    <div class="main_panle">
+    <div height="100%" class="main_panle">
        <!--  side panel div start from here -->
        <div class="side_panel">
-        <div class="pro-pic-of-side-panel">
-            
-        </div>
+        <div class="pro-pic-of-side-panel"></div>
         <div class="text_area_of_side_panel">
              <h1><?=$user['name']?></h1>             
              <p>Gender:<?=$user['gender']?></p>
 
         </div>
              <div class="button_area_of_side_panel">
-            <button>Edit Profile</button>
+            <button onclick="location.href='farmerEditAccount.php';">Edit Profile</button>
 
         </div>
        </div>
       <!--  main panel daynamic area star from here -->
       <div class="daynamic_area">
         <h2 class="daynamic_area_heading_text">Welcome Farmer,<?=$user['name']?></h2><hr>
-            <div class="function_area">
+            <div onclick="location.href='farmerEditAccount.php';" class="function_area">
                 <img src="images/edit.png">
                 <p>Edit Account</p>
            </div>
         
-          <div class="function_area">
+          <div onclick="location.href='farmerPosttype.php';" class="function_area">
               <img src="images/postproblem.png">
                 <p>Post For Problem</p>
           </div>
 
-          <div class="function_area">
+          <div onclick="location.href='veterinarianSupport.php';" class="function_area">
               <img src="images/support.png">
                 <p>Veterinarian Support</p>
           </div><br>
-          <div class="function_area">
+          <div onclick="location.href='farmerMachinariesGuidelines.php';" class="function_area">
               <img src="images/machinaries.png">
                 <p>Machiniaries Guidelines</p>
           </div>
-          <div class="function_area">
+          <div onclick="location.href='farmingGuideline.php';" class="function_area">
               <img src="images/farmingguideline.jpg">
                 <p>Farming Guidelines</p>
           </div>
-          <div class="function_area">
+          <div onclick="location.href='farmerBankingGuideline.php';" class="function_area">
               <img src="images/supportfrombank.jpg">
                 <p>Get Support From Bank</p>
           </div><br>
-          <div class="function_area">
+          <div onclick="location.href='farmerMarketPrices.php';" class="function_area">
               <img src="images/marketprices.png">
                 <p>Market Prices</p>
           </div>
-          <div class="function_area">
+          <div onclick="location.href='farmerDealsWithRetailer.php';" class="function_area">
               <img src="images/dealwithretailers.jpg">
                 <p>Deal With Retailer</p>
           </div>
-          <div class="function_area">
+          <div onclick="location.href='farmerCheckWeather.php';" class="function_area">
               <img src="images/weather.png">
                 <p>Check Weather</p>
           </div><br>
-          <div class="function_area">
+          <div onclick="location.href='farmerWaterPayments.php';" class="function_area">
               <img src="images/waterPayment.png">
                 <p>Water Payments</p>
           </div>
-          <div class="function_area">
+          <div onclick="location.href='farmerGeneralPayments.php';" class="function_area">
               <img src="images/generalPayment.jpg">
                 <p>General Payments</p>
           </div>
