@@ -5,7 +5,7 @@
 <html>
 <!-- center table creation -->
 <table width = 100%;>
-    <tr height = 100px style ="background-color:#C1BCBC ">
+    <tr height = 100px style ="background-color:#4fa3b0 ">
         <td width =10%; align = center>
             <img width = 100px; height = 100px src ="logo.png">
         </td>
@@ -22,7 +22,7 @@
     </tr>
     <!-- daynamic menubar -->
     <tr  height = 700px>
-        <td width =10%; valign = top; style ="background-color:#C1BCBC; font-size:20px;">
+        <td width =10%; valign = top; style ="background-color:#4fa3b0; font-size:20px;">
             <a href="#">Farmer Post</a><br><br>
             <a href="#">History</a><br><br>
             <a href="approvePost.php">Edit Profile</a><br><br>

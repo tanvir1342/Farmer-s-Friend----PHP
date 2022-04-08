@@ -1,0 +1,19 @@
+<?php
+
+// Blogger post pending
+function pending($username,$blogger_name,$post,$status)
+{
+	$con = mysqli_connect('localhost','root','','webtech');
+	$sql = "insert into post_pending_side(username,blogger_name,post,status) values ('$username','$blogger_name','$post','$status')";
+	
+	if(mysqli_query($con ,$sql))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+?>

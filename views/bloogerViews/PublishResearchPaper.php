@@ -23,7 +23,7 @@
 	<tr height="700px"> 
 		<td width="10%" valign="top" align="center" bgcolor="C1BCBC">
 		
-		<a href="EditAccount.php">Editt Account</a><br><br>
+		<a href="EditAccount.php">Edit Account</a><br><br>
 		<a href="WritePost.php">Write a Post</a><br><br>
 		<a href="ReadPost.php">Read Posts</a><br><br>
 		<a href="PublishResearchPaper.php">Research Paper</a><br><br>
@@ -31,22 +31,28 @@
 		</td>
 		<td valign="top">
 			<h1 align="center">Publish Your Research Paper</h1><hr>
+			<form method="POST" action="../../controllers/bloggerControllers/BloggerResearchPaperPendingCheck.php">
 
-			<label for="domain"><b>Domain Name:</b></label>
-			<input type="text" name="domain" required><br><br>
+			<label><b>Blogger Username:</b></label><br>
+			<input type="text" name="blogger_username"><br><br>
 
-			<label for="thesis"><b>Thesis Topic:</b></label>
-			<input type="text" name="thesis" required><br><br>
+			<label for="domain"><b>Domain Name:</b></label><br>
+			<input type="text" name="domain_name" required><br><br>
+
+			<label for="thesis"><b>Thesis Topic:</b></label><br>
+			<input type="text" name="thesis_topic" required><br><br>
 
 			<label for="researchpaper"><b>Publish Your Research Paper:</b></label><br>
-			<textarea rows="8" cols="100">
+			<textarea name="research_paper" rows="8" cols="100">
 				
 			</textarea><hr>
 			
-			<div class="clearfix">
-				<button type="button" class="cancelbtn">Cancel</button>
-				<button type="submit" class="submitbtn">Submit</button>
-			</div>
+			
+				<input type="submit" name="submit" value="Submit">   
+                <input type="reset" name="reset" value="Cancel">
+
+            </form>
+			
 			
 
 
