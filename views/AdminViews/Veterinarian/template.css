@@ -7,7 +7,7 @@ body{
 
 .menubar{
 	position: relative;
-	background-color:#1c271c;
+	background-color:#4b4da3;
 	width: 100%;
 	height: 70px;
 }
@@ -48,17 +48,17 @@ body{
 	float: left;
 	align-items: center;
 	width: 15%;
-	height: 1200px;
-	background-color: rgb(1,64,27);
+	height: 900px;
+	background-color: #325ea8;
 }
 .pro-pic-of-side-panel
 {
-	width:170px;
-	height: 170px;
+	width:180px;
+	height: 180px;
 	border: 1px solid;
 	border-radius: 100%;
 	margin: auto;
-	background-image: url('images/eee.jpg');
+	background-image: url('dp.jpg');
 	background-size: cover;
 	margin-top: 30px;
 }
@@ -112,12 +112,12 @@ body{
 	position: relative;
 	width: 350px;
 	height: 200px;
-	background-color: #314a30;
+	background-color: #6264d1;
 	display: inline-block;
 	margin-top: 70px;
 	margin-left: 150px;
-	border-left: 1 px solid #2c2c54;
-	border-bottom: 1 px solid #079992;
+	border-left: 1 px solid, #32a8a4;
+	border-bottom: 1 px solid, #32a8a4;
 	border-bottom-left-radius: 10%;
 	align-items: center;
 	cursor: pointer;
@@ -132,12 +132,6 @@ body{
 }
 .function_area p{
 	font-size: 20px;
-	color: white;
+	color: black;
 	text-align: center;
-}
-
-.output_panel{
-   background-color: #487047;
-   width: 100%;
-   height: 1200px;
 }

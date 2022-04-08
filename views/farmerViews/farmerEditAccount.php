@@ -5,27 +5,187 @@
      $user = getoneuser($username);
 
 ?>
+
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="farmer.css">
+</head>
+<body>
+       <!--  menubar start from here -->
+
+    <div class="menubar">
+        <div class="menubar-icon">
+            <img src="images/logo.png">
+        </div>
+        <div class="menubar-link">
+            <a href="">Home |</a>
+            <a href="#"> About us |</a>
+            <a href="#"> Contact us |</a>
+            <a href="../../controllers/farmerControllers/logout.php"> Logout </a>
+        </div>
+        
+    </div>
+
+       <!--  main panel -->
+    <div height="100%" class="main_panle">
+       <!--  side panel div start from here -->
+       <div  class="side_panel">      
+        
+            <div class="button_area_of_side_panel">
+            <button onclick="location.href='farmerPosttype.php';">Post For Problem</button>
+            <button onclick="location.href='veterinarianSupport.php';">Veteranian Support</button>
+            <button onclick="location.href='farmerMachinariesGuidelines.php';">Machinaries Guideline</button>
+            <button onclick="location.href='farmerBankingGuideline.php';">Farming Guideline</button>
+            <button onclick="location.href='farmerEditAccount.php';">Get Support From Bank</button>
+            <button onclick="location.href='farmerMarketPrices.php';" >Market Price</button>
+            <button onclick="location.href='farmerDealsWithRetailer.php';">Deal With Retailer</button>
+            <button onclick="location.href='farmerCheckWeather.php';">Check Weather</button>
+            <button onclick="location.href='farmerWaterPayments.php';">Water Payments</button>
+            <button onclick="location.href='farmerGeneralPayments.php';">General Payments</button>        
+
+
+        </div>
+    </div>
+
+
+<!-- edit your account -->
+
+<div class="output_panel"> 
+ <h1 align="center"> Edit Your Account </h1> <hr>
+            <table border="1" align="center">
+            <form name="validationn" method="POST" action="../../controllers/farmerControllers/updateCheck.php" >
+               <table align="center" style="font-size:20px;">
+                <div class="">
+                    <tr>
+                        <td>Change Name:</td>
+                        <td width="300px "><input type="name" name="name" value="<?=$user['name']?>" placeholder="Enter New Name"></td>
+                        <td>Change Email:</td>
+                        <td><input type="email" name="email" value="<?=$user['email']?>" placeholder="Enter New Email" onblur ="validation()" onblur="submiton()" ></td>
+                        <td><h1 id="eerror"></h1> </td>
+                    </tr>
+                </div>
+                    <br>
+                    <tr>
+                        <td>Change Username:</td>
+                        <td width="300px "><input type="name" name="username" value="<?=$user['username']?>" placeholder="Enter New Username"></td>
+                        <td>Change Phone Number:</td>
+                        <td width="300px "><input type="number" name="phoneNumber" value="<?=$user['phone_number']?>" placeholder="Enter New Phone Number"  onblur ="phonevalidation()"></td>
+                        <td> <h1 id="nerror"></h1></td><br>
+                    </tr>
+
+                    <tr>
+                        <td>Change NID Number:</td>
+                        <td><input type="number" name="nidNumber" value="<?=$user['nid']?>" placeholder="Enter NID"></td>
+                        <td>Change Photo:</td>
+                        <td><input type="file" name="" placeholder="Enter New Photo"></td>
+                    </tr>
+                    <br>
+                    <tr>
+                         <td>Gender:</td>
+                        <td width="300px "><input type="text" name="gen" value="<?=$user['gender']?>">
+                        <td>Farmer Type:</td>                        
+                        <td width="300px "><input type="text" name="farmerType" value="<?=$user['farmer_type']?>" ></td>                         
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td width="300px "><input type="password" name="password" value="<?=$user['password']?>" placeholder="Enter New Password"></td>
+                        <td>Confirm Password:</td>
+                        <td><input type="password" name="pass" value="" placeholder="Confirm New Password"></td>
+                    </tr>
+                    
+
+                     <tr align="center" width=100%>
+                        <td colspan="3">
+                        <input type="submit" name="submit" value="Update">   
+                        <input type="reset" name="reset" value="Cancel">
+                        </td>
+                     </tr>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html> -->
 <!-- Table creation -->
-<table width = 100%;>
+<!-- <table width = 100%;>
     <tr height = 100px style ="background-color:#C1BCBC ">
         <td width =10%; align = center>
             <img width = 100px; height = 100px src ="logo.png">
         </td>
         <td align = right >
-            <table >
+            <table > -->
                 <!-- center menubar -->
-                <tr style ="font-size:20px;">
+<!--                 <tr style ="font-size:20px;">
                     <td><a href="farmerHome.php">Home  |</a></td>
                     <td><a href="#"> About us  |</a></td>
                     <td><a href="../../controllers/farmerControllers/logout.php"> logout</a></td>
                 </tr>
             </table>
         </td>
-    </tr>
+    </tr> -->
  <!-- Dashboard of Farmer -->
-  <tr  height = 700px>
+<!--   <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
             <a href="farmerEditAccount.php"> Edit Account </a><br><br> 
             <a href="farmerPostProblems.php"> Post For Problem </a><br><br>
@@ -39,9 +199,9 @@
             <a href="farmerGeneralPayments.php"> General Payments </a><br><br>
             <a href="farmerWaterPayments.php"> Water Payments </a><br>
 
-        </td>
+        </td> -->
         <!-- Output -->
-        <td valign="top">
+        <!-- <td valign="top">
             <h1 align="center"> Edit Your Account </h1> <hr>
             <table border="1" align="center">
             <form name="validationn" method="POST" action="../../controllers/farmerControllers/updateCheck.php" >
@@ -80,35 +240,35 @@
                         <td width="300px "><input type="password" name="password" value="<?=$user['password']?>" placeholder="Enter New Password"></td>
                         <td>Confirm Password:</td>
                         <td><input type="password" name="pass" value="" placeholder="Confirm New Password"></td>
-                    </tr> 
+                    </tr>  -->
                     
                     <!-- <table align="center" > -->
-                            <tr align="center" width=100%>
+                            <!-- <tr align="center" width=100%>
                                 <td colspan="3">
                                   <input type="submit" name="submit" value="Update">   
                                   <input type="reset" name="reset" value="Cancel">
                                 </td>
-                            </tr>
+                            </tr> -->
                     <!-- </table> -->
                 
-
+<!-- 
                 </table>
                     
             </form> 
         </td>
-    </tr>
+    </tr> -->
     <!-- Footer Part -->
-    <tr  height = 100px;>
+<!--     <tr  height = 100px;>
         <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
            All Copyrights @2022 Reserved by Gallant ltd.
         </td>
     </tr>
-</table>
+</table> -->
 
 
-</html>
+<!-- </html> -->
 
-<script>
+<!-- <script>
     function validation()
     {
         let email = document.validationn.email.value;
@@ -137,4 +297,4 @@
         }
         
     }
-</script>
+</script> -->

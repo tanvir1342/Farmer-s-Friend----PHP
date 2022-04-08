@@ -31,15 +31,21 @@
         <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
 
             <h1 align = center>Give Tratment</h1><hr>
-            <h3>Famer id:</h3>
-            <h3>Animal type:</h3>
-            <h3>Discription:</h3>
+            <form method="POST" action="../../../controllers/adminControllers/VeterinarianControllers/VetScheduleCheck.php">
+            <label><b>Farmer username:</b></label><br><br>
+            <input type="username" name="farmer_username"><br><br>
+            <label><b>Veterinarian username:</b></label><br><br>
+            <input type="username" name="vet_username"><br><br>
+            <label><b>Animal Type:</b></label><br><br>
+            <input type="text" name="animal_type"><br><br>
+            <label><b>Description:</b></label>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus magna, vestibulum non molestie ac, sagittis ornare dui. Nam sit amet vulputate tortor, ac vestibulum risus. Maecenas feugiat est eu arcu venenatis, nec imperdiet dolor vehicula. Etiam diam orci, molestie ac convallis vel, commodo vitae tortor. Donec quis egestas nisi. Integer diam nisi, ornare at dui a, eleifend suscipit orci. Etiam vestibulum nulla a nulla interdum iaculis. Nam feugiat auctor arcu sit amet volutpat. Sed porttitor purus id felis auctor iaculis. Etiam volutpat lorem ut efficitur bibendum. In dictum tincidunt velit id fermentum. Nam at nisi in est pretium sodales. Curabitur laoreet ante eu dui ullamcorper, at porta sapien lobortis. Praesent aliquam lectus ex, a malesuada est finibus ut. Quisque eget erat ornare, finibus diam at, ornare nisl. Fusce nec consequat lorem.
             </p>
             <h3>Set time and date</h3>
             <input type="datetime-local" id="" name="schedule"><br><br>
             <input type="submit">
+        </form>
         </td>
     </tr>
     <!-- footer section -->

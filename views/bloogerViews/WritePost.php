@@ -31,17 +31,27 @@
 		</td>
 		<td valign="top">
 			<h1 align="center">Write content about farming</h1><hr>
+			<form method="POST" action="../../controllers/bloggerControllers/BloggerPostPendingCheck.php">
+
+			<label>Username:</label><br>
+			<input type="username" name="username"><br>
+			<label>Blogger Name:</label><br>
+			<input type="blogger_name" name="blogger_name"><br>
+			<label>Status:</label><br>
+			<input type="status" name="status"><br>
 
 
 			<label for="fname"><b>Write a Post:</b></label><br>
-			<textarea rows="8" cols="100">
+			<textarea name="post" rows="8" cols="100">
 				
 			</textarea><hr>
 			
-			<div class="clearfix">
-				<button type="button" class="cancel">Cancel</button>
-				<button type="submit" class="submit">Post</button>
-			</div><br><br>
+			
+				<input type="submit" name="submit" value="Post">   
+                <input type="reset" name="reset" value="Cancel">
+
+            </form>
+			
 
 	
 

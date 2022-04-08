@@ -15,7 +15,7 @@ if(isset($_REQUEST['submit']))
 		{
 			$_SESSION['status'] = "true";
 			$_SESSION['Farmer_username'] = $username;
-			setcookie('status', 'true', time()+300, '/');
+			setcookie('status', 'true', time()+1000, '/');
 			header('location: ../../views/farmerViews/farmerHome.php');
 		}
 		else

@@ -20,7 +20,7 @@ if(isset($_REQUEST['submit']))
 		}
 		else
 		{
-			header('location: ../../views/bloogerViews/Login.php');
+			header('location: ../../../views/bloggerHome.php');
 		}
 
 		/*$file = fopen('../../models/bloglogin.txt', 'r');

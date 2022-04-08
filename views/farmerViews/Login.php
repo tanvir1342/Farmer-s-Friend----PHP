@@ -8,14 +8,105 @@ if(isset($_GET['msg']))
     }
     if($_GET['msg'] == "error")
     {
-        $msg = "invalid username or password";
+        $msg = "Invalid Username or Password";
     }
 }
 
 ?>
+
+
+
 <!DOCTYPE html>
 <html>
-<!-- center table creation -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="farmerHomes.css">
+<link rel="stylesheet" type="text/css" href="farmerLogin.css">
+<!--  menubar start from here -->
+
+    <div class="menubar">
+        <div class="menubar-icon">
+            <img src="images/logo.png">
+        </div>
+        <div class="menubar-link">
+            <td><a href="../../index.php">Home |</a></td>
+            <td><a href="#"> About us  |</a></td>
+            <td><a href="../../controllers/farmerControllers/logout.php"> logout</a></td>
+        </div>
+        
+    </div>
+
+  <!--   Main area -->
+  <div class="main_area_login">
+
+      <div class="login_area_pic">
+        <div class="image_login">
+            <img src="images/farmerloginimage.jpg">
+            <p>Farmering is the Profession of Hope</p>
+        </div>
+          
+      </div>
+      <div class="login_area_text">
+        <h1>Farmer Login</h1>
+        <!-- <h2 align = center><?=$msg?></h2> -->
+            <form method="POST" action="../../controllers/farmerControllers/logincheck.php" class="login_table">
+              <table align="center">
+                <tr>
+                    <td><input class="input" type="username" name="username" placeholder="Enter your Username"></td>
+                </tr>
+                <tr>
+                    <td><input class="input" type="password" name="password" placeholder="Enter your Password"></td>
+                </tr>
+            </table> 
+            <input  class="submit_button" type="submit" name="submit" value="Login"> 
+        </form>
+            
+      </div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+
 <table width = 100%;>
     <tr height = 100px style ="background-color:#C1BCBC ">
         <td width =10%; align = center>
@@ -23,7 +114,7 @@ if(isset($_GET['msg']))
         </td>
         <td align = right >
             <table >
-                <!-- center menubar -->
+           
                 <tr style ="font-size:20px;">
                     <td><a href="../../index.php">Home  |</a></td>
                     <td><a href="#"> About us  |</a></td>
@@ -32,9 +123,8 @@ if(isset($_GET['msg']))
             </table>
         </td>
     </tr>
-    <!-- daynamic menubar -->
     <tr  height = 700px>
-        <!-- output of user -->
+
         <td colspan="3" valign = top style ="background-color:#F5F2F1 ">
 
             <h1 align = center>Login Form</h1><hr>
@@ -63,7 +153,7 @@ if(isset($_GET['msg']))
 
         </td>
     </tr>
-    <!-- footer section -->
+
     <tr  height = 100px;>
         <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
            coppyright @2022
@@ -75,4 +165,4 @@ if(isset($_GET['msg']))
 
 
 
-</html>
+</html> -->
