@@ -77,6 +77,7 @@ body{
 .text_area_of_side_panel p{
 	text-align: center;
 }
+/*home page side panel button */
 .button_area_of_side_panel{
 	color: white;
 	align-items: center;
@@ -95,6 +96,7 @@ body{
 	margin: 10px;
 
 }
+
 /*main panel daynamic area star from here*/
 .daynamic_area{
 	float: right;

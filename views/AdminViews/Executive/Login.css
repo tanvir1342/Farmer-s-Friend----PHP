@@ -41,6 +41,7 @@ body{
 .image_login p{
 	color: white;
 	font-size:16px;
+	font-family: "Lucida Console", "Courier New", monospace;
 	margin-top:50px;
 
 }

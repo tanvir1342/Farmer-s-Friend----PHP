@@ -10,68 +10,7 @@
 
 
 ?>
-<!-- <!DOCTYPE html>
-<html>
 
-<table width = 100%;>
-    <tr height = 100px style ="background-color:#C1BCBC ">
-        <td width =10%; align = center>
-            <img width = 100px; height = 100px src ="logo.png">
-        </td>
-        <td align = right >
-            <table >
-                
-                <tr style ="font-size:20px;">
-                    <td><a href="#">Home  |</a></td>
-                    <td><a href="#"> About us  |</a></td>
-                    <td><a href="../../../controllers/adminControllers/excecutiveControllers/logout.php"> logout</a></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
- 
-    <tr  height = 700px>
-        <td width =15% bgcolor="C1BCBC" valign="top" align="center">
-           <img src="proPic.jpg" width="150px" height="100px"><br>
-           <h2></h2><br>
-           <p><?=$user['Name']?></p>
-           <p><?=$user['gender']?></p>
-           <p><?=$user['age']?></p>
-           <a href="EditProfile.php">Edit profile</a>
-       </td>
-        </td>
-      
-        <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
-
-            <h1 align = center>welcome,<?=$user['Name']?></h1><hr>
-            <table  align="center" width="500px" >
-                <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="listOfuser.php">user account</a></td>
-                    <td><td>
-                </tr>
-                <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="controlDeaL.php">control deal</a></td>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="approvePost.php">approve post</a></td>
-                </tr>
-                <tr>
-                    <td height="100px" width="100px" bgcolor="#aaa69d" align="center"><a href="EditProfile.php">Edit profile</a></td>
-                </tr>
-            </table>
-            
-
-
-        </td>
-    </tr>
-    
-    <tr  height = 100px;>
-        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
-           coppyright @2022
-        </td>
-    </tr>
-</table>
-
-
-</html> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -117,17 +56,17 @@
       <!--  main panel daynamic area star from here -->
       <div class="daynamic_area">
         <h2 class="daynamic_area_heading_text">Welcome Executive,<?=$user['Name']?></h2><hr>
-            <div class="function_area">
+            <div class="function_area" onclick="location.href='listOfuser.php';">
                 <img src="image/user.png">
                 <p>User info</p>
            </div>
         
-          <div class="function_area">
+          <div class="function_area" onclick="location.href='controlDeaL.php';">
               <img src="image/control.png">
                 <p>control deal</p>
           </div>
 
-          <div class="function_area">
+          <div class="function_area" onclick="location.href='approvePost.php';">
               <img src="image/aprove.png">
                 <p>Post chehck</p>
           </div>

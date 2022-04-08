@@ -13,7 +13,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-<head>
+<head
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
@@ -64,102 +64,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-
-<table width = 100%;>
-    <tr height = 100px style ="background-color:#C1BCBC ">
-        <td width =10%; align = center>
-            <img width = 100px; height = 100px src ="logo.png">
-        </td>
-        <td align = right >
-            <table >
-              
-                <tr style ="font-size:20px;">
-                    <td><a href="#">Home  |</a></td>
-                    <td><a href="#"> About us  |</a></td>
-                    <td><a href="../../../controllers/adminControllers/excecutiveControllers/logout.php"> logout</a></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-   
-    <tr  height = 700px>
-       
-        <td colspan="3" valign = top style ="background-color:#F5F2F1 ">
-
-            <h1 align = center>Login Form</h1><hr>
-            <h3 align = center> <?=$error?></h3>
-
-           
-        <form method="POST" action="../../../controllers/adminControllers/excecutiveControllers/excutiveLogincheck.php">
-              <table align="center">
-                <tr>
-                    <td>Username: </td>
-                    <td><input type="username" name="username" placeholder="Enter your Username"></td>
-                </tr>
-                <tr>
-                    <td>Password: </td>
-                    <td><input type="password" name="password" placeholder="Enter your Password"></td>
-                </tr>
-                <br>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Login"></td>
-                </tr>
-            </table>  
-        </form>
-            
-            
-
-
-        </td>
-    </tr>
-    
-    <tr  height = 100px;>
-        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
-           coppyright @2022
-        </td>
-    </tr>
-</table>
-
-
-
-
-
-</html> -->
