@@ -76,6 +76,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   margin-top:30px;
+
  
 }
 
@@ -108,6 +109,14 @@ body{
 	margin-bottom: 5px;
 	height:22px;
 	color: #7f8c8d;
+}
+.input_ret{
+	font-size:16px;
+	border: 1px solid;
+	border-radius: 2px;
+	text-align: center;
+	color: #7f8c8d;
+	width: 150px;
 }
 .submit_button{
 	font-size: 16px;

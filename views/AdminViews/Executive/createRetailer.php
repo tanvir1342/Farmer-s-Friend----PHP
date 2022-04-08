@@ -4,50 +4,57 @@
     $pendinguser = getpendinguser();
     $user = getuser();
 ?>
+
 <!DOCTYPE html>
 <html>
-<!-- center table creation -->
-<table width = 100%;>
-    <tr height = 100px style ="background-color:#C1BCBC ">
-        <td width =10%; align = center>
-            <img width = 100px; height = 100px src ="logo.png">
-        </td>
-        <td align = right >
-            <table >
-                <!-- center menubar -->
-                <tr style ="font-size:20px;">
-                    <td><a href="Home.php">Home  |</a></td>
-                    <td><a href="#"> About us  |</a></td>
-                    <td><a href="../../../controllers/adminControllers/excecutiveControllers/logout.php"> logout</a></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <!-- daynamic menubar -->
-    <tr  height = 700px>
-        <td width =10%; valign = top; style ="background-color:#C1BCBC; font-size:20px;">
-            <a href="listOfuser.php">user Account</a><br><br>
-            <a href="verifyDocument.php">verfiy ducument</a><br><br>
-            <a href="controlDeaL.php">control deal</a><br><br>
-            <a href="approvePost.php">Approve post</a><br><br>
-            <a href="EditProfile.php">Edit profile</a><br><br>
-        </td>
-        <!-- output of user -->
-        <td valign = top style ="background-color:#F5F2F1 ">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Farmer user list</title>
+    <link rel="stylesheet" type="text/css" href="createUser.css">
+</head>
+<body>
+    <div class="menubar">
+        <div class="menubar-icon">
+            <img src="image/logo.png">
+        </div>
+        <div class="menubar-link">
+            <a href="">Home |</a>
+            <a href="#"> About us |</a>
+            <a href="#"> Contact us |</a>
+            <a href="../../../controllers/adminControllers/excecutiveControllers/logout.php"> Logout </a>
+        </div>
+        
+    </div>
+    <div class="main_panle">
+       <!--  side panel div start from here -->
+       <div class="side_panel">
+             <div class="button_area_of_2nd_side_panel">
+            <button>User info</button>
+            <button>Control deal</button>
+            <button>Post chehck</button>
+            <button>Edit profile</button>
 
-            <h3 align = center>retailer user pending list</h3>
-            <table border="1px">
+
+        </div>
+       </div>
+      <!--  main panel daynamic area star from here -->
+        <div class="daynamic_area">
+        
+           <span>Reatiler user List</span>
+            
+              <table border="1px" width="300px" id="userTable" align="center" >
                 <tr>
-                    <td>Name</td>
-                    <td>username</td>
-                    <td>password</td>
-                    <td>NID Number</td>
-                    <td>Email</td>
-                    <td>Phone number</td>
-                    <td>Gender</td>
-                    <td>Trade License Number</td>
-                    <td>photo</td>
-                    <td>Status</td>
+                    <th>Name</th>
+                    <th>username</th>
+                    <th>password</th>
+                    <th>NID Number</th>
+                    <th>Email</th>
+                    <th>Phone number</th>
+                    <th>Gender</th>
+                    <th>Trade License Number</th>
+                    <th>photo</th>
+                    <th>Status</th>
                 </tr>
                 <?php
                 if ($pendinguser!=null) {
@@ -57,17 +64,17 @@
 
                 ?>
                 <tr>
-                    <form method="POST" action="../../../controllers/adminControllers/excecutiveControllers/retailercreateAccount.php">
-                        <td><input type="name" name="name" value="<?=$pendinguser['0']?>"></td>
-                        <td><input type="username" name="username" value="<?=$pendinguser['1']?>"></td>
-                        <td><input type="password" name="password" value="<?=$pendinguser['2']?>"></td>
-                        <td><input type="number" name="nidNumber" value="<?=$pendinguser['3']?>"></td>
-                        <td><input type="email" name="email" value="<?=$pendinguser['4']?>"></td>
-                        <td><input type="number" name="phoneNumber" value="<?=$pendinguser['5']?>"></td>
-                        <td><input type="text" name="gen" value="<?=$pendinguser['6']?>"></td>
-                        <td><input type="lnumber" name="licNumber" value="<?=$pendinguser['7']?>"></td>
+                    <form  method="POST" action="../../../controllers/adminControllers/excecutiveControllers/retailercreateAccount.php">
+                        <td><input class="input_ret" type="name" name="name" value="<?=$pendinguser['0']?>"></td>
+                        <td><input class="input_ret" type="username" name="username" value="<?=$pendinguser['1']?>"></td>
+                        <td><input class="input_ret" type="password" name="password" value="<?=$pendinguser['2']?>"></td>
+                        <td><input class="input_ret" type="number" name="nidNumber" value="<?=$pendinguser['3']?>"></td>
+                        <td><input class="input_ret" type="email" name="email" value="<?=$pendinguser['4']?>"></td>
+                        <td><input class="input_ret" type="number" name="phoneNumber" value="<?=$pendinguser['5']?>"></td>
+                        <td><input class="input_ret" type="text" name="gen" value="<?=$pendinguser['6']?>"></td>
+                        <td><input class="input_ret" type="lnumber" name="licNumber" value="<?=$pendinguser['7']?>"></td>
                         <td>null</td>
-                        <td><input type="submit" name="submit" value="submit"></td>
+                        <td><input class="submit_button" type="submit" name="submit" value="Add"></td>
                     </form>
                     
                 </tr>
@@ -78,18 +85,18 @@
             </table>
 
             <br>
-            <h1 align="center">User list</h1>
-            <table border="1px">
+            <span align="center">User list</span>
+            <table border="1px" width="80%" id="userTable">
                 <tr>
-                    <td>Name</td>
-                    <td>username</td>
-                    <!-- <td>password</td>
- -->                    <td>NID Number</td>
-                    <td>Email</td>
-                    <td>Phone number</td>
-                    <td>Gender</td>
-                    <td>Trade License Number</td>
-                    <td>photo</td>
+                    <th>Name</th>
+                    <th>username</th>
+                    <th>password</th>
+                    <th>NID Number</th>
+                    <th>Email</th>
+                    <th>Phone number</th>
+                    <th>Gender</th>
+                    <th>Trade License Number</th>
+                    <th>photo</th>
                 </tr>
                 <?php
                 if ($user!=null) {
@@ -101,7 +108,7 @@
                 <tr>
                     <td><?=$user['0']?></td>
                     <td><?=$user['1']?></td>
-                   <!--  <td><?=$user['2']?></td> -->
+               
                     <td><?=$user['3']?></td>
                     <td><?=$user['4']?></td>
                     <td><?=$user['5']?></td>
@@ -116,8 +123,8 @@
             </table>
 
 
-            <!-- creat new user account  -->
-            <h3 align="center">Creat new user</h3><br>
+        
+            <span align="center">Creat new user</span><br>
              <form  name="validationn" method="POST" action="../../../controllers/adminControllers/excecutiveControllers/retailercreateAccount.php">
                <table align="center" style="font-size:20px;">
                     <tr>
@@ -162,35 +169,27 @@
                         <td>Confirm Password:</td>
                         <td><input type="password" name="pasword_extra" value=""placeholder="Confirm Password"></td>
                     </tr> 
-                    
-                    <!-- <table align="center" > -->
+                 
                             <tr align="center" width=100%>
                                 <td colspan="3">
                                   <input type="submit" name="submit" value="submit">   
                                   <input type="reset" name="reset" value="Reset">
                                 </td>
                             </tr>
-                    <!-- </table> -->
+                 
                 
 
                 </table>
                     
             </form>
-            
+        </div>
 
+        
+    </div>
 
-        </td>
-    </tr>
-    <!-- footer section -->
-    <tr  height = 100px;>
-        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
-           coppyright @2022
-        </td>
-    </tr>
-</table>
-
-
+</body>
 </html>
+
 
 <script>
 

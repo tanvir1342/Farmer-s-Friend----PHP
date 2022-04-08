@@ -94,7 +94,7 @@
           
             
             <h3 align="center"><?=$msg?></h3><br>
-            <span align="center">Creat new user</span>
+            <span align="center">Create new user</span>
             <h3 id="eerror" style="width: 100%;background-color:#f8c291;color: white;text-align: center;"></h2>
             <h3 id="nerror" style="width: 100%;background-color:#f8c291;color: white;text-align: center;"></h2>
             <h3 id="msg" style="width: 100%;background-color:#f8c291;color: white;text-align: center;"></h2>

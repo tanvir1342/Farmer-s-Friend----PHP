@@ -14,7 +14,7 @@ if(isset($_REQUEST['submit']))
 		{
 			$_SESSION['status'] = "true";
 			$_SESSION['Executive_username'] = $username;
-			setcookie('status', 'true', time()+300, '/');
+			setcookie('status', 'true', time()+9000, '/');
 			header('location: ../../../views/AdminViews/Executive/ExcutiveHome.php');
 		}
 		else
