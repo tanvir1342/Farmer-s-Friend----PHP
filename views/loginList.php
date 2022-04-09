@@ -24,7 +24,7 @@
     <input class="dashboard_button" type="button" onclick="location.href='AdminViews/Executive/Login.php';" value="Executive">
     <input class="dashboard_button" type="button" onclick="location.href='AdminViews/Adviser(Econmoic)/Login.php';" value="Adviser Economics">
     <input class="dashboard_button" type="button" onclick="location.href='AdminViews/Advisier(Agriculture)/Login.php';" value="Adviser Agriculture"><br>
-    <input class="dashboard_button" type="button" onclick="location.href='AdminViews/Veterinarian/Login.php';" value="Vatanirian">
+    <input class="dashboard_button" type="button" onclick="location.href='AdminViews/Veterinarian/Login.php';" value="Veterinarian">
     <input class="dashboard_button" type="button" onclick="location.href='farmerViews/Login.php';" value="Farmer">
     <input class="dashboard_button" type="button" onclick="location.href='retailerViews/Login.php';" value="Retailer">
     <br>
