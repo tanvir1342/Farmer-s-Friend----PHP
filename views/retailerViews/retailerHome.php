@@ -83,6 +83,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Retailer Home</title>
     <link rel="stylesheet" type="text/css" href="template.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="createUser.css">
 </head>
     <div class="menubar">
         <div class="menubar-icon">
@@ -104,37 +106,40 @@
         <div class="text_area_of_side_panel">
              <h1><?=$user['name']?></h1>
             
-             <p>Gender:<?=$user['Gender']?></p>
+             <p>Gender: <?=$user['Gender']?></p>
 
         </div>
-             <div class="button_area_of_side_panel">
+             <div class="button_area_of_side_panel" onclick="location.href='retailerEditAccount.php';">
             <button>Edit Profile</button>
 
         </div>
        </div>
+   </div>
        
       <div class="daynamic_area">
         <h2 class="daynamic_area_heading_text">Welcome Retailer,<?=$user['name']?></h2><hr>
-            <div class="function_area">
+            <div class="function_area" onclick="location.href='retailerUpdatePrice.php';">
+
                 <img src="image/update.png">
+                
                 <p>Update & Post Latest Prices</p>
            </div>
         
-          <div class="function_area">
-              <img src="image/control.png">
+          <div class="function_area" onclick="location.href='retailerHistory.php';">
+              <img src="image/cargo.png">
                 <p>Transport/Deal History</p>
           </div>
 
-          <div class="function_area">
-              <img src="image/aprove.png">
+          <div class="function_area" onclick="location.href='dealWithFarmer.php';">
+              <img src="image/deals.png">
                 <p>Deal With Farmers</p>
           </div>
-          <div class="function_area">
-              <img src="image/aprove.png">
+          <div class="function_area" onclick="location.href='govTax.php';">
+              <img src="image/taxes.png">
                 <p>Payment For Tax</p>
           </div>
-          <div class="function_area">
-              <img src="image/aprove.png">
+          <div class="function_area" onclick="location.href='makePayment.php';">
+              <img src="image/payment.png">
                 <p>Payment For Any Issue</p>
           </div>
 

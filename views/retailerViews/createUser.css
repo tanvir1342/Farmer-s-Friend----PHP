@@ -63,20 +63,6 @@ body{
         margin: 10px;
 
     }
-.button_area_of_1st_side_panel{
-        color: white;
-        align-items: center;
-        position: absolute;
-        margin-left:25px;
-        margin-top: 30px;
-    }
-.button_area_of_2nd_side_panel button{
-        width: 200px;
-        height: 30px;
-        font-size: 16px;
-        margin: 50px;
-
-    }
 .daynamic_area span{
 	text-align: center;
 	font-size: 30px;
@@ -86,7 +72,6 @@ body{
 
 
 }
-/*Table format start here*/
 #userTable {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -115,8 +100,7 @@ body{
 	font-size:20px;
 	
 
-}/*
-basic input area*/
+}
 .input{
 	font-size:16px;
 	border: 1px solid;
@@ -126,7 +110,6 @@ basic input area*/
 	height:22px;
 	color: #7f8c8d;
 }
-/*inside table input area*/
 .input_ret{
 	font-size:16px;
 	border: 1px solid;
@@ -135,18 +118,6 @@ basic input area*/
 	color: #7f8c8d;
 	width: 150px;
 }
-/*input_horizently*/
-.input_horizently{
-	font-size:19px;
-	margin-bottom:5px;
-	border-radius: 2px;
-	text-align: center;
-	
-	width: 500px;
-	border: none;
-	border-bottom: 2px solid #0C2461;
-}
-
 .submit_button{
 	font-size: 16px;
 	margin-top: 20px;
@@ -162,9 +133,4 @@ basic input area*/
     margin-top:10px;
 
 
-}
-.userTable_horizently{
-	font-size:22px;
-	align-items: center;
-	
 }

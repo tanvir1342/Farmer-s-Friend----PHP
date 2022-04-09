@@ -2,7 +2,7 @@
 	
 	session_start();
 	unset($_SESSION['status']);
-	setcookie('status', 'true', time()-30000, '/');
+	setcookie('status', 'true', time()-300, '/');
 	header('location: ../../views/retailerViews/Login.php');
 
 ?>

@@ -1,18 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-img {
-  border-radius: 10%;
-}
-</style>
-	<title></title>
+    <title>Transpor Deal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="createUser.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+   
 </head>
 <body>
-<table width="100%"; border="1px">
+    <div class="menubar">
+        <div class="menubar-icon">
+            <img src="image/logo.png">
+        </div>
+        <div class="menubar-link">
+            <a href="">Home |</a>
+            <a href="#"> About us |</a>
+            <a href="#"> Contact us |</a>
+            <a href="../../../controllers/adminControllers/excecutiveControllers/logout.php"> Logout </a>
+        </div>
+        
+    </div>
+    <div class="side_panel">
+             <div class="button_area_of_2nd_side_panel">
+            <button div class="function_area" onclick="location.href='retailerEditAccount.php';">Edit Account</button>
+            <button div class="function_area" onclick="location.href='retailerUpdatePrice.php';">Latest Prices</button>
+            <button  div class="function_area" onclick="location.href='dealWithFarmer.php';">Deal With Farmers</button>
+            <button  div class="function_area" onclick="location.href='retailerTransportHistory.php';">Transport Deal</button>
+            <button div class="function_area" onclick="location.href='retailerDealHistory.php';">Deal History</button>
+            <button div class="function_area" onclick="location.href='govTax.php';">Payment For Tax</button>
+            <button div class="function_area" onclick="location.href='makePayment.php';">Payment For Any Issue </button>
+            
+     </div>
+       </div>
+
+<div class="daynamic_area">
+	<span align = center>Directly Deal with Farmers</span>
+	<table border="1px" align="center" width="10%" id="userTable">
+				<tr align="left">
+					<td>
+						<img src="image/komi.png" style="width:150px">
+						<h1>Komi Chan</h1>
+					</td>
+				</tr>
+				<tr>
+					<table border="1px" align="center" width="10%" id="userTable">
+							<tr>
+								<td>
+									 Komi Chan: <textarea name="comment" rows="5" cols="40"></textarea>
+								</td>
+								<td>
+									<h1></h1>
+								</td>
+							</tr>
+							<tr align="left">
+								<td>
+									<h1></h1>
+								</td>
+								<td >
+									 <textarea name="comment" rows="5" cols="40"></textarea> :Tadano Kun
+								</td>
+							</tr>
+						</table>
+				</tr>
+			</table>
+</div>
+<!-- <table width="100%"; border="1px">
 <tr height = 100px style ="background-color:#C1BCBC ">
 		<td width="10%" align="center">
 			<img  width="80px"; height="80px"; src="logo.png";  >
@@ -70,6 +124,6 @@ img {
            All Copyrights Reserve by Gallant ltd.
         </td>
     </tr>
-</table>
+</table> -->
 </body>
 </html>

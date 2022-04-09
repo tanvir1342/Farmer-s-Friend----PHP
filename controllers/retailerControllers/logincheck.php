@@ -14,7 +14,7 @@ if(isset($_REQUEST['submit']))
       	$_SESSION['Retailer_username'] = $username;
       	$_SESSION['status'] = "true";
 			
-			setcookie('status', 'true', time()+300, '/');
+			setcookie('status', 'true', time()+9000, '/');
       	header('location: ../../views/retailerViews/retailerHome.php');
       }
 		else{

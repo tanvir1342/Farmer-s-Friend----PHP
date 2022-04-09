@@ -7,9 +7,58 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="createUser.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
-<table width="100%"; border="1px">
+
+<div class="menubar">
+        <div class="menubar-icon">
+            <img src="image/logo.png">
+        </div>
+        <div class="menubar-link">
+            <a href="">Home |</a>
+            <a href="#"> About us |</a>
+            <a href="#"> Contact us |</a>
+            <a href="../../../controllers/adminControllers/excecutiveControllers/logout.php"> Logout </a>
+        </div>
+        
+    </div>
+    <div class="side_panel">
+             <div class="button_area_of_2nd_side_panel">
+            <button div class="function_area" onclick="location.href='retailerEditAccount.php';">Edit Account</button>
+            <button div class="function_area" onclick="location.href='retailerUpdatePrice.php';">Latest Prices</button>
+            <button  div class="function_area" onclick="location.href='dealWithFarmer.php';">Deal With Farmers</button>
+            <button div class="function_area" onclick="location.href='retailerTransportHistory.php';">Deal History</button>
+            <button div class="function_area" onclick="location.href='retailerDealHistory.php';">Payment For Tax</button>
+            <button div class="function_area" onclick="location.href='govTax.php';">Payment For Any Issue </button>
+            <button div class="function_area" onclick="location.href='makePayment.php';">Edit profile</button>
+     </div>
+       </div>
+
+       <div class="daynamic_area">
+
+        
+           <span align = center>Retailer Transport/Deal History</span>
+		<div align="center" class="main_panle">
+			<div>
+				<div class="function_area" onclick="location.href='retailerTransportHistory.php';">
+              <img src="image/cargo.png">
+                <p>Check Transportation</p>
+          </div>
+           
+            <div class="function_area" onclick="location.href='retailerDealHistory.php';">
+              <img src="image/deals.png">
+                <p>Check Deal History</p>
+          </div>
+        </div>
+       </div>
+   </div>
+
+
+
+<!-- <table width="100%"; border="1px">
 <tr height = 100px style ="background-color:#C1BCBC ">
 		<td width="10%" align="center">
 			<img  width="80px"; height="80px"; src="logo.png";  >
@@ -35,12 +84,12 @@
 			<button type="button"><a href="retailerDealHistory.php">Check Deal history</a></button>
 		</td>
 	</tr>
-	 <!-- Footer Part -->
+	 
    <tr  height = 100px;>
         <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
            All Copyrights Reserve by Gallant ltd.
         </td>
     </tr>
-</table>
+</table> -->
 </body>
 </html>
