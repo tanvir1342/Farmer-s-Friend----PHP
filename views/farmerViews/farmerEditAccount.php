@@ -79,7 +79,7 @@
 
     <div class="daynamic_area">
         <h2 class="daynamic_area_heading_text">Edit Your Account</h2><hr>
-    <form name="validationn" method="POST" action="../../controllers/farmerControllers/regcheck.php">
+    <form name="validationn" method="POST" action="../../controllers/farmerControllers/updatecheck.php">
                <table align="center" style="font-size:20px;" class="create_user">
                     <tr>
                         <td>Name:</td>
@@ -93,7 +93,7 @@
                         <td>Username:</td>
                         <td width="300px "><input class="input" type="username" name="username" value="<?=$user['username']?>" placeholder="Enter Username"></td>
                         <td>Phone Number:</td>
-                        <td width="300px "><input  class="input" type="number" name="phoneNumber" value="<?=$user['phone_number']?>"" placeholder="Enter Phone Number" onblur ="phonevalidation()" ></td>
+                        <td width="300px "><input  class="input" type="number" name="phoneNumber" value="<?=$user['phone_number']?>" placeholder="Enter Phone Number" onblur ="phonevalidation()" ></td>
                         <td></td><br>
 
                     </tr>

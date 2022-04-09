@@ -1,5 +1,8 @@
 <?php 
     require('header.php');
+    require('../../models/farmer_info.php');
+     $username = $_SESSION['Farmer_username'];
+     $user = getoneuser($username);
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,56 +40,55 @@
             
         </td>
         <td valign="top"; align="center"><h1><u>Water Payments</u></h1><hr>
-            <table >
-                <tr>
-                    <td>Payment Method:</td>
-                    <td height="100">
-                        
-                <select>
-                    <option></option>
-                    <option>Bkash</option>
-                    <option>Dabit</option>
-                    <option>Credit</option>
-                    <option>Bank</option>
-                </select>
-            </td>
-                </tr>
-                <tr>
-                    <td>Phone:</td>
-                    <td>
-                     <input type="number" name="Phone:">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Amount: </td>
-                    <td>
-                    <input type="number" name="Amount">
-                    </td>
-                </tr>
-                <tr>
-                    <td>City/District: </td>
-                    <td>
-                    <input type="text" name="Amount">
-                    </td>
-                </tr>
-                <tr>
-                    <td>ID: </td>
-                    <td>
-                    <input type="number" name="Amount">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Pin/Pass Code: </td>
-                    <td>
-                    <input type="number" name="number">
-                    </td>
-                </tr>
-                <tr >
-                    <td >
-                         <br><input type="submit" value="Pay">
-                    </td>
-                </tr>
-            </table>
+            <form method="POST" action="../../controllers/farmerControllers/waterPaymentCheck.php">
+                        <table >
+                             <tr>
+                                    <td>Username:</td>
+                                    <td width="300px "><input type="username" name="username" value="<?=$user['username']?>" placeholder="Enter Username"></td>
+                             </tr>
+                            <tr>
+                                    <td>Payment Method:</td>                        
+                                    <td width="300px "><input type="radio" name="payment_method" value="Bkash" > Bkash <input type="radio" name="payment_method" value="Rocket" > Rocket <input type="radio" name="payment_method" value="Bank" > Bank </td> 
+                             </tr>
+
+
+                            <tr>
+                                <td>Phone:</td>
+                                <td>
+                                 <input type="number" name="Phone" value="<?=$user['phone_number']?>" placeholder="Enter Phone Number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Amount: </td>
+                                <td>
+                                <input type="number" name="Amount" value="" placeholder="Enter Amount">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>City/District: </td>
+                                <td>
+                                <input type="text" name="city_district" value="" placeholder="Enter Username City/District">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pin/Pass Code: </td>
+                                <td>
+                                <input type="number" name="pin_pass" value="" placeholder="Enter Pin/Pass Code">
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>Code: </td>
+                                <td>
+                                <input type="number" name="code" value="" placeholder="Enter Code">
+                                </td>
+                            </tr>
+                            <tr >
+                                <td >
+                                     <br><input type="submit" name="submit" value="Pay">
+                                </td>
+                            </tr>
+                        </table>
+            </form>
             
         </td>
     </tr>
