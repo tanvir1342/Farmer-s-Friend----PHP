@@ -46,7 +46,7 @@
             <img src="images/logo.png">
         </div>
         <div class="menubar-link">
-            <a href="">Home |</a>
+            <a href="farmerHome.php">Home |</a>
             <a href="#"> About us |</a>
             <a href="#"> Contact us |</a>
             <a href="../../controllers/farmerControllers/logout.php"> Logout </a>
@@ -131,8 +131,7 @@
                 
 
                 </table>
-                                  <input class="submit_button" id="submited" type="submit" name="submit" value="submit">  
-                                  <input class="submit_button" type="reset" name="reset" value="Reset">
+                                  <input class="submit_button" id="submited" type="submit" name="submit" value="Update">  
                     
             </form>
 </div>
