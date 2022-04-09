@@ -28,6 +28,6 @@
     <input class="dashboard_button" type="button" onclick="location.href='farmerViews/Login.php';" value="Farmer">
     <input class="dashboard_button" type="button" onclick="location.href='retailerViews/Login.php';" value="Retailer">
     <br>
-    <input class="dashboard_button" type="button" onclick="location.href='bloogerViews/Login.php';" value="Blooger">
+    <input class="dashboard_button" type="button" onclick="location.href='bloogerViews/Login.php';" value="Blogger">
 </div>
 </html> 

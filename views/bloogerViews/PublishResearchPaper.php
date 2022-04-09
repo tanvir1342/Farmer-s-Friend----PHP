@@ -1,5 +1,8 @@
 <?php 
     require('header.php');
+    require('../../models/Blogger_info.php');
+    $username = $_SESSION['Blogger_username'];
+    $user  = getoneuser($username);
 ?>
 <html>
 <head>
@@ -34,7 +37,7 @@
 			<form method="POST" action="../../controllers/bloggerControllers/BloggerResearchPaperPendingCheck.php">
 
 			<label><b>Blogger Username:</b></label><br>
-			<input type="text" name="blogger_username"><br><br>
+			<input type="text" name="blogger_username" value="<?=$user['username']?>"><br><br>
 
 			<label for="domain"><b>Domain Name:</b></label><br>
 			<input type="text" name="domain_name" required><br><br>

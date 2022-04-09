@@ -1,8 +1,8 @@
 <?php 
     require('header.php');
-    //require('../../../models/Executive_info.php');
-    //$username = $_SESSION['Executive_username'];
-    //$user = getuserinfo($username);
+    require('../../../models/vet_info.php');
+    $username = $_SESSION['vet_username'];
+    $user = getoneuser($username);
     
     //echo $user['Name'];
 
@@ -98,9 +98,9 @@
     
         </div>
         <div align="center" class="text_area_of_side_panel">
-             <p><b>Name: Atto</b></p>
-             <p><b>Age: 22</b></p>
-             <p><b>Gender: Male</b></p>
+             <h2><?=$user['name']?></h2>
+             <p>Phone:<?=$user['phone']?></p>
+             <p>Gender:<?=$user['gender']?></b></p>
 
         </div>
              <div class="button_area_of_side_panel" onclick="location.href='EditProfile.php';">
@@ -111,7 +111,7 @@
        </div>
       <!--  main panel daynamic area star from here -->
       <div class="daynamic_area">
-        <h2 class="daynamic_area_heading_text">Welcome Veterinarian</h2><hr>
+        <h2 class="daynamic_area_heading_text">Welcome Veterinarian,<?=$user['name']?></h2><hr>
             <div class="function_area" onclick="location.href='FarmerPost.php';">
                 <img src="farmer_post.png">
                 <p>Farmer Post</p>

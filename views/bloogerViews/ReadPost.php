@@ -1,7 +1,7 @@
 <?php 
     require('header.php');
     require('../../models/BloggerPost.php');
-    $user = getuser($username);
+    $user = getuser();
     //print_r($user);
     
 

@@ -33,7 +33,7 @@ function edit ($name,$username,$password,$email,$gender,$phone,$usernameold)
 }
 
 
-function getuserinfo($username)
+function getoneuser($username)
 {
 	$con = mysqli_connect('localhost','root','','webtech');
 	$sql = "select *from vet_info where username = '{$username}'";

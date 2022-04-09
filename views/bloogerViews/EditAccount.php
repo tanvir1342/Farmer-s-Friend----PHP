@@ -1,6 +1,8 @@
 <?php 
     require('header.php');
-    //$username = $_SESSION['Blogger_username'];
+    require('../../models/Blogger_info.php');
+    $username = $_SESSION['Blogger_username'];
+    $user = getoneuser($username);
 ?>
 
 
@@ -19,7 +21,7 @@
             <img src="logo.png">
         </div>
         <div class="menubar-link">
-            <a href="">Home |</a>
+            <a href="bloggerHome.php">Home |</a>
             <a href="#"> About us |</a>
             <a href="#"> Contact us |</a>
             <a href="../../controllers/bloggerControllers/logout.php"> Logout </a>
@@ -30,10 +32,10 @@
        <!--  side panel div start from here -->
        <div class="side_panel">
              <div class="button_area_of_2nd_side_panel">
-            <button>Edit Profile</button>
-            <button>Write a Post</button>
-            <button>Read Post</button>
-            <button>Research Paper</button>
+            <button onclick="location.href='EditAccount.php';">Edit Profile</button>
+            <button onclick="location.href='WritePost.php';">Write a Post</button>
+            <button onclick="location.href='ReadPost.php';">Read Post</button>
+            <button onclick="location.href='PublishResearchPaper.php';">Research Paper</button>
 
 
         </div>
@@ -49,24 +51,24 @@
                <table align="center" style="font-size:20px;" class="create_user">
                     <tr>
                         <td>Name:</td>
-                        <td width="300px "><input class="input" type="name" name="name" value="" placeholder="Enter Name"></td>
+                        <td width="300px "><input class="input" type="name" name="name" value="<?=$user['name']?>" placeholder="Enter Name"></td>
                         <td>Email:</td>
-                        <td><input class="input" type="email" name="email" value=""placeholder="Enter Email" onblur ="validation()"></td>
+                        <td><input class="input" type="email" name="email" value="<?=$user['email']?>"placeholder="Enter Email" onblur ="validation()"></td>
                         <td></td>
                     </tr>
                     <br>
                     <tr>
                         <td>Username:</td>
-                        <td width="300px "><input class="input" type="username" name="username" value="" placeholder="Enter Username"></td>
+                        <td width="300px "><input class="input" type="username" name="username" value="<?=$user['username']?>" placeholder="Enter Username"></td>
                         <td>Phone Number:</td>
-                        <td width="300px "><input  class="input" type="number" name="phone" value="" placeholder="Enter Phone Number" onblur ="phonevalidation()" ></td>
+                        <td width="300px "><input  class="input" type="number" name="phone" value="<?=$user['phone']?>" placeholder="Enter Phone Number" onblur ="phonevalidation()" ></td>
                         <td></td><br>
 
                     </tr>
                     <tr>
                         <td>Gender:</td>
                         <td width="300px "><input class="input" type="radio" name="gender" value="male" > Male 
-                        <input class="input" type="radio" name="gender" value="female" > Female <input class="input" type="radio" name="gender" > Other </td>
+                        <input class="input" type="radio" name="gender" value="female" > Female <input class="input" type="radio" name="gender" value="other" > Other </td>
                                          
                         
                         <td>Photo:</td>
@@ -77,7 +79,7 @@
                     <br>
                     <tr>
                         <td>Password:</td>
-                        <td width="300px "><input class="input" id="password1" type="password" name="password" value="" placeholder="Enter Password"></td>
+                        <td width="300px "><input class="input" id="password1" type="password" name="password" value="<?=$user['password']?>" placeholder="Enter Password"></td>
                         <td>Confirm Password:</td>
                         <td><input class="input" type="password" id="password2" name="cpassword" value=""placeholder="Confirm Password" onkeyup ="passchechk()">
                         </td>

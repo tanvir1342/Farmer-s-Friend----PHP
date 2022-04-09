@@ -1,5 +1,8 @@
 <?php 
     require('header.php');
+    require('../../models/Blogger_info.php');
+    $username = $_SESSION['Blogger_username'];
+    $user  = getoneuser($username);
 ?>
 <html>
 <head>
@@ -34,9 +37,9 @@
 			<form method="POST" action="../../controllers/bloggerControllers/BloggerPostPendingCheck.php">
 
 			<label>Username:</label><br>
-			<input type="username" name="username"><br>
+			<input type="username" name="username" value="<?=$user['username']?>"><br>
 			<label>Blogger Name:</label><br>
-			<input type="blogger_name" name="blogger_name"><br><br>
+			<input type="blogger_name" name="blogger_name" value="<?=$user['name']?>"><br><br>
 			
 
 
