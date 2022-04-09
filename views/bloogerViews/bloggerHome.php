@@ -1,8 +1,10 @@
 <?php 
     require('header.php');
-    //require('../../../models/Executive_info.php');
-    //$username = $_SESSION['Executive_username'];
-    //$user = getuserinfo($username);
+    $username = $_SESSION['Blogger_username'];
+    require('../../models/Blogger_info.php');
+    $user = getoneuser($username);
+    
+    
     
     //echo $user['Name'];
 
@@ -98,9 +100,8 @@
     
         </div>
         <div align="center" class="text_area_of_side_panel">
-             <p><b>Name: Atto</b></p>
-             <p><b>Age: 22</b></p>
-             <p><b>Gender: Male</b></p>
+             <h3><?=$user['name']?></h3>             
+             <p>Gender:<?=$user['gender']?></p>
 
         </div>
              <div class="button_area_of_side_panel">
@@ -111,7 +112,7 @@
        </div>
       <!--  main panel daynamic area star from here -->
       <div class="daynamic_area">
-        <h2 class="daynamic_area_heading_text">Welcome Blogger</h2><hr>
+        <h2 class="daynamic_area_heading_text">Welcome Blogger,<?=$user['name']?></h2><hr>
             <div class="function_area" onclick="location.href='WritePost.php';">
                 <img src="writepost.jpg">
                 <p>Write a Post</p>

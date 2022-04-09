@@ -10,6 +10,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="farmer.css">
+    <style>
+    .button_area_of_2nd_side_panel{
+        color: white;
+        align-items: center;
+        position: absolute;
+        margin-left:25px;
+        margin-top: 30px;
+    }
+    .button_area_of_2nd_side_panel button{
+        width: 200px;
+        height: 30px;
+        font-size: 16px;
+        margin: 10px;
+
+    }
+    .function_area{
+        margin-left:250px;
+    }
+    </style>
 </head>
 <body>
        <!--  menubar start from here -->
@@ -32,7 +51,7 @@
        <!--  side panel div start from here -->
        <div  class="side_panel">      
         
-            <div class="button_area_of_side_panel">
+            <div class="button_area_of_2nd_side_panel">
             <button onclick="location.href='farmerPosttype.php';">Post For Problem</button>
             <button onclick="location.href='veterinarianSupport.php';">Veteranian Support</button>
             <button onclick="location.href='farmerMachinariesGuidelines.php';">Machinaries Guideline</button>

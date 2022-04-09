@@ -1,85 +1,234 @@
 <?php 
     require('header.php');
+    require('../../models/BloggerPost.php');
+    $user = getuser();
+    //print_r($user);
+    
+
 ?>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Blogger</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Farmer user list</title>
+    <link rel="stylesheet" type="text/css" href="createUser.css">
 </head>
 <body>
-
-<table border="1" width="100%">
-	<tr height="100px" style="background-color:#C1BCBC">
-		<td width="10%" align="center">
-			<img width="100px" height="100px" src="logo.png">
-		</td>
-		<td align="right">
-			<a href="bloggerHome.php">Home</a>
-			<a href="0">| About Us</a>
-			<a href="../../controllers/bloggerControllers/logout.php">">| Logout</a>
-		</td>
-		
-
-	</tr>
-	<tr height="700px"> 
-		<td width="10%" valign="top" align="center" bgcolor="C1BCBC">
-		
-		<a href="EditAccount.php">Editt Account</a><br><br>
-		<a href="WritePost.php">Write a Post</a><br><br>
-		<a href="ReadPost.php">Read Posts</a><br><br>
-		<a href="PublishResearchPaper.php">Research Paper</a><br><br>
-		
-		</td>
-		<td valign="top">
-			<h1 align="center">Read Posts</h1><hr>
+    <div class="menubar">
+        <div class="menubar-icon">
+            <img src="logo.png">
+        </div>
+        <div class="menubar-link">
+            <a href="">Home |</a>
+            <a href="#"> About us |</a>
+            <a href="#"> Contact us |</a>
+            <a href="../../controllers/bloggerControllers/logout.php"> Logout </a>
+        </div>
+        
+    </div>
+    <div class="main_panle">
+       <!--  side panel div start from here -->
+       <div class="side_panel">
+             <div class="button_area_of_2nd_side_panel">
+            <button>Edit Profile</button>
+            <button>Write a Post</button>
+            <button>Read Post</button>
+            <button>Research Paper</button>
 
 
-		<label for="blogs">Read all the posts:</label><br><hr>
-		<table>
+        </div>
+       </div>
+      <!--  main panel daynamic area star from here -->
+        <div class="daynamic_area">
+        
+           <span>Read Blogger Posts</span>
+            <table border="1px" align="center" width="80%" id="userTable">
 
-			<label><b>What is Lorem Ipsum?<br></label>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><hr>
+                <tr>
+                    <th>Username</th>
+                    <th>Blogger Name</th>
+                    <th>Post</th>
+                    <th>Another Blogger Name</th>
+                    <th>Comment</th>
+                </tr>
+                <?php
 
-				<label>Comment:</label><br>
-				<input type="text" name="comment">   
-                <input type="submit" name="submit"><br>
-			
-<br>
-<label>Why do we use it?</label>
-<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p><hr>
-
-            <label>Comment:</label><br>
-			<input type="text" name="comment">   
-            <input type="submit" name="submit"><br>
-
-<br>
-<label><b>Where can I get some?</label>
-	<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p><hr>
+                if($user!=null){
+                foreach ($user as $user) {
 
 
+                    ?>
 
-</table>
+                <tr>
+                    <td><?=$user['0']?></td>
+                    <td><?=$user['1']?></td>
+                    <td><?=$user['2']?></td>
+                    <td><?=$user['3']?></td>
+                    <td><?=$user['4']?></td>
+                    
 
-		<label>Comment:</label><br>
-		<input type="text" name="comment">   
-        <input type="submit" name="submit"><br>
-			
+                </tr>
+                <?php
+                    
+                }
+                }
+
+                ?>
+            </table><br>
+
+          
+           
 
 
 
 
 
 
-		</td>
-		
 
-	</tr>
-    <!-- Footer Part -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<table width = 100%;>
+    <tr height = 100px style ="background-color:#C1BCBC ">
+        <td width =10%; align = center>
+            <img width = 100px; height = 100px src ="logo.png">
+        </td>
+        <td align = right >
+            <table >
+            
+                <tr style ="font-size:20px;">
+                    <td><a href="Home.php">Home  |</a></td>
+                    <td><a href="#"> About us  |</a></td>
+                    <td><a href="../../../controllers/adminControllers/excecutiveControllers/logout.php"> logout</a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+   <tr  height = 700px>
+        <td width =10%; valign = top; style ="background-color:#C1BCBC; font-size:20px;">
+            <a href="listOfuser.php">user Account</a><br><br>
+            <a href="verifyDocument.php">verfiy ducument</a><br><br>
+            <a href="controlDeaL.php">control deal</a><br><br>
+            <a href="approvePost.php">Approve post</a><br><br>
+            <a href="EditProfile.php">Edit profile</a><br><br>
+        </td>
+      
+        <td valign = top style ="background-color:#F5F2F1 ">
+
+            <h3 align = center>Farmer user List</h3>
+            <table border="1px" align="center" width="80%">
+                <tr>
+                    <td>username</td>
+                    <td>Name</td>
+                    <td>Email</td>
+                    <td>Phone number</td>
+                    <td>Farmer Type</td>
+                    <td>gender</td>
+                    <td>Nid</td>
+                    <td>Photo</td>
+                </tr>
+                <?php
+
+                if($user!=null){
+                foreach ($user as $user) {
+
+
+                    ?>
+
+                <tr>
+                    <td><?=$user['0']?></td>
+                    <td><?=$user['2']?></td>
+                    <td><?=$user['3']?></td>
+                    <td><?=$user['4']?></td>
+                    <td><?=$user['5']?></td>
+                    <td><?=$user['6']?></td>
+                    <td><?=$user['7']?></td>
+                    <td>null</td>
+                </tr>
+                <?php
+                    
+                }
+                }
+
+                ?>
+            </table><br>
+
+          
+            <h3 align="center"><?=$msg?></h3><br>
+            <h3 align="center">Creat new user</h3><br>
+            <h3 id="eerror" style="width: 100%;background-color:#f8c291;color: white;text-align: center;"></h2>
+            <h3 id="nerror" style="width: 100%;background-color:#f8c291;color: white;text-align: center;"></h2>
+            <h3 id="msg" style="width: 100%;background-color:#f8c291;color: white;text-align: center;"></h2>
+            <form name="validationn" method="POST" action="../../../controllers/adminControllers/excecutiveControllers/FarmerCreatAccount.php">
+               <table align="center" style="font-size:20px;">
+                    <tr>
+                        <td>Name:</td>
+                        <td width="300px "><input type="name" name="name" value="" placeholder="Enter Name"></td>
+                        <td>Email:</td>
+                        <td><input type="email" name="email" value=""placeholder="Enter Email" onblur ="validation()"></td>
+                        <td></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Username:</td>
+                        <td width="300px "><input type="username" name="username" value="" placeholder="Enter Username"></td>
+                        <td>Phone Number:</td>
+                        <td width="300px "><input type="number" name="phoneNumber" value="" placeholder="Enter Phone Number" onblur ="phonevalidation()" ></td>
+                        <td></td><br>
+
+                    </tr>
+
+                    <tr>
+                        <td>NID Number:</td>
+                        <td><input type="number" name="nidNumber" value="" placeholder="Enter NID"></td> 
+                        <td>Photo:</td>
+                        <td><input type="file" name="" placeholder="Enter Photo"></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Gender:</td>
+                        <td width="300px "><input type="radio" name="gen" value="male" > Male 
+                        <input type="radio" name="gen" value="female" > Female <input type="radio" name="gen" > Other </td>
+                        <td>Farmer Type:</td>                        
+                        <td width="300px "><input type="radio" name="farmerType" value="plantation" > Plantation <input type="radio" name="farmerType" value="Husbandry" > Husbandary <input type="radio" name="farmerType" value="Fisheries" > Fisheries </td>                 
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Password:</td>
+                        <td width="300px "><input id="password1" type="password" name="password" value="" placeholder="Enter Password"></td>
+                        <td>Confirm Password:</td>
+                        <td><input type="password" id="password2" name="cpassword" value=""placeholder="Confirm Password" onkeyup ="passchechk()">
+                        </td>
+                    </tr> 
+                    
+                   
+                            <tr align="center" width=100%>
+                                <td colspan="3">
+                                  <input id="submited" type="submit" name="submit" value="submit">   
+                                  <input type="reset" name="reset" value="Reset">
+                                </td>
+                            </tr>
+                  
+                
+
+                </table>
+                    
+            </form>
+            
+
+
+        </td>
+    </tr>
+ 
     <tr  height = 100px;>
         <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
-           All Copyrights @2022 Reserved by Gallant ltd.
+           coppyright @2022
         </td>
     </tr>
 </table>
 
 
-</html>
+</html> -->

@@ -7,13 +7,13 @@ if(isset($_REQUEST['submit'])){
 	$username = $_REQUEST['username'];
 	$blogger_name = $_REQUEST['blogger_name'];
 	$post = $_REQUEST['post'];
-	$status = $_REQUEST['status'];
+	
 
 
-	if($username != null && $blogger_name !=null && $post != null && $status != null)
+	if($username != null && $blogger_name !=null && $post != null )
 	{
 
-		$status = pending ($username,$blogger_name,$post,$status);
+		$status = pending ($username,$blogger_name,$post);
 		if($status)
 		{
 			header('location: ../../views/bloogerViews/WritePost.php?msg=success');

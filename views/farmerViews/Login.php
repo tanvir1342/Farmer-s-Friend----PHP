@@ -46,7 +46,7 @@ if(isset($_GET['msg']))
       <div class="login_area_pic">
         <div class="image_login">
             <img src="images/farmerloginimage.jpg">
-            <p>Farmering is the Profession of Hope</p>
+            <p>Farming is the Profession of Hope</p>
         </div>
           
       </div>

@@ -13,7 +13,7 @@ if(isset($_REQUEST['submit']))
 		if($status)
 		{
 			$_SESSION['status'] = "true";
-			$_SESSION['Executive_username'] = $username;
+			$_SESSION['vet_username'] = $username;
 			setcookie('status', 'true', time()+300, '/');
 			header('location: ../../../views/AdminViews/Veterinarian/VatHome.php');
 		}
