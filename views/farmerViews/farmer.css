@@ -49,7 +49,7 @@ body{
 	align-items: center;
 	width: 15%;
 	height: 1200px;
-	background-color: rgb(1,64,27);
+	background-color: rgb(49,74,48);
 }
 .pro-pic-of-side-panel
 {
@@ -136,8 +136,8 @@ body{
 	text-align: center;
 }
 
-.output_panel{
+/*.output_panel{
    background-color: #487047;
    width: 100%;
    height: 1200px;
-}
+}*/
