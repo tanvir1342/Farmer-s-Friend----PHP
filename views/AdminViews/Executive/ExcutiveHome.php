@@ -6,9 +6,6 @@
     
     //echo $user['Name'];
 
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +46,7 @@
 
         </div>
              <div class="button_area_of_side_panel">
-            <button>Edit Profile</button>
+            <button onclick="location.href='executiveEditAccount.php';">Edit Profile</button>   
 
         </div>
        </div>

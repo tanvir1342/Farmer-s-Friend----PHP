@@ -1,9 +1,124 @@
 <?php 
     require('header.php');
 ?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
-<!-- Table creation -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Check Weather</title>
+    <link rel="stylesheet" type="text/css" href="farmer.css">
+    <style>
+    .button_area_of_2nd_side_panel{
+        color: white;
+        align-items: center;
+        position: absolute;
+        margin-left:25px;
+        margin-top: 30px;
+    }
+    .button_area_of_2nd_side_panel button{
+        width: 200px;
+        height: 30px;
+        font-size: 16px;
+        margin: 10px;
+
+    }
+    .function_area{
+        margin-left:250px;
+    }
+    </style>
+</head>
+<body>
+       <!--  menubar start from here -->
+
+    <div class="menubar">
+        <div class="menubar-icon">
+            <img src="images/logo.png">
+        </div>
+        <div class="menubar-link">
+            <a href="farmerHome.php">Home |</a>
+            <a href="#"> About us |</a>
+            <a href="#"> Contact us |</a>
+            <a href="../../controllers/farmerControllers/logout.php"> Logout </a>
+        </div>
+        
+    </div>
+
+       <!--  main panel -->
+    <div height="100%" class="main_panle">
+       <!--  side panel div start from here -->
+       <div  class="side_panel">      
+        
+            <div class="button_area_of_2nd_side_panel">
+            <button onclick="location.href='farmerPosttype.php';">Post For Problem</button>
+            <button onclick="location.href='veterinarianSupport.php';">Veterinarian Support</button>
+            <button onclick="location.href='farmerMachinariesGuidelines.php';">Machinaries Guideline</button>
+            <button onclick="location.href='farmingGuideline.php';">Farming Guideline</button>
+            <button onclick="location.href='farmerBankingGuideline.php';">Get Support From Bank</button>
+            <button onclick="location.href='farmerMarketPrices.php';" >Market Price</button>
+            <button onclick="location.href='farmerDealsWithRetailer.php';">Deal With Retailer</button>
+            <button onclick="location.href='farmerCheckWeather.php';">Check Weather</button>
+            <button onclick="location.href='farmerWaterPayments.php';">Water Payments</button>
+            <button onclick="location.href='farmerGeneralPayments.php';">General Payments</button>        
+
+
+        </div>
+    </div>
+
+    <!-- feature page -->
+
+    <div class="daynamic_area">
+        <h2 class="daynamic_area_heading_text">Check Weather</h2><hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
 <table width = 100%;>
     <tr height = 100px style ="background-color:#C1BCBC ">
         <td width =10%; align = center>
@@ -11,7 +126,6 @@
         </td>
         <td align = right >
             <table >
-                <!-- center menubar -->
                 <tr style ="font-size:20px;">
                     <td><a href="farmerHome.php">Home  |</a></td>
                     <td><a href="#"> About us  |</a></td>
@@ -20,7 +134,6 @@
             </table>
         </td>
     </tr>
- <!-- Dashboard of Farmer -->
   <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
              <a href="farmerEditAccount.php"> Edit Account </a><br><br> 
@@ -43,7 +156,6 @@
                         <td width="300px "><select> <option>Jessore</option><option>Rangpur</option><option>Dhaka</option><option>Chittagang</option>
                         <option>Sylhet</option><option>Khulna</option><option>Rajshahi</option><option>Mymensingh</option></select></td>
                         
-                        <!-- <td><input type="number" name="nidNumber" value=""></td>  -->
                                                                   
             </tr>
             <tr align="center">
@@ -54,7 +166,6 @@
 		</td>	
 
 	</tr>
-    <!-- Footer Part -->
     <tr  height = 100px;>
         <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
            All Copyrights @2022 Reserved by Gallant ltd.
@@ -64,3 +175,4 @@
 
 
 </html>
+ -->

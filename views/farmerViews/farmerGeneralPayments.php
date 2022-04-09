@@ -4,9 +4,176 @@
      $username = $_SESSION['Farmer_username'];
      $user = getoneuser($username);
 ?>
+
 <!DOCTYPE html>
 <html>
-<!-- Table creation -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>General Payment</title>
+    <link rel="stylesheet" type="text/css" href="farmer.css">
+    <link rel="stylesheet" type="text/css" href="farmercreateedit.css">
+    <link rel="stylesheet" type="text/css" href="farmerHomes.css">
+
+    <style>
+    .button_area_of_2nd_side_panel{
+        color: white;
+        align-items: center;
+        position: absolute;
+        margin-left:25px;
+        margin-top: 30px;
+    }
+    .button_area_of_2nd_side_panel button{
+        width: 200px;
+        height: 30px;
+        font-size: 16px;
+        margin: 10px;
+
+    }
+    .function_area{
+        margin-left:250px;
+    }
+    </style>
+</head>
+<body>
+       <!--  menubar start from here -->
+
+    <div class="menubar">
+        <div class="menubar-icon">
+            <img src="images/logo.png">
+        </div>
+        <div class="menubar-link">
+            <a href="farmerHome.php">Home |</a>
+            <a href="#"> About us |</a>
+            <a href="#"> Contact us |</a>
+            <a href="../../controllers/farmerControllers/logout.php"> Logout </a>
+        </div>
+        
+    </div>
+
+       <!--  main panel -->
+    <div height="100%" class="main_panle">
+       <!--  side panel div start from here -->
+       <div  class="side_panel">      
+        
+            <div class="button_area_of_2nd_side_panel">
+            <button onclick="location.href='farmerPosttype.php';">Post For Problem</button>
+            <button onclick="location.href='veterinarianSupport.php';">Veterinarian Support</button>
+            <button onclick="location.href='farmerMachinariesGuidelines.php';">Machinaries Guideline</button>
+            <button onclick="location.href='farmingGuideline.php';">Farming Guideline</button>
+            <button onclick="location.href='farmerBankingGuideline.php';">Get Support From Bank</button>
+            <button onclick="location.href='farmerMarketPrices.php';" >Market Price</button>
+            <button onclick="location.href='farmerDealsWithRetailer.php';">Deal With Retailer</button>
+            <button onclick="location.href='farmerCheckWeather.php';">Check Weather</button>
+            <button onclick="location.href='farmerWaterPayments.php';">Water Payments</button>
+            <button onclick="location.href='farmerGeneralPayments.php';">General Payments</button>        
+
+
+        </div>
+    </div>
+
+    <!-- feature page -->
+
+
+
+    <div class="daynamic_area">
+        <h2 class="daynamic_area_heading_text">General Payment</h2><hr>
+
+            <form method="POST" action="../../controllers/farmerControllers/generalPaymentCheck.php">
+                        <table align="center" style="font-size:20px;" class="create_user">
+
+                             <tr>
+                                    <td>Username:</td>
+                                    <td width="300px "><input class="input" type="username" name="username" value="<?=$user['username']?>" placeholder="Enter Username"></td>
+                             </tr>
+                            <tr>
+                                    <td>Payment Method:</td>                        
+                                    <td width="300px "><input class="input"  type="radio" name="payment_method" value="Bkash" > Bkash <input type="radio" name="payment_method" value="Rocket" > Rocket <input type="radio" name="payment_method" value="Bank" > Bank </td> 
+                             </tr>
+
+
+                            <tr>
+                                <td>Phone:</td>
+                                <td>
+                                 <input class="input" type="number" name="Phone" value="<?=$user['phone_number']?>" placeholder="Enter Phone Number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Amount: </td>
+                                <td>
+                                <input class="input" type="number" name="Amount" value="" placeholder="Enter Amount">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>City/District: </td>
+                                <td>
+                                <input class="input"  type="text" name="city_district" value="" placeholder="Enter City/District">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pin/Pass Code: </td>
+                                <td>
+                                <input class="input" type="number" name="pin_pass" value="" placeholder="Enter Pin/Pass Code">
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>Code: </td>
+                                <td>
+                                <input class="input"  type="number" name="code" value="" placeholder="Enter Code">
+                                </td>
+                            </tr>
+                            <tr >
+                                <td >
+                                     <br><input class="submit_button" type="submit" name="submit" value="Pay">
+                                </td>
+                            </tr>
+                        </table>
+            </form>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+
 <table width = 100%;>
     <tr height = 100px style ="background-color:#C1BCBC ">
         <td width =10%; align = center>
@@ -14,7 +181,7 @@
         </td>
         <td align = right >
             <table >
-                <!-- center menubar -->
+              
                 <tr style ="font-size:20px;">
                     <td><a href="farmerHome.php">Home  |</a></td>
                     <td><a href="#"> About us  |</a></td>
@@ -23,7 +190,7 @@
             </table>
         </td>
     </tr>
- <!-- Dashboard of Farmer -->
+
   <tr  height = 700px>
         <td width =15% bgcolor="C1BCBC" valign="top" align="center">
             <a href="farmerEditAccount.php"> Edit Account </a><br><br> 
@@ -91,7 +258,7 @@
         </td>
     </tr>
 
-    <!-- Footer Part -->
+  
     <tr  height = 100px;>
         <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
            All Copyrights @2022 Reserved by Gallant ltd.
@@ -100,4 +267,4 @@
 </table>
 
 
-</html>
+</html> -->

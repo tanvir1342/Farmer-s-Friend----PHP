@@ -42,7 +42,7 @@
             <img src="images/logo.png">
         </div>
         <div class="menubar-link">
-            <a href="">Home |</a>
+            <a href="farmerHome.php">Home |</a>
             <a href="#"> About us |</a>
             <a href="#"> Contact us |</a>
             <a href="../../controllers/farmerControllers/logout.php"> Logout </a>
@@ -76,22 +76,26 @@
                <table align="center" style="font-size:20px;" class="create_user">
                     <tr>
                         <td>Username:</td>
-                        <td width="300px "><input class="input" type="username" name="name" value="<?=$user['username']?>" placeholder="Enter Username"></td>
+                        <td width="300px "><input class="input" type="username" name="username" value="<?=$user['username']?>" placeholder="Enter Username"></td>
+                    </tr>
+                    <br>
+                    <tr>    
                         <td>Farmer Name:</td>
-                        <td width="300px "><input class="input" type="username" name="fname" value="<?=$user['username']?>" placeholder="Enter Username"></td>
+                        <td width="300px "><input class="input" type="name" name="farmer_name" value="<?=$user['name']?>" placeholder="Enter Name"></td>
                         <td></td><br>
 
                     </tr>
                     <br>
                     <tr>
                         <td>Animal Type:</td>                        
-                        <td width="300px "><input class="input" type="radio" name="animaltype" value=""  > Cow <input class="input" type="radio" name="animaltype" value="" > Goat <input class="input" type="radio" name="animaltype" value="" > Chicken </td>               
+                        <td width="300px "><input class="input" type="text" name="animal_type" value="" placeholder="Enter Animal Type"></td>               
                     </tr>
                     <br>
                     <tr>
                         <td>Description :</td>
-                        <td width="300px "><input class="input" type="name" name="description" value="" ></td>
-                        <td></td><br>
+
+                        <td><textarea id ="des" class="input" name="description" rows="12" cols="50"></textarea></td><br> 
+
                     </tr>
                   
                 

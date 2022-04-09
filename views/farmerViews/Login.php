@@ -21,7 +21,7 @@ if(isset($_GET['msg']))
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Farmer Login</title>
 </head>
 <body>
 <link rel="stylesheet" type="text/css" href="farmerHomes.css">

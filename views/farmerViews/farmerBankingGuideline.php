@@ -12,7 +12,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title>Get Support From Bank</title>
     <link rel="stylesheet" type="text/css" href="farmer.css">
     <link rel="stylesheet" type="text/css" href="farmercreateedit.css">
     <link rel="stylesheet" type="text/css" href="farmerHomes.css">
@@ -60,10 +60,10 @@
         
             <div class="button_area_of_2nd_side_panel">
             <button onclick="location.href='farmerPosttype.php';">Post For Problem</button>
-            <button onclick="location.href='veterinarianSupport.php';">Veteranian Support</button>
+            <button onclick="location.href='veterinarianSupport.php';">Veterinarian Support</button>
             <button onclick="location.href='farmerMachinariesGuidelines.php';">Machinaries Guideline</button>
-            <button onclick="location.href='farmerBankingGuideline.php';">Farming Guideline</button>
-            <button onclick="location.href='farmerEditAccount.php';">Get Support From Bank</button>
+            <button onclick="location.href='farmingGuideline.php';">Farming Guideline</button>
+            <button onclick="location.href='farmerBankingGuideline.php';">Get Support From Bank</button>
             <button onclick="location.href='farmerMarketPrices.php';" >Market Price</button>
             <button onclick="location.href='farmerDealsWithRetailer.php';">Deal With Retailer</button>
             <button onclick="location.href='farmerCheckWeather.php';">Check Weather</button>
@@ -83,8 +83,8 @@
                     <tr>
                         <td>Username:</td>
                         <td width="300px "><input class="input" type="name" name="username" value="<?=$user['username']?>" ></td>
-                        <td>Farmer's name:</td>
-                        <td width="300px "><input class="input" type="name" name="farmer_name" value="" ></td>
+                        <td>Farmer's Name:</td>
+                        <td width="300px "><input class="input" type="name" name="name" value="<?=$user['name']?>" ></td>
                     </tr>
                     <br>
                     <tr>
@@ -99,7 +99,8 @@
                         <td>Amount of Loan:</td>
                         <td width="300px "><input class="input" type="number" name="amount" value="" ></td>
                         <td>Reason For Loan:</td>
-                        <td width="300px "><input class="input" type="name" name="reason_for_loan" value="" ></td>
+                        <td><textarea class="input" name="reason_for_loan" rows="10" cols="40"></textarea></td>
+                        <!-- <td width="300px "><input class="input" type="name" name="reason_for_loan" value="" ></td> -->
                     </tr>                    
                 
                 

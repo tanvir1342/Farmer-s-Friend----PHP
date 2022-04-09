@@ -4,9 +4,9 @@ require('../../models/farmer_vet_support.php');
 
 if(isset($_REQUEST['submit'])){
 	
-	$username = $_REQUEST['name'];
-	$farmer_name = $_REQUEST ['fname'];
-	$animal_type = $_REQUEST['animaltype'];
+	$username = $_REQUEST['username'];
+	$farmer_name = $_REQUEST ['farmer_name'];
+	$animal_type = $_REQUEST['animal_type'];
 	$description = $_REQUEST['description'];
 
 

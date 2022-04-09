@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title>Machinaries Guidelines</title>
     <link rel="stylesheet" type="text/css" href="farmer.css">
     <style>
     .button_area_of_2nd_side_panel{
@@ -37,7 +37,7 @@
             <img src="images/logo.png">
         </div>
         <div class="menubar-link">
-            <a href="">Home |</a>
+            <a href="farmerHome.php">Home |</a>
             <a href="#"> About us |</a>
             <a href="#"> Contact us |</a>
             <a href="../../controllers/farmerControllers/logout.php"> Logout </a>
@@ -52,10 +52,10 @@
         
             <div class="button_area_of_2nd_side_panel">
             <button onclick="location.href='farmerPosttype.php';">Post For Problem</button>
-            <button onclick="location.href='veterinarianSupport.php';">Veteranian Support</button>
+            <button onclick="location.href='veterinarianSupport.php';">Veterinarian Support</button>
             <button onclick="location.href='farmerMachinariesGuidelines.php';">Machinaries Guideline</button>
-            <button onclick="location.href='farmerBankingGuideline.php';">Farming Guideline</button>
-            <button onclick="location.href='farmerEditAccount.php';">Get Support From Bank</button>
+            <button onclick="location.href='farmingGuideline.php';">Farming Guideline</button>
+            <button onclick="location.href='farmerBankingGuideline.php';">Get Support From Bank</button>
             <button onclick="location.href='farmerMarketPrices.php';" >Market Price</button>
             <button onclick="location.href='farmerDealsWithRetailer.php';">Deal With Retailer</button>
             <button onclick="location.href='farmerCheckWeather.php';">Check Weather</button>
@@ -72,11 +72,11 @@
         <h2 class="daynamic_area_heading_text">Machinaries Guidelines</h2><hr>
             <div onclick="location.href='farmerMachinariesGuidelinesText.php';" class="function_area">
                 <img src="images/machitext.png">
-                <p>Articles/text</p>
+                <p>Machinaries Guidelines Text</p>
            </div>
             <div onclick="location.href='farmerMachinariesGuidelinesVideo.php';" class="function_area">
                 <img src="images/machivideo.jpg">
-                <p>Tutorials/Videos</p>
+                <p>Machinaries Guidelines Videos</p>
            </div>
     </div>
 

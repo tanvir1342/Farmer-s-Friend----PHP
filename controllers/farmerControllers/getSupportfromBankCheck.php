@@ -5,7 +5,7 @@ require('../../models/bank_support_database.php');
 if(isset($_REQUEST['submit'])){
 	
 	$username = $_REQUEST['username'];
-	$farmer_name = $_REQUEST['farmer_name'];
+	$farmer_name = $_REQUEST['name'];
 	$land_property = $_REQUEST['land_property'];
 	$yearly_income  = $_REQUEST['income'];
 	$Amount_of_loan  = $_REQUEST['amount'];
