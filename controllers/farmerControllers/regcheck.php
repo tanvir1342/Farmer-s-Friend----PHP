@@ -33,4 +33,28 @@ if(isset($_REQUEST['submit'])){
 	}
 }
 
+
+
+if (isset($_POST['username']) && $_POST['username'] !=null) {
+	$username = $_POST['username'];
+	$chk = checkusername($username);
+	if ($chk) {
+		echo "Username Not Available";
+	}
+	else{
+
+	}
+}
+if (isset($_POST['email']) && $_POST['email'] !=null) {
+	$email = $_POST['email'];
+	$chk = checkemail($email);
+	if ($chk) {
+		echo "Email Already Used";
+	}
+	else{
+	    	
+	}
+}
+
+
 ?>

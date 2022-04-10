@@ -49,7 +49,7 @@ function edit($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$n
 		return false;
 	}
 }
-//username chehck
+//username check
 function checkusername($username)
 {
 	$con = mysqli_connect('localhost','root','','webtech');
@@ -66,7 +66,7 @@ function checkusername($username)
 	}
 	
 }
-//email chehck
+//email check
 function checkemail($email)
 {
 	$con = mysqli_connect('localhost','root','','webtech');

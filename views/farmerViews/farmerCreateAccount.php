@@ -24,31 +24,26 @@
         
     </div>
 
-       <!--  main panel -->
-    <div height="100%" class="main_panle">
-       <!--  side panel div start from here -->
-       <div  class="side_panel"></div>
-
 
 <!-- create farmer -->
 
 <h1 align="center"> Create Account For Farmer </h1> 
 <div>
-    <form name="validationn" method="POST" action="../../controllers/farmerControllers/regcheck.php">
+    <form name="validationn" method="POST" enctype="multipart/form-data" action="../../controllers/farmerControllers/regcheck.php">
                <table align="center" style="font-size:20px;" class="create_user">
                     <tr>
                         <td>Name:</td>
                         <td width="300px "><input class="input" type="name" name="name" value="" placeholder="Enter Name"></td>
                         <td>Email:</td>
-                        <td><input class="input" type="email" name="email" value=""placeholder="Enter Email" onblur ="validation()"></td>
+                        <td><input class="input" type="email" id="email"  name="email" value=""placeholder="Enter Email" onblur ="ValidateEmail(), checkemail()" ><p id="emailchk"></p></td>
                         <td></td>
                     </tr>
                     <br>
                     <tr>
                         <td>Username:</td>
-                        <td width="300px "><input class="input" type="username" name="username" value="" placeholder="Enter Username"></td>
+                        <td width="300px "><input class="input" id="username" type="username" name="username" value="" placeholder="Enter Username" onblur="checkusername()"><p id="valid"></p></td>
                         <td>Phone Number:</td>
-                        <td width="300px "><input  class="input" type="number" name="phoneNumber" value="" placeholder="Enter Phone Number" onblur ="phonevalidation()" ></td>
+                        <td width="300px "><input  class="input" type="number" name="phoneNumber" value="" placeholder="Enter Phone Number" ></td>
                         <td></td><br>
 
                     </tr>
@@ -72,7 +67,7 @@
                         <td>Password:</td>
                         <td width="300px "><input class="input" id="password1" type="password" name="password" value="" placeholder="Enter Password"></td>
                         <td>Confirm Password:</td>
-                        <td><input class="input" type="password" id="password2" name="cpassword" value=""placeholder="Confirm Password" onkeyup ="passchechk()">
+                        <td><input class="input" type="password" id="password2" name="cpassword" value=""placeholder="Confirm Password" >
                         </td>
                     </tr> 
                     
@@ -86,17 +81,61 @@
                 
 
                 </table>
-                                  <input class="submit_button" id="submited" type="submit" name="submit" value="submit">   
-                                  <input class="submit_button" type="reset" name="reset" value="Reset">
+                                  <input class="submit_button" id="submited" type="submit" name="submit" value="Create">   
+                                  <!-- <input class="submit_button" type="reset" name="reset" value="Reset"> -->
                     
             </form>
 </div>
+<!-- /*ajax code start from  here*/
+/*username check function*/ -->
+<script>
+
+    function checkusername(){
+            let username = document.getElementById('username').value;
+            let xhttp = new XMLHttpRequest();
+
+            xhttp.open('POST', '../../controllers/farmerControllers/regcheck.php', true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send('username='+username);
+
+            xhttp.onreadystatechange = function (){
+
+                if(this.readyState == 4 && this.status == 200){
+                    //alert(this.responseText);
+                    document.getElementById('valid').innerHTML = this.responseText;
+                    document.getElementById('valid').style.color = "red";
+                    document.getElementById('valid').style.fontSize = 12+'px';
 
 
+                }
+            }
+    }
 
 
+  /*  email chehck function
+*/
+function checkemail(){
+            let email = document.getElementById('email').value;
+            let xhttp = new XMLHttpRequest();
+
+            xhttp.open('POST', '../../controllers/farmerControllers/regcheck.php', true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send('email='+email);
+
+            xhttp.onreadystatechange = function (){
+
+                if(this.readyState == 4 && this.status == 200){
+                    //alert(this.responseText);
+                    document.getElementById('emailchk').innerHTML = this.responseText;
+                    document.getElementById('emailchk').style.color = "red";
+                    document.getElementById('emailchk').style.fontSize = 12+'px';
 
 
+                }
+            }
+    }
+
+</script>
 
 
 
