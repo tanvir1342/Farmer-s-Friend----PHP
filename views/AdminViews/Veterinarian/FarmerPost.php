@@ -1,7 +1,7 @@
 <?php 
     require('header.php');
-    require('../../../models/farmer_post_problem_agri.php');
-    $user = getallpost_agri();
+    require('../../../models/farmer_vet_support.php');
+    $user = getallpost();
 ?>
 
     
@@ -23,7 +23,7 @@
             <a href="">Home |</a>
             <a href="#"> About us |</a>
             <a href="#"> Contact us |</a>
-            <a href="../../controllers/bloggerControllers/logout.php"> Logout </a>
+            <a href="../../../controllers/adminControllers/VeterinarianControllers/logout.php"> Logout </a>
         </div>
         
     </div>
@@ -46,10 +46,11 @@
             <table border="1px" align="center" width="80%" id="userTable">
 
                 <tr>
-                    <th>Farmer Username</th>
-                    <th>Farmer Type</th>
-                    <th>Problem</th>
-                    <th>Solve</th>
+                    <th>Username</th>
+                    <th>Farmer username</th>
+                    <th>Animal type</th>
+                    <th>Description</th>
+                    <th id="Solve">Solution</th>
                 </tr>
                 <?php
 
@@ -60,9 +61,12 @@
                     ?>
 
                 <tr>
+
                     <td><?=$user['0']?></td>
                     <td><?=$user['1']?></td>
                     <td><?=$user['2']?></td>
+                    <td><?=$user['3']?></td>
+                    <td align="center" id="Solve"><a href="treatment.php">Treatment</a></td>
 
                 </tr>
                 <?php

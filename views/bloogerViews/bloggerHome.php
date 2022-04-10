@@ -97,6 +97,7 @@
        <!--  side panel div start from here -->
        <div class="side_panel">
         <div class="pro-pic-of-side-panel">
+        
     
         </div>
         <div align="center" class="text_area_of_side_panel">

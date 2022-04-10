@@ -10,31 +10,52 @@ if(isset($_REQUEST['submit'])){
 	$email = $_REQUEST['email'];
 	$gender = $_REQUEST['gender'];
 	$phone = $_REQUEST['phone'];
+	$filename = $_FILES['image']['name'];
+	$src = $_FILES['image']['tmp_name'];
+	$des = "../../models/bloggerupload/".$_FILES['image']['name'];
 
-	// $photo = $_REQUEST['file'];
+	
 
 	if($name != null && $username != null && $password != null &&  $email != null && $gender != null && $phone != null)
 	{
 
-		/*$user =$name."|".$email."|".$username."|".$pasword."|".$phoneNumber."|".$gen."\r\n";
-		$file = fopen('../../models/farmerlogin.txt', 'w');
-		fwrite($file, $user);
+		move_uploaded_file($src, $des);
+		$status = create ($name,$username,$password,$email,$gender,$phone,$filename);
 		
-		header('location: ../../views/farmerViews/login.php');*/
 
-		$status = create ($name,$username,$password,$email,$gender,$phone);
 		if($status)
 		{
-			header('location: ../../views/BloogerViews/Login.php?msg=success');
+			header('location: ../../views/BloogerViews/CreateAccount.php?msg=success');
 		}
 		else
 		{
-			header('location: ../../views/BloogerViews/CreateAccount.php');
+			header('location: ../../views/BloogerViews/CreateAccount.php?msg=failed');
 		}
 
 
 	}else{
 		echo "null submission ....";
+	}
+}
+if (isset($_POST['username']) && $_POST['username'] !=null) {
+	$username = $_POST['username'];
+	$chk = checkusername($username);
+	if ($chk) {
+		echo "username not available";
+	}
+	else{
+
+	}
+}
+
+if (isset($_POST['email']) && $_POST['email'] !=null) {
+	$email = $_POST['email'];
+	$chk = checkemail($email);
+	if ($chk) {
+		echo "Email already used";
+	}
+	else{
+	    	
 	}
 }
 
