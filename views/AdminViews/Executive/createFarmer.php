@@ -81,7 +81,7 @@
                     <td><?=$user['5']?></td>
                     <td><?=$user['6']?></td>
                     <td><?=$user['7']?></td>
-                    <td><img src="../../../models/upload/<?=$user['8']?>" width=70px></td> 
+                    <td><img src="../../../models/Farmerupload/<?=$user['8']?>" width=70px></td> 
                 </tr>
                 <?php
                     

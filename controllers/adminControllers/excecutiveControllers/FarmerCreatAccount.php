@@ -14,7 +14,7 @@ if(isset($_REQUEST['submit'])){
 	$nid = $_REQUEST['nidNumber'];
 	$filename = $_FILES['image']['name'];
 	$src = $_FILES['image']['tmp_name'];
-	$des = "../../../models/upload/".$_FILES['image']['name'];
+	$des = "../../../models/Farmerupload/".$_FILES['image']['name'];
 
 	if($username != null && $password != null && $name != null && $email != null && $phoneNumber != null && $farmer_type !=null && $gen != null && $nid !=null)
 	{
