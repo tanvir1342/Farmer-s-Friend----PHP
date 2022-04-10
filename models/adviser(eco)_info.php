@@ -35,7 +35,7 @@ function checkusername($username)
 	}
 	
 }
-//username chehck
+//email chehck
 function checkemail($email)
 {
 	$con = mysqli_connect('localhost','root','','webtech');

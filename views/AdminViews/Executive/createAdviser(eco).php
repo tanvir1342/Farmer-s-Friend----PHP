@@ -296,6 +296,7 @@ function ValidateEmail() {
 
 
 
+
     /*function ajaxinsertdata(){
             let username = document.getElementById('username').value;
             let name = document.getElementById('name').value;

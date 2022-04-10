@@ -18,11 +18,11 @@ function login($username,$password)
 }
 
 // create
-function create($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid)
+function create($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid,$filename)
 {
 	$con = mysqli_connect('localhost','root','','webtech');
-	$sql = "insert into farmer_login (username,password,name,email,phone_number,farmer_type,gender,nid) values ('$username','$password','$name','$email','$phoneNumber',
-	'$farmer_type','$gen','$nid')";
+	$sql = "insert into farmer_login (username,password,name,email,phone_number,farmer_type,gender,nid,photo) values ('$username','$password','$name','$email','$phoneNumber',
+	'$farmer_type','$gen','$nid','$filename')";
 	
 	if(mysqli_query($con ,$sql))
 	{
@@ -48,6 +48,40 @@ function edit($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$n
 	{
 		return false;
 	}
+}
+//username chehck
+function checkusername($username)
+{
+	$con = mysqli_connect('localhost','root','','webtech');
+	$sql = "select *from farmer_login where username = '{$username}'";
+	$result = mysqli_query($con ,$sql);
+	if($row = mysqli_fetch_assoc($result)){
+
+
+		return true;
+	}
+	else
+	{
+		false;
+	}
+	
+}
+//email chehck
+function checkemail($email)
+{
+	$con = mysqli_connect('localhost','root','','webtech');
+	$sql = "select *from farmer_login where email = '{$email}'";
+	$result = mysqli_query($con ,$sql);
+	if($row = mysqli_fetch_assoc($result)){
+
+
+		return true;
+	}
+	else
+	{
+		false;
+	}
+	
 }
 function getuser()
 {

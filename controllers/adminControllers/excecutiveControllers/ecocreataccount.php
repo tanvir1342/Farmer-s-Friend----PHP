@@ -70,14 +70,8 @@ if (isset($_POST['email']) && $_POST['email'] !=null) {
 			$age = $_POST['age1'];
 			$salary = $_POST['salary1'];
 			$join = $_POST['join1'];
-			
-			$filename = $_FILES['file']['name'];
-			$location = "../../../views/AdminViews/Adviser(Econmoic)/upload/".$filename;
-
 			$status = creat($username,$name,$password,$email,$gender,$age,$salary,$join,$location);
 			if ($status){
-				move_uploaded_file($_FILES['file']['tmp_name'], $location);
-			
 			 echo "success";
 			}
 		
