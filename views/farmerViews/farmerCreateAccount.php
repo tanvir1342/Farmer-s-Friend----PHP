@@ -35,7 +35,7 @@
                         <td>Name:</td>
                         <td width="300px "><input class="input" type="name" name="name" value="" placeholder="Enter Name"></td>
                         <td>Email:</td>
-                        <td><input class="input" type="email" id="email"  name="email" value=""placeholder="Enter Email" onblur ="ValidateEmail(), checkemail()" ><p id="emailchk"></p></td>
+                        <td><input class="input" type="email" id="email"  name="email" value=""placeholder="Enter Email" onblur ="checkemail()" ><p id="emailchk"></p></td>
                         <td></td>
                     </tr>
                     <br>

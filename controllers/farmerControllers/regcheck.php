@@ -13,11 +13,12 @@ if(isset($_REQUEST['submit'])){
 	$gen = $_REQUEST['gen'];
 	$nid = $_REQUEST['nidNumber'];
 	// $photo = $_REQUEST['file'];
+	$filename = "";
 
 	if($username != null && $password != null && $name != null && $email != null && $phoneNumber != null && $farmer_type !=null && $gen != null && $nid !=null)
 	{
 
-		$status = create ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid);
+		$status = create ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid,$filename);
 		if($status)
 		{
 			header('location: ../../views/farmerViews/login.php?msg=success');
