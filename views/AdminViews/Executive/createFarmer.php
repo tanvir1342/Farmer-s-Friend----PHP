@@ -165,6 +165,7 @@
 
 
 <script>
+ 
     function passchechk()
     {
        let p1 = document.getElementById('password1').value;
@@ -185,6 +186,7 @@
 
 
     }
+/*ajax code start from  here*/
 /*username chehck function*/
     function chkusername(){
             let username = document.getElementById('username').value;
