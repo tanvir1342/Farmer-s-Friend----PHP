@@ -42,6 +42,7 @@
        <!--  side panel div start from here -->
        <div class="side_panel">
         <div class="pro-pic-of-side-panel"></div>
+        <td><img src="../../../models/Farmerupload/<?=$user['8']?>"></td>
         <div class="text_area_of_side_panel">
              <h1><?=$user['name']?></h1>             
              <p>Gender:<?=$user['gender']?></p>

@@ -29,13 +29,16 @@
 
 <h1 align="center"> Create Account For Farmer </h1> 
 <div>
+            <h3 id="eerror" style="width: 100%;background-color:rgb(255,0,0);color: white;text-align: center;"></h2>
+            <h3 id="nerror" style="width: 100%;background-color:rgb(255,0,0);color: white;text-align: center;"></h2>
+            <h3 id="msg" style="width: 100%;background-color:#1DBF73;color: white;text-align: center;"></h2>
     <form name="validationn" method="POST" enctype="multipart/form-data" action="../../controllers/farmerControllers/regcheck.php">
                <table align="center" style="font-size:20px;" class="create_user">
                     <tr>
                         <td>Name:</td>
                         <td width="300px "><input class="input" type="name" name="name" value="" placeholder="Enter Name"></td>
                         <td>Email:</td>
-                        <td><input class="input" type="email" id="email"  name="email" value=""placeholder="Enter Email" onblur ="checkemail()" ><p id="emailchk"></p></td>
+                        <td><input class="input" type="email" id="email"  name="email" value=""placeholder="Enter Email" onblur ="ValidateEmail(),checkemail()" ><p id="emailchk"></p></td>
                         <td></td>
                     </tr>
                     <br>
@@ -43,7 +46,7 @@
                         <td>Username:</td>
                         <td width="300px "><input class="input" id="username" type="username" name="username" value="" placeholder="Enter Username" onblur="checkusername()"><p id="valid"></p></td>
                         <td>Phone Number:</td>
-                        <td width="300px "><input  class="input" type="number" name="phoneNumber" value="" placeholder="Enter Phone Number" ></td>
+                        <td width="300px "><input  class="input" type="number"id="phoneNumber" name="phoneNumber" value="" placeholder="Enter Phone Number" onblur="phonenumbervalidtion()" ></td>
                         <td></td><br>
 
                     </tr>
@@ -52,7 +55,7 @@
                         <td>NID Number:</td>
                         <td><input class="input" type="number" name="nidNumber" value="" placeholder="Enter NID"></td> 
                         <td>Photo:</td>
-                        <td><input class="input" type="file" name="" placeholder="Enter Photo"></td>
+                        <td><input class="input" type="file" name="image"  placeholder="Enter Photo"></td>
                     </tr>
                     <br>
                     <tr>
@@ -67,7 +70,7 @@
                         <td>Password:</td>
                         <td width="300px "><input class="input" id="password1" type="password" name="password" value="" placeholder="Enter Password"></td>
                         <td>Confirm Password:</td>
-                        <td><input class="input" type="password" id="password2" name="cpassword" value=""placeholder="Confirm Password" >
+                        <td><input class="input" type="password" id="password2" name="cpassword" value=""placeholder="Confirm Password" onkeyup ="passchechk()">
                         </td>
                     </tr> 
                     
@@ -86,10 +89,32 @@
                     
             </form>
 </div>
-<!-- /*ajax code start from  here*/
-/*username check function*/ -->
+
 <script>
 
+
+        function passchechk()
+    {
+       let p1 = document.getElementById('password1').value;
+       let p2 = document.getElementById('password2').value;
+       if (p1!=p2)
+       {
+            document.getElementById('msg').innerHTML = "Password Don't Match";
+            document.getElementById('msg').style.backgroundColor = "rgb(255,0,0)";
+
+            document.getElementById('submited').style.display = "none";
+           //console.log("Fsfsdf");
+        }
+        else{
+            document.getElementById('msg').innerHTML = "Password Matched";
+            document.getElementById('msg').style.backgroundColor = "#78e08f";
+            document.getElementById('submited').style.display = "block";
+        }
+
+
+    }
+// <!-- /*ajax code start from  here*/
+// /*username check function*/ -->
     function checkusername(){
             let username = document.getElementById('username').value;
             let xhttp = new XMLHttpRequest();
@@ -134,6 +159,71 @@ function checkemail(){
                 }
             }
     }
+
+
+
+/*email validation function*/
+function IsValidEmail(email) {
+        //Check minimum valid length of an Email.
+        if (email.length <= 2) {
+            return false;
+        }
+        //If whether email has @ character.
+        if (email.indexOf("@") == -1) {
+            return false;
+        }
+ 
+        var parts = email.split("@");
+        var dot = parts[1].indexOf(".");
+        var len = parts[1].length;
+        var dotSplits = parts[1].split(".");
+        var dotCount = dotSplits.length - 1;
+ 
+ 
+        //Check whether Dot is present, and that too minimum 1 character after @.
+        if (dot == -1 || dot < 2 || dotCount > 2) {
+            return false;
+        }
+ 
+        //Check whether Dot is not the last character and dots are not repeated.
+        for (var i = 0; i < dotSplits.length; i++) {
+            if (dotSplits[i].length == 0) {
+                return false;
+            }
+        }
+ 
+        return true;
+    };
+/*email validation function calling*/
+function ValidateEmail() {
+        var email = document.getElementById("email").value;
+        var error = document.getElementById("eerror");
+        error.innerHTML = "";
+        if (!IsValidEmail(email)) {
+            error.innerHTML = "Invalid email address.";
+        }
+    }
+
+
+
+/*phone number validation*/
+
+function phonenumbervalidtion() {
+    var number = document.getElementById("phoneNumber").value;
+    var two = number.substring(0,2);
+    if(number.length> 11 || number.length<11)
+    {
+        document.getElementById("nerror").innerHTML = "Invalid Phone Number";
+    }
+    else if(two!= 01 )
+    {
+        document.getElementById("nerror").innerHTML = "Invalid Phone Number";
+    }
+    else
+    {
+        document.getElementById("nerror").innerHTML = "";
+    }
+}
 
 </script>
 

@@ -12,11 +12,13 @@ if(isset($_REQUEST['submit'])){
 	$farmer_type = $_REQUEST['farmerType'];
 	$gen = $_REQUEST['gen'];
 	$nid = $_REQUEST['nidNumber'];
-	// $photo = $_REQUEST['file'];
-	$filename = "";
+	$filename = $_FILES['image']['name'];
+	$src = $_FILES['image']['tmp_name'];
+	$des = "../../models/Farmerupload/".$_FILES['image']['name'];
 
 	if($username != null && $password != null && $name != null && $email != null && $phoneNumber != null && $farmer_type !=null && $gen != null && $nid !=null)
 	{
+		move_uploaded_file($src, $des);
 
 		$status = create ($username,$password,$name,$email,$phoneNumber,$farmer_type,$gen,$nid,$filename);
 		if($status)
