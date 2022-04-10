@@ -17,6 +17,41 @@ function login($username,$password)
 		return false;
 	}
 }
+
+//username chehck
+function checkusername($username)
+{
+	$con = mysqli_connect('localhost','root','','webtech');
+	$sql = "select *from adviser_eco_info where username = '{$username}'";
+	$result = mysqli_query($con ,$sql);
+	if($row = mysqli_fetch_assoc($result)){
+
+
+		return true;
+	}
+	else
+	{
+		false;
+	}
+	
+}
+//username chehck
+function checkemail($email)
+{
+	$con = mysqli_connect('localhost','root','','webtech');
+	$sql = "select *from adviser_eco_info where email = '{$email}'";
+	$result = mysqli_query($con ,$sql);
+	if($row = mysqli_fetch_assoc($result)){
+
+
+		return true;
+	}
+	else
+	{
+		false;
+	}
+	
+}
 //get adviser all info
 function getuserinfo($username)
 {
@@ -62,9 +97,9 @@ function editprofile($username,$name,$password,$email,$gender,$age,$usernameold)
 	}
 }
 //create Account
-function  creat($username,$name,$password,$email,$gender,$age,$salary,$join){
+function  creat($username,$name,$password,$email,$gender,$age,$salary,$join,$des){
 	$con = mysqli_connect('localhost','root','','webtech');
-	$sql = "insert into adviser_eco_info (Name,username,password,email,gender,age,salary,joining_date) values ('$name','$username','$password','$email','$gender','$age','$salary','$join')";
+	$sql = "insert into adviser_eco_info (Name,username,password,email,gender,age,salary,joining_date,photo) values ('$name','$username','$password','$email','$gender','$age','$salary','$join','$des')";
 	if(mysqli_query($con ,$sql))
 	{
 		return true;

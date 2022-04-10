@@ -80,7 +80,7 @@
                     <td><?=$user['5']?></td>
                     <td><?=$user['6']?></td>
                     <td><?=$user['7']?></td>
-                    <td>null</td>
+                    <td><img src="<?=$user['8']?>" width=70px></td> 
                 </tr>
                 <?php
                     
@@ -94,44 +94,53 @@
         
             <h3 align="center"><?=$msg?></h3><br>
             <span align="center">Create new user</span><br>
-
-            <form method="POST" action="../../../controllers/adminControllers/excecutiveControllers/ecocreataccount.php">
-                <table class="userTable userTable_horizently" align="center">
+            <!-- email error msg -->
+            <h3 id="emailerror" style="font-size:16px; text-align: center; color: white; background-color: red;"></h3>
+            <!-- create account form -->
+             <form  method="POST" enctype="multipart/form-data" action="../../../controllers/adminControllers/excecutiveControllers/ecocreataccount.php">
+                <table class="userTable userTable_horizently" align="center" >
                     <tr>
                         <td>Name</td>
-                        <td><input class="input_horizently" type="name" name="name" value=""></td>
+                        <td><input class="input_horizently" id="name" type="name" name="name" value=""></td>
                     </tr>
                     <tr>
                         <td>Username</td>
-                        <td><input class="input_horizently" type="username" name="username" value=""></td>
+                        <td><input class="input_horizently" id="username" onblur="chkusername()" type="username" name="username" value=""> <p id="valid"></p></td>
+                 
                     </tr>
                     <tr>
                         <td>Password</td>
-                        <td><input class="input_horizently" type="password" name="password" value=""></td>
+                        <td><input class="input_horizently" id="password" type="password" name="password" value=""></td>
                     </tr>
                     <tr>
                         <td>Email</td>
-                        <td><input class="input_horizently" type="email" name="email" value=""></td>
+                        <td><input class="input_horizently" id="email" onblur="emailcheck() , ValidateEmail()" type="email" name="email" value=""> <p id="emailchk"></p></td>
                     </tr>
                      <tr>
                         <td>Gender</td>
-                        <td><input class="input_horizently" type="text" name="gender" value=""></td>
+                        <td><input class="input_horizently" id="gender" type="text" name="gender" value=""></td>
                     </tr>
                      <tr>
                         <td>Age</td>
-                        <td><input class="input_horizently" type="text" name="age" value=""></td>
+                        <td><input class="input_horizently" id="age" type="text" name="age" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Photo</td>
+                        <td><input class="input_horizently" id="image" type="file" name="image" accept="image/png, image/jpeg" value=""></td>
                     </tr>
                     <tr>
                         <tr>
                         <td>salary</td>
-                        <td><input class="input_horizently" type="number" name="salary" value=""></td>
+                        <td><input class="input_horizently" id="salary" type="number" name="salary" value=""></td>
                     </tr>
                     <tr>
                         <td>joining date</td>
                       
-                        <td><input class="input_horizently" type="date" name="join" value=""></td>
+                        <td><input class="input_horizently" id="join" type="date" name="join" value=""></td>
                     </tr>
-                        <td colspan="2"><input class="submit_button" type="submit" name="submit" value="create user"></td>
+                        <td colspan="2"><input class="submit_button" type="submit" name="submit" id="submit"   value="create user"></td>
+
+                        
                     </tr>
                     
                 </table>
@@ -145,140 +154,186 @@
 
 </body>
 </html>
-</body>
 
 
+<script>
+    /*username chehck function*/
+    function chkusername(){
+            let username = document.getElementById('username').value;
+            let xhttp = new XMLHttpRequest();
+
+            xhttp.open('POST', '../../../controllers/adminControllers/excecutiveControllers/ecocreataccount.php', true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send('username='+username);
+
+            xhttp.onreadystatechange = function (){
+
+                if(this.readyState == 4 && this.status == 200){
+                    //alert(this.responseText);
+                    document.getElementById('valid').innerHTML = this.responseText;
+                    document.getElementById('valid').style.color = "red";
+                    document.getElementById('valid').style.fontSize = 12+'px';
 
 
-
-
-<!-- <!DOCTYPE html>
-<html>
-
-<table width = 100%;>
-    <tr height = 100px style ="background-color:#C1BCBC ">
-        <td width =10%; align = center>
-            <img width = 100px; height = 100px src ="logo.png">
-        </td>
-        <td align = right >
-            <table >
-              
-                <tr style ="font-size:20px;">
-                    <td><a href="Home.php">Home  |</a></td>
-                    <td><a href="#"> About us  |</a></td>
-                    <td><a href="../../../controllers/adminControllers/excecutiveControllers/logout.php"> logout</a></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-  
-    <tr  height = 700px>
-        <td width =10%; valign = top; style ="background-color:#C1BCBC; font-size:20px;">
-            <a href="listOfuser.php">user Account</a><br><br>
-            <a href="verifyDocument.php">verfiy ducument</a><br><br>
-            <a href="controlDeaL.php">control deal</a><br><br>
-            <a href="approvePost.php">Approve post</a><br><br>
-            <a href="EditProfile.php">Edit profile</a><br><br>
-        </td>
-     
-        <td valign = top style ="background-color:#F5F2F1 ">
-
-            <h3 align = center>Adviser(Economics) user List</h3>
-            <table border="1px" align="center" width="80%">
-                <tr>
-                    <td>Name</td>
-                    <td>username</td>
-                    <td>email</td>
-                    <td>gender</td>
-                    <td>Age</td>
-                    <td>salary</td>
-                    <td>joining Date</td>
-                    <td>photo</td>
-                </tr>
-                <?php
-
-                if($user!=null){
-                foreach ($user as $user) {
-
-
-                    ?>
-
-                <tr>
-                    <td><?=$user['0']?></td>
-                    <td><?=$user['1']?></td>
-                    <td><?=$user['3']?></td>
-                    <td><?=$user['4']?></td>
-                    <td><?=$user['5']?></td>
-                    <td><?=$user['6']?></td>
-                    <td><?=$user['7']?></td>
-                    <td>null</td>
-                </tr>
-                <?php
-                    
                 }
+            }
+    }
+
+  /*  email chehck function
+*/
+function emailcheck(){
+            let email = document.getElementById('email').value;
+            let xhttp = new XMLHttpRequest();
+
+            xhttp.open('POST', '../../../controllers/adminControllers/excecutiveControllers/ecocreataccount.php', true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send('email='+email);
+
+            xhttp.onreadystatechange = function (){
+
+                if(this.readyState == 4 && this.status == 200){
+                    //alert(this.responseText);
+                    document.getElementById('emailchk').innerHTML = this.responseText;
+                    document.getElementById('emailchk').style.color = "red";
+                    document.getElementById('emailchk').style.fontSize = 12+'px';
+
+
                 }
+            }
+    }
 
-                ?>
-                
-            </table><br>
+/*email validation function*/
+function IsValidEmail(email) {
+        //Check minimum valid length of an Email.
+        if (email.length <= 2) {
+            return false;
+        }
+        //If whether email has @ character.
+        if (email.indexOf("@") == -1) {
+            return false;
+        }
+ 
+        var parts = email.split("@");
+        var dot = parts[1].indexOf(".");
+        var len = parts[1].length;
+        var dotSplits = parts[1].split(".");
+        var dotCount = dotSplits.length - 1;
+ 
+ 
+        //Check whether Dot is present, and that too minimum 1 character after @.
+        if (dot == -1 || dot < 2 || dotCount > 2) {
+            return false;
+        }
+ 
+        //Check whether Dot is not the last character and dots are not repeated.
+        for (var i = 0; i < dotSplits.length; i++) {
+            if (dotSplits[i].length == 0) {
+                return false;
+            }
+        }
+ 
+        return true;
+    };
+/*email validation function calling*/
+function ValidateEmail() {
+        var email = document.getElementById("email").value;
+        var error = document.getElementById("emailerror");
+        error.innerHTML = "";
+        if (!IsValidEmail(email)) {
+            error.innerHTML = "Invalid email address.";
+        }
+    }
 
-        
-            <h3 align="center"><?=$msg?></h3><br>
-            <h3 align="center">Create new user</h3><br>
 
-            <form method="POST" action="../../../controllers/adminControllers/excecutiveControllers/ecocreataccount.php">
-                <table align="center">
-                    <tr>
-                        <td>Name</td>
-                        <td><input type="name" name="name" value=""></td>
-                    </tr>
-                    <tr>
-                        <td>Username</td>
-                        <td><input type="username" name="username" value=""></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td><input type="password" name="password" value=""></td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td><input type="email" name="email" value=""></td>
-                    </tr>
-                     <tr>
-                        <td>Gender</td>
-                        <td><input type="text" name="gender" value=""></td>
-                    </tr>
-                     <tr>
-                        <td>Age</td>
-                        <td><input type="text" name="age" value=""></td>
-                    </tr>
-                    <tr>
-                        <tr>
-                        <td>salary</td>
-                        <td><input type="number" name="salary" value=""></td>
-                    </tr>
-                    <tr>
-                        <td>joining date</td>
-                        <td><input type="date" name="join" value=""></td>
-                    </tr>
-                        <td colspan="2"><input type="submit" name="submit" value="create user"></td>
-                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*function ajaxinsertdata(){
+            let username = document.getElementById('username').value;
+            let name = document.getElementById('name').value;
+            let password = document.getElementById('password').value;
+            let email = document.getElementById('email').value;
+            let gender = document.getElementById('gender').value;
+            let age = document.getElementById('age').value;
+            let image = document.getElementById('image').value;
+            let salary = document.getElementById('salary').value;
+            let join = document.getElementById('join').value;
+            var dataString = 'username1=' + username + '&name1=' + name + '&email1=' + email + '&password1=' + password + '&gender1=' + gender + '&age1=' + age+ '&salary1=' + salary + '&join1=' + join;
+           if (name == '' || email == '' || password == '') {
+                alert("Please Fill All Fields");
+                } else {
+                // AJAX code to submit form.\
                     
-                </table>
+                    let http = new XMLHttpRequest();
+                    http.open('POST', '../../../controllers/adminControllers/excecutiveControllers/ecocreataccount.php', true);
+                    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    http.send(dataString);
+                    http.onreadystatechange = function(){
+                        
+                        if(this.readyState == 4 && this.status == 200){
+                            document.getElementById('h3').innerHTML = this.responseText;;
+                        }
+                        }
+                        }
+                        }
+    function fileupload()
+    {
+          let formData = new FormData(); 
+          formData.append("file", fileupload.files[0]);
+          await fetch('/../../../controllers/adminControllers/excecutiveControllers/ecocreataccount.php', {
+            method: "POST", 
+            body: formData
+          }); 
+          alert('The file has been uploaded successfully.');
+    }*/
 
-            </form>
-            
+</script>
 
-
-        </td>
-    </tr>
-
-    <tr  height = 100px;>
-        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
-           coppyright @2022
-        </td>
-    </tr>
-</table>
-
-
-</html> -->
