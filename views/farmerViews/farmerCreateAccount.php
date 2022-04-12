@@ -103,7 +103,7 @@
             document.getElementById('msg').style.backgroundColor = "rgb(255,0,0)";
 
             document.getElementById('submited').style.display = "none";
-           //console.log("Fsfsdf");
+         
         }
         else{
             document.getElementById('msg').innerHTML = "Password Matched";
@@ -113,8 +113,7 @@
 
 
     }
-// <!-- /*ajax code start from  here*/
-// /*username check function*/ -->
+
     function checkusername(){
             let username = document.getElementById('username').value;
             let xhttp = new XMLHttpRequest();
@@ -137,8 +136,6 @@
     }
 
 
-  /*  email chehck function
-*/
 function checkemail(){
             let email = document.getElementById('email').value;
             let xhttp = new XMLHttpRequest();
