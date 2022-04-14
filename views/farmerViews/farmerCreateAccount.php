@@ -93,7 +93,7 @@
 <script>
 
 
-        function passchechk()
+    function passchechk()
     {
        let p1 = document.getElementById('password1').value;
        let p2 = document.getElementById('password2').value;
