@@ -18,10 +18,10 @@ function login($username,$password)
 }
 //create account retailer side
 
-function createpending($name,$username ,$password,$nidNumber, $email, $phoneNumber, $gen, $licNumber)
+function createpending($name,$username ,$password,$nidNumber, $email, $phoneNumber, $gen, $licNumber,$filename)
 {
 	$con = mysqli_connect('localhost','root','','webtech');
-	$sql = "insert into retailer_info_pending  (name, username, password, nidNumber, email, phone_Number, Gender, trade_License_Number) values ('$name','$username' ,'$password','$nidNumber', '$email', '$phoneNumber', '$gen', '$licNumber')";
+	$sql = "insert into retailer_info_pending  (name, username, password, nidNumber, email, phone_Number, Gender, trade_License_Number,photo, trade_License_Copy) values ('$name','$username' ,'$password','$nidNumber', '$email', '$phoneNumber', '$gen', '$licNumber','$filename')";
 	
 	if(mysqli_query($con ,$sql))
 	{
@@ -113,4 +113,41 @@ function delete_pending($username)
 	}
 }
 
+//email chehck
+function checkemail($email)
+{
+	$con = mysqli_connect('localhost','root','','webtech');
+	$sql = "select *from retailer_info where email = '{$email}'";
+	$result = mysqli_query($con ,$sql);
+	if($row = mysqli_fetch_assoc($result)){
+
+
+		return true;
+	}
+	else
+	{
+		false;
+	}
+	
+}
+
+//username check
+function checkusername($username)
+{
+	$con = mysqli_connect('localhost','root','','webtech');
+	$sql = "select *from retailer_info where username = '{$username}'";
+	$result = mysqli_query($con ,$sql);
+	if($row = mysqli_fetch_assoc($result)){
+
+
+		return true;
+	}
+	else
+	{
+		false;
+	}
+	
+}
+
 ?>
+
