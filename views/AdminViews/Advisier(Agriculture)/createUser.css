@@ -1,0 +1,170 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+/*Menubar degine*/
+
+.menubar{
+	position: relative;
+	background-color:#34495e;
+	width: 100%;
+	height: 70px;
+}
+
+.menubar-icon
+{
+	position: absolute;
+	left: 50px;
+	top:10px;
+}
+.menubar-icon img {
+	width: 50px;
+	height: 50px;
+}
+.menubar-link
+{
+	position: absolute;
+	right:30px;
+	top: 20px;
+}
+.menubar-link a{
+	text-decoration: none;
+	color: white;
+	font-size:20px;
+}
+/*main panel start from here*/
+.main_panel{
+	width: 100%;
+	height: 900px;
+	overflow: hidden;
+	}
+.side_panel
+{
+	position: relative;
+	float: left;
+	align-items: center;
+	width: 15%;
+	height: 900px;
+	background-color: #0c2461;
+}
+
+.button_area_of_2nd_side_panel{
+        color: white;
+        align-items: center;
+        position: absolute;
+        margin-left:25px;
+        margin-top: 30px;
+    }
+.button_area_of_2nd_side_panel button{
+        width: 200px;
+        height: 30px;
+        font-size: 16px;
+        margin: 10px;
+
+    }
+.button_area_of_1st_side_panel{
+        color: white;
+        align-items: center;
+        position: absolute;
+        margin-left:25px;
+        margin-top: 30px;
+    }
+.button_area_of_2nd_side_panel button{
+        width: 200px;
+        height: 30px;
+        font-size: 16px;
+        margin: 50px;
+
+    }
+.daynamic_area span{
+	text-align: center;
+	font-size: 30px;
+	display: table;
+    margin: 0 auto;
+    border-bottom: 1px solid;
+
+
+}
+/*Table format start here*/
+#userTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin-top:30px;
+
+ 
+}
+
+#userTable td, #userTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#userTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#userTable tr:hover {background-color: #ddd;}
+
+#userTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0C2461;
+  color: white;
+}
+.create_user th td{
+	font-size:20px;
+	
+
+}/*
+basic input area*/
+.input{
+	font-size:16px;
+	border: 1px solid;
+	border-radius: 5px;
+	text-align: center;
+	margin-bottom: 5px;
+	height:22px;
+	color: #7f8c8d;
+}
+/*inside table input area*/
+.input_ret{
+	font-size:16px;
+	border: 1px solid;
+	border-radius: 2px;
+	text-align: center;
+	color: #7f8c8d;
+	width: 150px;
+}
+/*input_horizently*/
+.input_horizently{
+	font-size:19px;
+	margin-bottom:5px;
+	border-radius: 2px;
+	text-align: center;
+	
+	width: 500px;
+	border: none;
+	border-bottom: 1px solid #0C2461;
+}
+
+.submit_button{
+	font-size: 16px;
+	margin-top: 20px;
+	padding: 5px;
+	width: 100px;
+	height:35px;
+	background-color: #0C2461;
+	border: none;
+	color: white;
+	text-align: center;
+	display: block;
+    margin: 0 auto;
+    margin-top:10px;
+
+
+}
+.userTable_horizently{
+	font-size:22px;
+	align-items: center;
+	
+}

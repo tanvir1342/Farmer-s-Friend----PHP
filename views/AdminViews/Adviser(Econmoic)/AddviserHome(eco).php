@@ -48,8 +48,8 @@
        </div>
 
 <div class="daynamic_area">
-        <h2 class="daynamic_area_heading_text">Welcome Executive,<?=$user['Name']?></h2><hr>
-            <div class="function_area" onclick="location.href='post.php';">
+        <h2 class="daynamic_area_heading_text">Welcome Adviser (Eco),<?=$user['Name']?></h2><hr>
+            <div class="function_area" onclick="location.href='Post.php';">
                 <img src="image/post.png">
                 <p>Post</p>
            </div>

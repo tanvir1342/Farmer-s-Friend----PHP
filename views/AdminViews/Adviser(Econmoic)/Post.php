@@ -77,20 +77,20 @@
             <label for="Husbandary">Husbandary</label>
             <input class="input" type="radio" id="Fisheries" name="Farmer_type3" value="fisheries">
             <label for="Fisheries">Fisheries</label><br>
-            <?php
+<?php
             if ($post!= null) {
                 foreach($post as $post){
             ?>
             <form method="POST" action="../../../controllers/adminControllers/adviserControllers(eco)/sendsolve.php">
-                <input class="input"  name="farmer_username" value="<?=$post['0']?>" readonly="readonly">
+                <input style="border: none;" class="input" type="user" name="farmer_username" value="<?=$post['0']?>" readonly="readonly">
             <h3> Farmer type :<?=$post['1']?></h3>
             
                
-               <textarea class="input"  name="problem" rows="5" cols="180" readonly='readonly'><?=$post['2']?></textarea>
+               <textarea style="background-color: black;color: white;" class="input" name="problem" rows="5" cols="180" readonly='readonly'><?=$post['2']?></textarea>
             
            
                  <textarea id ="solve" name="solveProblem" rows="12" cols="180"></textarea><br>
-                 <input class="submit_button" type="submit" name="submit" value="Send to Farmer">
+                 <input type="submit" name="submit" value="send to Farmer">
             </form>
             
             <br>

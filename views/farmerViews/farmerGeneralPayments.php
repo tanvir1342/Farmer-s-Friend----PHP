@@ -79,52 +79,52 @@
     <div class="daynamic_area">
         <h2 class="daynamic_area_heading_text">General Payment</h2><hr>
 
-            <form method="POST" action="../../controllers/farmerControllers/generalPaymentCheck.php">
+            <form method="POST">
                         <table align="center" style="font-size:20px;" class="create_user">
 
                              <tr>
                                     <td>Username:</td>
-                                    <td width="300px "><input class="input" type="username" name="username" value="<?=$user['username']?>" placeholder="Enter Username"></td>
+                                    <td width="300px "><input class="input" type="username" id="username" name="username" value="<?=$user['username']?>" placeholder="Enter Username"></td>
                              </tr>
                             <tr>
                                     <td>Payment Method:</td>                        
-                                    <td width="300px "><input class="input"  type="radio" name="payment_method" value="Bkash" > Bkash <input type="radio" name="payment_method" value="Rocket" > Rocket <input type="radio" name="payment_method" value="Bank" > Bank </td> 
+                                    <td width="300px "><input class="input"  type="radio" id="payment_method" name="payment_method" value="Bkash" > Bkash <input type="radio" id="payment_method" name="payment_method" value="Rocket" > Rocket <input type="radio" id="payment_method" name="payment_method" value="Bank" > Bank </td> 
                              </tr>
 
 
                             <tr>
                                 <td>Phone:</td>
                                 <td>
-                                 <input class="input" type="number" name="Phone" value="<?=$user['phone_number']?>" placeholder="Enter Phone Number">
+                                 <input class="input" type="number" id="Phone" name="Phone" value="<?=$user['phone_number']?>" placeholder="Enter Phone Number">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Amount: </td>
                                 <td>
-                                <input class="input" type="number" name="Amount" value="" placeholder="Enter Amount">
+                                <input class="input" type="number" id="Amount" name="Amount" value="" placeholder="Enter Amount">
                                 </td>
                             </tr>
                             <tr>
                                 <td>City/District: </td>
                                 <td>
-                                <input class="input"  type="text" name="city_district" value="" placeholder="Enter City/District">
+                                <input class="input"  type="text" id="city_district" name="city_district" value="" placeholder="Enter City/District">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Pin/Pass Code: </td>
                                 <td>
-                                <input class="input" type="number" name="pin_pass" value="" placeholder="Enter Pin/Pass Code">
+                                <input class="input" type="number" id="pin_pass" name="pin_pass" value="" placeholder="Enter Pin/Pass Code">
                                 </td>
                             </tr>
                              <tr>
                                 <td>Code: </td>
                                 <td>
-                                <input class="input"  type="number" name="code" value="" placeholder="Enter Code">
+                                <input class="input"  type="number" id="code" name="code" value="" placeholder="Enter Code">
                                 </td>
                             </tr>
                             <tr >
                                 <td >
-                                     <br><input class="submit_button" type="submit" name="submit" value="Pay">
+                                     <br><input type="button" class="submit_button" onclick="generalpayinsert()" value="Pay">
                                 </td>
                             </tr>
                         </table>
@@ -133,7 +133,40 @@
 
     </div>
 
+<script>
+        function generalpayinsert(){
+            let username = document.getElementById('username').value;
+            let payment_method = document.getElementById('payment_method').value;
+            let Phone = document.getElementById('Phone').value;
+            let Amount = document.getElementById('Amount').value;
+            let city_district = document.getElementById('city_district').value;
+            let pin_pass = document.getElementById('pin_pass').value;
+            let code = document.getElementById('code').value;
+            
+            var dataString = 'username1=' + username + '&payment_method1=' + payment_method +  '&Phone1=' + Phone
+            +'&Amount1=' + Amount + '&city_district1=' + city_district + '&pin_pass1=' + pin_pass + '&code1=' + code ;
+            console.log (dataString);  
+            if (username == '' || payment_method == '' || Phone == '' || Amount == '' || city_district == '' || pin_pass == '' || code == '') {
+            alert("Null Value is Not Allowed");
+            } else {
+            // AJAX code to submit form.\
 
+            let http = new XMLHttpRequest();
+            http.open('POST', '../../controllers/farmerControllers/generalPaymentCheck.php', true);
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.send(dataString);
+            http.onreadystatechange = function(){
+
+            if(this.readyState == 4 && this.status == 200){
+                alert(this.responseText);
+            
+              }
+            }
+         }
+     }
+
+
+    </script>
 
 
 

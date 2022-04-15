@@ -2,29 +2,29 @@
 session_start();
 require('../../models/farmer_post_problem_eco.php');
 
-if(isset($_REQUEST['submit'])){
-	
-	$username = $_REQUEST['username'];
-	$farmer_type = $_REQUEST['farmer_type'];
-	$problem = $_REQUEST['problem'];
+if(isset($_POST['username1']) && isset ($_POST['farmer_type1']) && isset ($_POST['problem1']))
+
+{
 
 
-	if($username != null && $farmer_type !=null && $problem != null)
+	$username = $_POST['username1'];
+	$farmer_type = $_POST['farmer_type1'];
+	$problem = $_POST['problem1'];
+
+
 	{
 
 		$status = problem_eco($username,$farmer_type,$problem);
 		if($status)
 		{
-			header('location: ../../views/farmerViews/postproblemeco.php?msg=success');
-		}
-		else
-		{
-			header('location: ../../views/farmerViews/postproblemeco.php?msg=failed');
-		}
+            echo "Post Successful";
+        }
+        else
+        {
+            echo "Post Failed";
+        }
 
 
-	}else{
-		echo "null submission ....";
 	}
 }
 
