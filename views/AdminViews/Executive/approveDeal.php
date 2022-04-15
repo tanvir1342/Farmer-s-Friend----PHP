@@ -37,7 +37,8 @@
       <!--  main panel daynamic area star from here -->
         <div class="daynamic_area">
         
-           <span>Pending List of deal</span>
+           <span>Pending List of deal</span><br>
+           <span><button style="text-align: center;background-color: green;color: white;width: 100px;height: 35px;border: none;" onclick="getdata()">Get data</button></span>
           
             <table border="1px" align="center" width="80%" id="userTable">
 
@@ -84,7 +85,8 @@
             <h3 id="eerror" style="width: 100%;background-color:#f8c291;color: white;text-align: center;"></h2>
             <h3 id="nerror" style="width: 100%;background-color:#f8c291;color: white;text-align: center;"></h2>
             <h3 id="msg" style="width: 100%;background-color:#f8c291;color: white;text-align: center;"></h2> -->
-<a href=""></a>
+                
+
             
               
         </div>
@@ -113,7 +115,7 @@
                         
                         if(this.readyState == 4 && this.status == 200)
                         {
-                            var data =  JSON.parse(this.responseText)
+                            var data =  JSON.parse(this.responseText);
                             console.log(data);
                             var html ="";
                             for (var i = 0; i<data.length;i++) {
@@ -126,7 +128,10 @@
 
                                 var date = data[i].date;
                                 var link = "approvedata('" +farmerusername+ "','"+retailerusername+"')";
-                                //console.log(link);
+                                var insertdata =  "insertdata('" +farmerusername+"','"+retailerusername+"','"+pn+"','"+discription+"','"+amount+"','"+qntty+"','"+date+"')";
+                                var get = "getdata()";
+                                /*console.log(insertdata);
+                                console.log(link);*/
 
 
                                 html+= "<tr>";
@@ -152,10 +157,10 @@
                                     +date+
                                             "'></td>";
                                            
-                                           /*html+= "<td><button style = 'color:white;background-color:green;border:none;'><a style='text-decoration:none;color:white' href="+link+">approve"
+                                           html+= "<td><button style = 'color:white;background-color:green;border:none;height:30px'  onclick ="+insertdata+","+link+"> Approve"
                                     
-                                            "</a></button></td>";*/
-                                            html+= "<td><button style = 'color:white;background-color:red;border:none' onclick ="+link+"> reject"
+                                            "</button></button></td>";
+                                            html+= "<td><button style = 'color:white;background-color:red;border:none;height:30px' onclick ="+link+","+get+"> Reject"
                                     
                                             "</button></button></td>";
                                 html+= "</tr>";
@@ -171,10 +176,40 @@
                     }
     }
 
-function approvedata(farmerusername,retailerusername) {
+function approvedata(farmerusername,retailerusername){
 
 /*     console.log(farmerusername);
      console.log(retailerusername);*/
+        var dataString = 'farmerusername1=' + farmerusername + '&retailerusername1=' + retailerusername;
+        let http = new XMLHttpRequest();
+        http.open('POST', '../../../controllers/adminControllers/excecutiveControllers/deletpendingpost.php', true);
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.send(dataString);
+        http.onreadystatechange = function(){
+
+        if(this.readyState == 4 && this.status == 200){
+            console.log(this.responseText);
+        }
+    }
+}
+
+
+
+function insertdata(farmerusername,retailerusername,pn,discription,amount,qntty,date)
+{
+    var dataString = 'farmerusername=' + farmerusername + '&retailerusername=' + retailerusername + '&discription=' + discription + '&amount=' + amount + '&qntty=' + qntty + '&date=' + date+ '&pn=' + pn;
+    console.log(dataString);
+        let http = new XMLHttpRequest();
+        http.open('POST', '../../../controllers/adminControllers/excecutiveControllers/approvedealchehck.php', true);
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.send(dataString);
+        http.onreadystatechange = function(){
+
+        if(this.readyState == 4 && this.status == 200){
+            alert(this.responseText);
+        }
+
+}
 }
 
     

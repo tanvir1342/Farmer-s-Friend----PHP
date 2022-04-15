@@ -1,14 +1,14 @@
 <?php
 require('../../../models/pendingdeal.php');
-if ($status = getallpendingdeal()) {
+if (isset($_POST['word1'])) {
+	$word = $_POST['word1'];
+}
+if ($status = live($word)) {
 	
 		echo json_encode($status);
 
 	
 }
-
-
-
 
 
 ?>
