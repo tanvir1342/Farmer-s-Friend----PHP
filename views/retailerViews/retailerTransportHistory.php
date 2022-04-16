@@ -97,138 +97,72 @@
 				<table border="1px" align="center" width="10%" id="userTable">
 					<tr>
 						<td>Retailer name</td>
-						<td><input type="name" name="retailer_name" value="<?=$user['name']?>"></td>
+						<td><input type="name" id="retailer_name" name="retailer_name" value="<?=$user['name']?>"></td>
 					</tr>
 					<tr>
 						<td>Retailer username</td>
-						<td><input type="name" name="retailer_username" value="<?=$user['username']?>"></td>
+						<td><input type="name" id="username" name="retailer_username" value="<?=$user['username']?>"></td>
 					</tr>
 					<tr>
 						<td>From</td>
-						<td><input type="text" name="froms"></td>
+						<td><input type="text" id="from" name="froms"></td>
 					</tr>
 					<tr>
 						<td>To</td>
-						<td><input type="text" name="too"></td>
+						<td><input type="text" id="to" name="too"></td>
 					</tr>
 					<tr>
 						<td>Product name</td>
-						<td><input type="text" name="product_name"></td>
+						<td><input type="text" id="product_name" name="product_name"></td>
 					</tr>
 					<tr>
 						<td>Weight</td>
-						<td><input type="text" name="weight"></td>
+						<td><input type="text" id="weight" name="weight"></td>
 					</tr>
 					<tr>
 						<td>date</td>
-						<td><input type="date" name="date"></td>
+						<td><input type="date" id="date" name="date"></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td><input type="submit" name="submit" value="Apply"></td>
+						<td><input type="button"  value="Apply" onclick="transporthistory()"></td>
 					</tr>
 				</table>
 			</form>
-<!-- <table width="100%"; border="1px">
-	
-	<tr height = "700px" valign="top" >
-        <td width =15% bgcolor="C1BCBC" valign="top" align="center">
-             <a href="retailerEditAccount.php"> Edit Account </a><br><br> 
-            <a href="retailerUpdatePrice.php"> Update & Post Latest Prices </a><br><br>
-            <a href="dealWithFarmer.php"> Deal With Farmers </a><br><br>
-            <a href="retailerTransportHistory.php"> Transport Products </a><br><br>
-            <a href="retailerDealHistory.php"> Deal History </a><br><br>
-            <a href="govTax.php"> Payment For Tax </a><br><br>
-            <a href="makePayment.php"> Payment For Any Issue </a><br><br>        
-        </td>
-		<td valign="top"; align="center">
-			<h1><u>Transport History</u></h1><hr> 
-			<table width="100%"; border="1px">
-				<tr>
-					<th>Retailer Name</th>
-					<th>username</th>
-					<th>From</th>
-					<th>To</th>
-					<th>Product name</th>
-					<th>Wieght</th>
-					<th>date</th>
-					<th>Status</th>
-				</tr>
-				<?php
-				if ($usertransport!=null) {
-					foreach($usertransport as $usertransport)
-					{
 
-					?>
-				<form>
-					<tr>
-					<td><input type="name" name="retailer_name" value="<?=$usertransport[0]?>" readonly="readonly"></td></td>
-					<td><input type="name" name="retailer_username" value="<?=$usertransport[1]?>" readonly="readonly"></td>
-					<td><input type="text" name="froms" value="<?=$usertransport[2]?>"></td>
-					<td><input type="text" name="too" value="<?=$usertransport[3]?>"></td>
-					<td><input type="text" name="product_name" value="<?=$usertransport[4]?>"></td>
-					<td><input type="text" name="weight" value="<?=$usertransport[5]?>"></td>
-					<td><input type="date" name="date" value="<?=$usertransport[6]?>"></td>
-					<td><input type="submit" name="submit" value="Cencel"></td>
-					
-				</tr>
-
-
-				</form>
-				<?php
-			}
-		}
-		?>
-				
-
-				
-			</table>
-			<br>
-			<h1>Apply for transport</h1>
-			<form method="post" action="../../controllers/retailerControllers/transportcheck.php">
-				<table>
-					<tr>
-						<td>Retailer name</td>
-						<td><input type="name" name="retailer_name" value="<?=$user['name']?>"></td>
-					</tr>
-					<tr>
-						<td>Retailer username</td>
-						<td><input type="name" name="retailer_username" value="<?=$user['username']?>"></td>
-					</tr>
-					<tr>
-						<td>From</td>
-						<td><input type="text" name="froms"></td>
-					</tr>
-					<tr>
-						<td>To</td>
-						<td><input type="text" name="too"></td>
-					</tr>
-					<tr>
-						<td>Product name</td>
-						<td><input type="text" name="product_name"></td>
-					</tr>
-					<tr>
-						<td>Weight</td>
-						<td><input type="text" name="weight"></td>
-					</tr>
-					<tr>
-						<td>date</td>
-						<td><input type="date" name="date"></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td><input type="submit" name="submit" value="Apply"></td>
-					</tr>
-				</table>
-			</form>
-		</td>
-	</tr>
-	
-   <tr  height = 100px;>
-        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
-           All Copyrights Reserve by Gallant ltd.
-        </td>
-    </tr>
-</table> -->
 </body>
 </html>
+<script>
+    
+function transporthistory(){
+
+let name = document.getElementById('retailer_name'/*id*/).value;
+let username = document.getElementById('username').value;
+let from = document.getElementById('from').value;
+let to = document.getElementById('to').value;
+let product_name = document.getElementById('product_name').value;
+let weight = document.getElementById('weight').value;
+let date = document.getElementById('date').value;
+
+var dataString = 'username1=' + username + '&name1=' + name + '&from1=' + from + '&to1=' + to + '&product_name1=' + product_name + '&weight1=' + weight + '&date1=' + date ; /*array*/
+console.log(dataString);
+if (name == '' || username == ''|| from == '' || to == ''|| product_name == ''|| weight == ''|| date == '') {
+alert("Please Fill All Fields");
+} else {
+// AJAX code to submit form.\
+
+let http = new XMLHttpRequest();
+http.open('POST', '../../controllers/retailerControllers/transportcheck.php', true);
+http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+http.send(dataString);
+http.onreadystatechange = function(){
+
+if(this.readyState == 4 && this.status == 200){
+alert(this.responseText);
+
+}
+}
+}
+}
+
+</script>

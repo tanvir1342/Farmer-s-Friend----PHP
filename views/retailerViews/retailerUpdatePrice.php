@@ -81,29 +81,64 @@
                 
                     <tr>
                         <td>Retailer name:</td>
-                        <td><input type="name" name="retailer_name" value="<?=$user['name']?>" readonly="readonly"></td>
+                        <td><input type="name" id="retailer_name" name="retailer_name" value="<?=$user['name']?>" readonly="readonly"></td>
                     </tr>
                     <tr>
                         <td>Retailer username:</td>
-                        <td><input type="name" name="retailer_username" value="<?=$user['username']?>" readonly="readonly"></td>
+                        <td><input type="name" id="username" name="retailer_username" value="<?=$user['username']?>" readonly="readonly"></td>
                     </tr>
                     <tr>
                         <td>Product name:</td>
-                        <td><input type="name" name="product_name" value=""></td>
+                        <td><input type="name" id="product_name" name="product_name" value=""></td>
                     </tr>
                     <tr>
                         <td>Price:</td>
-                        <td><input type="name" name="price" value=""></td>
+                        <td><input type="name" id="price" name="price" value=""></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input type="submit" name="submit" value="insert"></td>
+                        <td><input type="button" onclick="updateprice()" value="insert"></td>
                     </tr>
                
             </form>
             </table>
+</div>
+</body>
+</html>
+
+<script>
+    
+function updateprice(){
+
+let name = document.getElementById('retailer_name'/*id*/).value;
+let username = document.getElementById('username').value;
+
+let product_name = document.getElementById('product_name').value;
+let price = document.getElementById('price').value;
 
 
+var dataString = 'username1=' + username + '&name1=' + name + '&product_name1=' + product_name + '&price1=' + price  ; /*array*/
+console.log(dataString);
+if (name == '' || username == ''||  product_name == ''||  price == '') {
+alert("Please Fill All Fields");
+} else {
+// AJAX code to submit form.\
+
+let http = new XMLHttpRequest();
+http.open('POST', '../../controllers/retailerControllers/insertprice.php', true);
+http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+http.send(dataString);
+http.onreadystatechange = function(){
+
+if(this.readyState == 4 && this.status == 200){
+alert(this.responseText);
+
+}
+}
+}
+}
+
+</script>
 <!-- Table Creation -->
 <!-- <table width = 100%; border = 1px>
     <tr  height = 100px style ="background-color:#C1BCBC ">

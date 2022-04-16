@@ -1,27 +1,28 @@
 <?php
 session_start();
 require('../../models/transport.php');
-if (isset($_REQUEST['submit'])) {
-	$retailer_name = $_REQUEST['retailer_name'];
-	$retailer_username = $_REQUEST['retailer_username'];
-	$froms = $_REQUEST['froms'];
-	$too = $_REQUEST['too'];
-	$product_name = $_REQUEST['product_name'];
-	$weight = $_REQUEST['weight'];
-	$date = $_REQUEST['date'];
-	if ($retailer_name!=null && $retailer_username!=null && $froms!=null && $too!=null && $product_name!=null && $weight!=null && $date !=null) {
+if (isset($_POST['username1'])&& isset($_POST['name1'])&&isset($_POST['from1'])&&isset($_POST['to1'])&&isset($_POST['product_name1'])&&isset($_POST['weight1'])&&isset($_POST['date1'])  ) {
+	$retailer_name = $_POST['name1'];
+	$retailer_username = $_POST['username1'];
+	$froms = $_POST['from1'];
+	$too = $_POST['to1'];
+	$product_name = $_POST['product_name1'];
+	$weight = $_POST['weight1'];
+	$date = $_POST['date1'];
+
 		
 
 		$status = transport($retailer_name,$retailer_username,$froms,$too,$product_name,$weight,$date);
 		if ($status) {
-			header('location: ../../views/retailerViews/retailerTransportHistory.php?msg=done');
+			echo "success";
 		}
 		else
 		{
-			header('location: ../../views/retailerViews/retailerTransportHistory.php?msg=failed');
+			echo "failed";
 		}
 	}
 }
 
 
 ?>
+
