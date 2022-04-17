@@ -95,7 +95,7 @@
                     <td><?=$pricelist[1]?></td>
                     <td><?=$pricelist[2]?></td>
                     <td><?=$pricelist[3]?></td>
-                    <td><button onclick="location.href='farmerDealsWithRetailer.php';">Deal</button></td>                  
+                    <td><button onclick="location.href='farmerDealsWithRetailer.php? name=<?=$pricelist[0]?>, &username=<?=$pricelist[1]?> , &pn=<?=$pricelist[2]?> ,&price=<?=$pricelist[3]?>';">Deal</button></td>                  
 
                 </tr>
                 <?php

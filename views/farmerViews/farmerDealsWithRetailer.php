@@ -1,5 +1,17 @@
 <?php 
     require('header.php');
+    
+        $retailerusername = $_GET['username'];
+        $product_name = $_GET['pn'];
+        $retailername = $_GET['name'];
+        $price = $_GET['price'];
+        /*echo $retailerusername;
+        echo $retailername;
+        echo $product_name;
+
+        echo $price;*/
+
+    
 ?>
 
 

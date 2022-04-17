@@ -1,5 +1,5 @@
 <?php
-require('../../../models/pendingdeal.php');
+require('../../../models/BloggerPost.php');
 if (isset($_POST['word1'])) {
 	$word = $_POST['word1'];
 }

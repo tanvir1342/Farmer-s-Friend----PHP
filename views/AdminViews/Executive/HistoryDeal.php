@@ -39,11 +39,14 @@
         
            <span>History of deal</span><br>
            
+
+           
           
           
             <table border="1px" align="center" width="80%" id="userTable">
                 <tr>
-                    <td colspan="7"><input type="text" onkeyup="live()" id="words"></td>
+                    <td ><input type="text" onkeyup="live()" id="words" placeholder="Enter username"></td>
+                    <td colspan="6"><h3 id="notfound" style="background-color:red;font-size: 15px;"></h3></td>
                 </tr>
 
                 <tr>
@@ -113,7 +116,14 @@
                         if(this.readyState == 4 && this.status == 200)
                         {
                             console.log(this.responseText);
-                            var data =  JSON.parse(this.responseText);
+                            if(this.responseText == "data not found"){
+                                document.getElementById('notfound').innerHTML = "Data not found";
+
+                            }
+                            else
+                            {
+                                document.getElementById('notfound').innerHTML = "";
+                                var data =  JSON.parse(this.responseText);
                             //console.log(data);
                             var html = " ";
                             for (var i = 0; i<data.length;i++) {
@@ -157,6 +167,9 @@
 
                             }
                             document.getElementById("database").innerHTML = html;
+
+                            }
+                            
                             //document.getElementById("ap").color = "red";
 
 
