@@ -8,6 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Farmer user list</title>
     <link rel="stylesheet" type="text/css" href="createUser.css">
+        <style>
+    .button_area_of_2nd_side_panel{
+        color: white;
+        align-items: center;
+        position: absolute;
+        margin-left:25px;
+        margin-top: 30px;
+    }
+    .button_area_of_2nd_side_panel button{
+        width: 200px;
+        height: 30px;
+        font-size: 16px;
+        margin: 10px;
+
+    }
+    .function_area{
+        margin-left:250px;
+    }
+    </style>
 </head>
 <body onload="getdata()">
     <div class="menubar">
