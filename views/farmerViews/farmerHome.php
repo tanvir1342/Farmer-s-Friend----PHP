@@ -42,7 +42,7 @@
        <!--  side panel div start from here -->
        <div class="side_panel">
         <div class="pro-pic-of-side-panel"></div>
-        <img style="width: 200px; height: 200px; border-radius: 100%;" src="../../models/Farmerupload/<?=$user['photo']?>" >
+        <img style="width:200px;height:200px;border-radius: 100% ;" src="../../models/Farmerupload/<?=$user['photo']?>" >
         <div class="text_area_of_side_panel">
              <h1><?=$user['name']?></h1>             
              <p>Gender:<?=$user['gender']?></p>
@@ -86,14 +86,14 @@
               <img src="images/marketprices.png">
                 <p>Market Prices</p>
           </div>
-          <div onclick="location.href='farmerDealsWithRetailer.php';" class="function_area">
+<!--           <div onclick="location.href='farmerDealsWithRetailer.php';" class="function_area">
               <img src="images/dealwithretailers.jpg">
                 <p>Deal With Retailer</p>
           </div>
           <div onclick="location.href='farmerCheckWeather.php';" class="function_area">
               <img src="images/weather.png">
                 <p>Check Weather</p>
-          </div><br>
+          </div><br> -->
           <div onclick="location.href='farmerWaterPayments.php';" class="function_area">
               <img src="images/waterPayment.png">
                 <p>Water Payments</p>

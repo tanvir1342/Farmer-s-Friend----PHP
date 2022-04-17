@@ -65,8 +65,8 @@
             <button onclick="location.href='farmingGuideline.php';">Farming Guideline</button>
             <button onclick="location.href='farmerBankingGuideline.php';">Get Support From Bank</button>
             <button onclick="location.href='farmerMarketPrices.php';" >Market Price</button>
-            <button onclick="location.href='farmerDealsWithRetailer.php';">Deal With Retailer</button>
-            <button onclick="location.href='farmerCheckWeather.php';">Check Weather</button>
+            
+            <!-- <button onclick="location.href='farmerCheckWeather.php';">Check Weather</button> -->
             <button onclick="location.href='farmerWaterPayments.php';">Water Payments</button>
             <button onclick="location.href='farmerGeneralPayments.php';">General Payments</button>        
 

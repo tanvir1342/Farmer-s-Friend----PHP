@@ -1,30 +1,28 @@
 <?php 
     require('header.php');
-    
+    require('../../models/farmer_dealWithRetailers.php');
         $retailerusername = $_GET['username'];
         $product_name = $_GET['pn'];
         $retailername = $_GET['name'];
         $price = $_GET['price'];
-        /*echo $retailerusername;
-        echo $retailername;
-        echo $product_name;
-
-        echo $price;*/
+        $username = $_SESSION['Farmer_username'];
+        // echo $retailerusername;
+        // echo $retailername;
+        // echo $product_name;
+        // echo $price;
 
     
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Deal With Retailer</title>
+    <title>Request Deal</title>
     <link rel="stylesheet" type="text/css" href="farmer.css">
+    <link rel="stylesheet" type="text/css" href="farmercreateedit.css">
+    <link rel="stylesheet" type="text/css" href="farmerHomes.css">
     <style>
     .button_area_of_2nd_side_panel{
         color: white;
@@ -67,7 +65,7 @@
        <div  class="side_panel">      
         
             <div class="button_area_of_2nd_side_panel">
-            <button onclick="location.href='farmerPosttype.php';">Post For Problem</button>
+<!--             <button onclick="location.href='farmerPosttype.php';">Post For Problem</button>
             <button onclick="location.href='veterinarianSupport.php';">Veterinarian Support</button>
             <button onclick="location.href='farmerMachinariesGuidelines.php';">Machinaries Guideline</button>
             <button onclick="location.href='farmingGuideline.php';">Farming Guideline</button>
@@ -76,7 +74,7 @@
             <button onclick="location.href='farmerDealsWithRetailer.php';">Deal With Retailer</button>
             <button onclick="location.href='farmerCheckWeather.php';">Check Weather</button>
             <button onclick="location.href='farmerWaterPayments.php';">Water Payments</button>
-            <button onclick="location.href='farmerGeneralPayments.php';">General Payments</button>        
+            <button onclick="location.href='farmerGeneralPayments.php';">General Payments</button> -->        
 
 
         </div>
@@ -85,7 +83,47 @@
     <!-- feature page -->
 
     <div class="daynamic_area">
-        <h2 class="daynamic_area_heading_text">Deal With Retailer</h2><hr>
+        <h2 class="daynamic_area_heading_text">Request Deal</h2><hr>
+            <form name="validationn" method="POST" action="../../controllers/farmerControllers/dealWithRetailersCheck.php">
+               <table align="center" style="font-size:20px;" class="create_user">
+                    <tr>
+                        <td>Farmer Username:</td>
+                        <td width="300px "><input class="input" type="name" name="farmerusername" value="<?=$username?>"></td>
+                        <td>Retailer Username:</td>
+                        <td><input class="input" type="name" name="retailerusername" value="<?=$retailerusername?>"></td>
+                        <td></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Product Name:</td>
+                        <td width="300px "><input class="input" type="username" name="pn" value="<?=$product_name?>"></td>
+                        <td>Description:</td>
+                        <td width="300px "><input  class="input" type="text" name="description" value="" placeholder="Enter Description" ></td>
+                        <td></td><br>
+
+                    </tr>
+
+                    <tr>
+                        <td>Quantity:</td>
+                        <td><input class="input" type="number" name="qntty" value="" placeholder="Enter Quantity"></td> 
+                        <td>Amount:</td>
+                        <td><input class="input" type="number" name="amount" placeholder="Enter Amount"></td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Date:</td>
+                        <td><input class="input" type="date" name="date" value=""></td> 
+                    </tr>
+                  
+                
+
+                </table>
+                            <input class="submit_button" id="submited" type="submit" name="submit" value="Request">  
+                    
+            </form>
+</div>
+
+
 
 
 
