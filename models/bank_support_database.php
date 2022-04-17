@@ -52,6 +52,17 @@ function deletepending($username)
 	}
 }
 
+function gettlist()
+{
+	$con = mysqli_connect('localhost','root','','webtech');
+	$sql = "select *from bank_support_pending";
+	$result = mysqli_query($con ,$sql);
+	if ($result->num_rows > 0){
+		$row = mysqli_fetch_all($result);
+		return $row;
+	}
+}
+
 
 
 ?>

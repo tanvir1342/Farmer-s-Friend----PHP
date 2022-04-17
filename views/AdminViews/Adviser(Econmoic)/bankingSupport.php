@@ -1,5 +1,6 @@
 <?php 
     require('header.php');
+    require('../../../models/bank_support_database.php');
     $msg = "";
     if (isset($_GET['msg'])) {
 
@@ -7,6 +8,7 @@
                 $msg = "approved";
         }
     }
+    $list = gettlist();
 ?>
 
 
@@ -82,25 +84,36 @@
                     <th>Username</th>
                     <th>Land Property status</th>
                     <th>Yearly Income</th>
-                    <th align="center">Reason for Loan</th>
-                    <th>Amount of loan</th>
-                    <th>Officials permit</th>
+                    <th align="center">yearly income</th>
+                    <th>Reason for Loan</th>
+                    <th>Approve</th>
                 </tr>
+                <?php
+                if($list!=null){
+                    foreach($list as $list)
+                    {
+
+
+                ?>
                 
 
                     <tr>
-                    <td><input class="input" width="10px" type="name" name="name" value="Safi sikdar"></td>
-                    <td><input class="input" type="username" name="username" value="Safi125"></td>
-                    <td><input class="input" type="text" name="land_Property_status" value="S66 Kata"></td>
-                    <td><input class="input" type="text" name="yearly_income" value="7 lack"></td>
-                    <td><input class="input" type="text" name="Amount_of_loan" value="2 lack"></td>
-                    <td><textarea class="input" id ="guide" name="reason" rows="5" cols="20" >
-                        Pellentesque habitant morbi tristique senectus et netus et malesuada 
-                        fames ac turpis egestas. Sed non enim non nulla scelerisque tristique
+                    <td><input class="input" width="10px" type="name" name="name" value="<?=$list[0]?>"></td>
+                    <td><input class="input" type="username" name="username" value="<?=$list[1]?>"></td>
+                    <td><input class="input" type="text" name="land_Property_status" value="<?=$list[2]?>"></td>
+                    <td><input class="input" type="text" name="yearly_income" value="<?=$list[3]?>"></td>
+                    <td><input class="input" type="text" name="Amount_of_loan" value="<?=$list[3]?>"></td>
+                    <td><textarea   name="reason" rows="5" cols="20">
+                        <?=$list[5]?>
         
                     </textarea><br></td>
                     <td><input class="submit_button" type="submit" name="submit" value="Approve"></td>
                 </tr>
+                <?php
+
+
+            }
+        }?>
         
                 
             </table>

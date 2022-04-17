@@ -1,6 +1,6 @@
 /*Login page design start from here*/
 body{
-	background-image: linear-gradient(to right, #8e44ad , #2c3e50);
+	background-image: linear-gradient(to right, #e1b12c , #c23616);
 }
 .main_area_login{
 	width:90%;
@@ -17,7 +17,7 @@ body{
 	width:50%;
 	height:800px;
 	
-	background-color: #34495E;
+	background-color: #786fa6;
 	text-align: center;
 	float: left;
 

@@ -13,7 +13,7 @@
             <table >
                 <!-- center menubar -->
                 <tr style ="font-size:20px;">
-                    <td><a href="#">Home  |</a></td>
+                    <td><a href="ExcutiveHome.php">Home |</a></td>
                     <td><a href="#"> About us  |</a></td>
                     <td><a href="../../../controllers/adminControllers/excecutiveControllers/logout.php"> logout</a></td>
                 </tr>

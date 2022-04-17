@@ -24,7 +24,7 @@
             <img src="image/logo.png">
         </div>
         <div class="menubar-link">
-            <a href="">Home |</a>
+            <a href="ExcutiveHome.php">Home |</a>
             <a href="#"> About us |</a>
             <a href="#"> Contact us |</a>
             <a href="../../../controllers/adminControllers/excecutiveControllers/logout.php"> Logout </a>
@@ -67,6 +67,11 @@
               <img src="image/aprove.png">
                 <p>Post chehck</p>
           </div>
+          <!-- <br>
+          <div class="function_area" onclick="location.href='BloggerPostForAll.php';">
+              <img src="image/aprove.png">
+                <p>Blogger Post</p>
+          </div> -->
 
               
           </div>

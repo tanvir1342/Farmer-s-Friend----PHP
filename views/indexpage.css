@@ -34,7 +34,7 @@ body{
 {   position: relative;
 	height: 900px;
 	width: 100%;
-	background-image:url(img.jpg);
+	background-image:url(models/img.jpg);
 	
 }
 .hero_section_text

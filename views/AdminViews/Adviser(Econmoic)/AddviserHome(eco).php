@@ -12,6 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="Home.css">
+    <style>
+        .pro_pic img{
+            border-radius: 100%;
+            width: 200px;
+            height: 200px;
+            align-items: center;
+           margin-left: 20px;
+           margin-top:10px;
+        }
+    </style>
 </head>
 <body>
    <!--  menubar start from here -->
@@ -33,7 +43,8 @@
     <div class="main_panle">
        <!--  side panel div start from here -->
        <div class="side_panel">
-        <div class="pro-pic-of-side-panel">
+        <div class="pro_pic">
+            <img src="<?=$user['photo']?>">
         </div>
         <div class="text_area_of_side_panel">
              <h1><?=$user['Name']?></h1>

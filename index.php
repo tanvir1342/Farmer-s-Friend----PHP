@@ -5,12 +5,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home</title>
   
-    <link rel="stylesheet" type="text/css" href="homestyle.css">
+    <link rel="stylesheet" type="text/css" href="views/indexpage.css">
+    <style>
+        .hero_section
+{   position: relative;
+    height: 900px;
+    width: 100%;
+    background-image:url(models/img.jpg);
+    
+}
+    </style>
 </head>
 <body>
     <div class="menubar">
         <div class="menubar-icon">
-            <img src="logo.png">
+            <img src="models/logo.png">
         </div>
         <div class="menubar-link">
             <a href="">Home |</a>
@@ -28,9 +37,9 @@
             <button>click here</button>
         </div>
         <div class="change">
-            <img  src="change.png" width="10px" height="10px" onclick="changeImage1()">
+            <img  src="models/change.png" width="10px" height="10px" onclick="changeImage1()">
          
-            <img  src="change.png" width="10px" height="10px" onclick="changeImage2()">
+            <img  src="models/change.png" width="10px" height="10px" onclick="changeImage2()">
         </div>
 
     </div>
@@ -38,9 +47,9 @@
 </html> 
 <script>
     function changeImage2(){
-        document.getElementById('hero_area').style.backgroundImage = "url('img2.jpg')";
+        document.getElementById('hero_area').style.backgroundImage = "url('models/img2.jpg')";
     }
     function changeImage1(){
-        document.getElementById('hero_area').style.backgroundImage = "url('img.jpg')";
+        document.getElementById('hero_area').style.backgroundImage = "url('models/img.jpg')";
     }
 </script>
