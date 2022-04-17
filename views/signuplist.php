@@ -13,10 +13,10 @@
             <img src="logo.png">
         </div>
         <div class="menubar-link">
-            <a href="views/index.php">Home |</a>
-            <a href="views/loginList.php"> Login |</a>
-            <a href="views/signuplist.php"> signup |</a>
-            <a href=""> Logout </a>
+            <a href="../index.php">Home |</a>
+            <a href="loginList.php"> Login |</a>
+            <a href="signuplist.php"> Signup</a>
+            
         </div>
         
     </div>

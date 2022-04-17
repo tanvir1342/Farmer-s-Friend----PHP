@@ -24,8 +24,9 @@
         <div class="menubar-link">
             <a href="">Home |</a>
             <a href="views/loginList.php"> Login |</a>
-            <a href="views/signuplist.php"> signup |</a>
-            <a href=""> Logout </a>
+            <a href="views/signuplist.php"> Signup |</a>
+            <a href=""> About Us |</a>
+            <a href=""> Contact Us</a>
         </div>
         
     </div>
