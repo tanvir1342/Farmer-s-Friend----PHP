@@ -98,7 +98,8 @@
        <div class="side_panel">
         <div class="pro-pic-of-side-panel">
         
-    
+            <img style="width:200px;height:200px;border-radius: 100% ;" src="../../models/bloggerupload/<?=$user['photo']?>">
+
         </div>
         <div align="center" class="text_area_of_side_panel">
              <h3><?=$user['name']?></h3>             

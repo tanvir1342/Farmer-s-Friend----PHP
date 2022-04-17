@@ -2,30 +2,29 @@
 session_start();
 require('../../models/BloggerResearchPaperPending.php');
 
-if(isset($_REQUEST['submit'])){
+if(isset($_POST['blogger_username1']) && isset ($_POST['domain_name1']) && isset ($_POST['thesis_topic1']) && isset ($_POST['research_paper1']))
+{
 	
-	$blogger_username = $_REQUEST['blogger_username'];
-	$domain_name = $_REQUEST['domain_name'];
-	$thesis_topic = $_REQUEST['thesis_topic'];
-	$research_paper = $_REQUEST['research_paper'];
+	$blogger_username = $_POST['blogger_username1'];
+	$domain_name = $_POST['domain_name1'];
+	$thesis_topic = $_POST['thesis_topic1'];
+	$research_paper = $_POST['research_paper1'];
 
 
-	if($blogger_username != null && $domain_name !=null && $thesis_topic != null && $research_paper != null)
+	//if($blogger_username != null && $domain_name !=null && $thesis_topic != null && $research_paper != null)
 	{
 
 		$status = paper ($blogger_username,$domain_name,$thesis_topic,$research_paper);
 		if($status)
 		{
-			header('location: ../../views/bloogerViews/PublishResearchPaper.php?msg=success');
+			echo "success";
 		}
 		else
 		{
-			header('location: ../../views/bloogerViews/PublishResearchPaper.php');
+			echo "failed";
 		}
 
 
-	}else{
-		echo "null submission ....";
 	}
 }
 

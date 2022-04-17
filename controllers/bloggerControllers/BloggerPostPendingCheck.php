@@ -2,30 +2,31 @@
 session_start();
 require('../../models/BloggerPostPending.php');
 
-if(isset($_REQUEST['submit'])){
+if(isset($_POST['username1']) && isset ($_POST['blogger_name1']) && isset ($_POST['post1']))
+{
+
+
 	
-	$username = $_REQUEST['username'];
-	$blogger_name = $_REQUEST['blogger_name'];
-	$post = $_REQUEST['post'];
+	$username = $_POST['username1'];
+	$blogger_name = $_POST['blogger_name1'];
+	$post = $_POST['post1'];
 	
 
 
-	if($username != null && $blogger_name !=null && $post != null )
+	//if($username != null && $blogger_name !=null && $post != null )
 	{
 
 		$status = pending ($username,$blogger_name,$post);
 		if($status)
 		{
-			header('location: ../../views/bloogerViews/WritePost.php?msg=success');
+			echo "sucsess";
 		}
 		else
 		{
-			header('location: ../../views/bloogerViews/WritePost.php');
+			echo "failed";
 		}
 
 
-	}else{
-		echo "null submission ....";
 	}
 }
 

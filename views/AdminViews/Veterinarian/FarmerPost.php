@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Farmer Post</title>
     <link rel="stylesheet" type="text/css" href="createUser.css">
+    <link rel="stylesheet" type="text/css" href="template.css">
 </head>
 <body>
     <div class="menubar">

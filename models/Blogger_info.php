@@ -92,17 +92,7 @@ function getuser()
 	
 }
 
-/*function getuserphoto()
-{
-	$con = mysqli_connect('localhost','root','','webtech');
-	$sql = "select photo from blogger_info where username = '$username'";
-	$result = mysqli_query($con ,$sql);
-	if ($result->num_rows > 0){
-		$row = mysqli_fetch_all($result);
-		return $row;
-	}
-	
-}*/
+
 
 function getoneuser($username)
 {

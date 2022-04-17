@@ -1,67 +1,91 @@
 <?php 
     require('header.php');
+    require('../../../models/farmer_vet_support.php');
+    $post = getallpost();
+    
 ?>
 <!DOCTYPE html>
 <html>
-<!-- center table creation -->
-<table width = 100%;>
-    <tr height = 100px style ="background-color:#C1BCBC ">
-        <td width =10%; align = center>
-            <img width = 100px; height = 100px src ="logo.png">
-        </td>
-        <td align = right >
-            <table >
-                <!-- center menubar -->
-                <tr style ="font-size:20px;">
-                    <td><a href="#">Home  |</a></td>
-                    <td><a href="#"> About us  |</a></td>
-                    <td><a href="../../../controllers/adminControllers/VeterinarianControllers/logout.php"> logout</a></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <!-- daynamic menubar -->
-    <tr  height = 700px>
-        <td width =10%; valign = top; style ="background-color:#C1BCBC; font-size:20px;">
-            <a href="#">Farmer Post</a><br><br>
-            <a href="#">History</a><br><br>
-            <a href="approvePost.php">Edit Profile</a><br><br>
-        </td>
-        <!-- output of user -->
-        <td colspan="2" valign = top style ="background-color:#F5F2F1 ">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Farmer Post</title>
+    <link rel="stylesheet" type="text/css" href="createUser.css">
+    <link rel="stylesheet" type="text/css" href="template.css">
+</head>
+<body>
+    <div class="menubar">
+        <div class="menubar-icon">
+            <img src="logo.png">
+        </div>
+        <div class="menubar-link">
+            <a href="">Home |</a>
+            <a href="#"> About us |</a>
+            <a href="#"> Contact us |</a>
+            <a href="../../../controllers/adminControllers/VeterinarianControllers/logout.php"> Logout </a>
+        </div>
+        
+    </div>
+    <div class="main_panle">
+       <!--  side panel div start from here -->
+       <div class="side_panel">
+             <div class="button_area_of_2nd_side_panel">
+            <button onclick="location.href='EditProfile.php';">Edit Profile</button>
+            <button onclick="location.href='treatment.php';">Farmer's Post</button>
+            <button onclick="location.href='history.php';">History</button>
+        
 
-            <h1 align = center>Give Tratment</h1><hr>
+
+        </div>
+       </div>
+       <div class="daynamic_area">
+
+            <h1 align = center>Farmer's Post</h1><hr>
+            <?php
+            if($post!= null)
+            {
+                foreach($post as $post)
+                {
+               ?>
+            
+            
             <form method="POST" action="../../../controllers/adminControllers/VeterinarianControllers/VetTreatmentCheck.php">
-            <label><b>Farmer username:</b></label><br><br>
-            <input type="username" name="farmer_username"><br><br>
-            <label><b>Veterinarian username:</b></label><br><br>
-            <input type="username" name="vet_username"><br><br>
-            <label><b>Animal Type:</b></label><br><br>
-            <input type="username" name="animal_type"><br><br>
-            <label><b>Description:</b></label>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus magna, vestibulum non molestie ac, sagittis ornare dui. Nam sit amet vulputate tortor, ac vestibulum risus. Maecenas feugiat est eu arcu venenatis, nec imperdiet dolor vehicula. Etiam diam orci, molestie ac convallis vel, commodo vitae tortor. Donec quis egestas nisi. Integer diam nisi, ornare at dui a, eleifend suscipit orci. Etiam vestibulum nulla a nulla interdum iaculis. Nam feugiat auctor arcu sit amet volutpat. Sed porttitor purus id felis auctor iaculis. Etiam volutpat lorem ut efficitur bibendum. In dictum tincidunt velit id fermentum. Nam at nisi in est pretium sodales. Curabitur laoreet ante eu dui ullamcorper, at porta sapien lobortis. Praesent aliquam lectus ex, a malesuada est finibus ut. Quisque eget erat ornare, finibus diam at, ornare nisl. Fusce nec consequat lorem.
-            </p>
-            <a href="">Quick Tratment</a><br><br>
-            <textarea id="" name="treatment" rows="8" cols="50">
-    
-            </textarea><br>
-            <input type="submit" name="submit" value="Submit"><br><br>
-            <a href="schedule.php"> Set online/offline shedule</a>
-
-        </form>
-
-                        
-
-
+             <span>Quick Treatment</span>
+            <table border="1px" align="center" width="80%" id="userTable">
+                 <tr>
+                     <td width="20%">Farmer name</td>
+                     <td>Farmer type</td>
+                 </tr>
+                 <tr>
+                     <td><input type="username" name="username" value="<?=$post[0]?>"></td>
+                     <td><input type="text" name="type" value="<?=$post[2]?>"></td>
+                 </tr>
+                 <tr>
+                     <td>Description</td>
+                     <td><textarea cols="100" rows="10" name="description"><?=$post[3]?></textarea></td>
+                 </tr>
+                 <tr>
+                    <td>Quick tratment</td>
+                    <td><textarea cols="100" rows="10" name="solve"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="Send to farmer"></td>
+                </tr>
+             </table>
+            </form>
+            <br>
+            <br>
+            <?php
+        }
+    }
+    ?>
+            
+            <br>
+            
         </td>
     </tr>
-    <!-- footer section -->
-    <tr  height = 100px;>
-        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
-           coppyright @2022
-        </td>
-    </tr>
+
 </table>
 
 

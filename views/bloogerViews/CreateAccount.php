@@ -121,7 +121,8 @@
 
     }
 /*ajax code start from  here*/
-/*username chehck function*/
+
+/*username check function*/
     function checkusername(){
             let username = document.getElementById('username').value;
             let xhttp = new XMLHttpRequest();
@@ -143,8 +144,8 @@
             }
     }
 
-  /*  email chehck function
-*/
+  /*  email check function*/
+
 function emailcheck(){
             let email = document.getElementById('email').value;
             let xhttp = new XMLHttpRequest();

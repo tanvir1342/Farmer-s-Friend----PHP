@@ -4,77 +4,129 @@
     $username = $_SESSION['Blogger_username'];
     $user  = getoneuser($username);
 ?>
+
+
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Blogger</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research Paper</title>
+    <link rel="stylesheet" type="text/css" href="template.css">
+    <link rel="stylesheet" type="text/css" href="createUser.css">
+
+   
 </head>
 <body>
+       <!--  menubar start from here -->
 
-<table border="1" width="100%">
-	<tr height="100px" style="background-color:#C1BCBC">
-		<td width="10%" align="center">
-			<img width="100px" height="100px" src="logo.png">
-		</td>
-		<td align="right">
-			<a href="bloggerHome.php">Home</a>
-			<a href="0">| About Us</a>
-			<a href="../../controllers/bloggerControllers/logout.php">">| Logout</a>
-		</td>
-		
+    <div class="menubar">
+        <div class="menubar-icon">
+            <img src="logo.png">
+        </div>
+        <div class="menubar-link">
+            <a href="farmerHome.php">Home |</a>
+            <a href="#"> About us |</a>
+            <a href="#"> Contact us |</a>
+            <a href="../../controllers/bloggerControllers/logout.php"> Logout </a>
+        </div>
+        
+    </div>
 
-	</tr>
-	<tr height="700px"> 
-		<td width="10%" valign="top" align="center" bgcolor="C1BCBC">
-		
-		<a href="EditAccount.php">Edit Account</a><br><br>
-		<a href="WritePost.php">Write a Post</a><br><br>
-		<a href="ReadPost.php">Read Posts</a><br><br>
-		<a href="PublishResearchPaper.php">Research Paper</a><br><br>
-		
-		</td>
-		<td valign="top">
-			<h1 align="center">Publish Your Research Paper</h1><hr>
-			<form method="POST" action="../../controllers/bloggerControllers/BloggerResearchPaperPendingCheck.php">
+       <!--  main panel -->
+    <div height="100%" class="main_panle">
+       <!--  side panel div start from here -->
+       <div  class="side_panel">      
+        
+            <div class="button_area_of_2nd_side_panel">
+            <button onclick="location.href='EditAccount.php';">Edit Profile</button>
+            <button onclick="location.href='WritePost.php';">Write a Post</button>
+            <button onclick="location.href='ReadPost.php';">Read Posts</button>
+            <button onclick="location.href='PublishResearchPaper.php';">Research Paper</button>
+            
 
-			<label><b>Blogger Username:</b></label><br>
-			<input type="text" name="blogger_username" value="<?=$user['username']?>"><br><br>
+        </div>
+    </div>
 
-			<label for="domain"><b>Domain Name:</b></label><br>
-			<input type="text" name="domain_name" required><br><br>
+    <!-- feature page -->
 
-			<label for="thesis"><b>Thesis Topic:</b></label><br>
-			<input type="text" name="thesis_topic" required><br><br>
+    <div class="daynamic_area">
+        <h2 class="daynamic_area_heading_text">Research Paper</h2><hr>
+               <table align="center" style="font-size:20px;" class="create_user">
+                <form method="POST">
+                    <tr>
+                        <td>Blogger Username</td>
+                        <td><input class="input" id="blogger_username" type="username" name="blogger_username" value="<?=$user['username']?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Domain name</td>
+                        <td><input class="input" id="domain_name" type="text" name="domain_name" value=""></td>
+                    </tr>
 
-			<label for="researchpaper"><b>Publish Your Research Paper:</b></label><br>
-			<textarea name="research_paper" rows="8" cols="100">
-				
-			</textarea><hr>
-			
-			
-				<input type="submit" name="submit" value="Submit">   
-                <input type="reset" name="reset" value="Cancel">
-
-            </form>
-			
-			
-
-
-
-
-
-
-
-		</td>
-		
-
-	</tr>
-    <!-- Footer Part -->
-    <tr  height = 100px;>
-        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
-           All Copyrights @2022 Reserved by Gallant ltd.
-        </td>
-    </tr>
-</table>
+                    <tr>
+                        <td>Thesis Topic</td>
+                        <td><input class="input" id="thesis_topic" type="text" name="thesis_topic" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Publish Your Research Paper</td>
+                        <td><textarea class="input" id="research_paper" name="research_paper" rows="10" cols="100"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button class="submit_button" onclick="ajaxinsertdata()">Submit</button></td>
+                    </tr>
+                </form>
+                
+            </table>
 
 
-</html>
+             <script>
+
+            function ajaxinsertdata(){
+            let blogger_username = document.getElementById('blogger_username').value;
+            let domain_name = document.getElementById('domain_name').value;
+            let thesis_topic = document.getElementById('thesis_topic').value;
+            let research_paper = document.getElementById('research_paper').value;
+            
+            var dataString = 'blogger_username1=' + blogger_username + '&domain_name1=' + domain_name + '&thesis_topic1=' + thesis_topic + '&research_paper1=' + research_paper;
+            console.log (dataString);  
+            if (blogger_username == '' || domain_name == '' || thesis_topic == '' || research_paper == '') {
+            alert("Please Fill All Fields");
+            } else {
+// AJAX code to submit form.\
+
+            let http = new XMLHttpRequest();
+            http.open('POST', '../../controllers/bloggerControllers/BloggerResearchPaperPendingCheck.php', true);
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.send(dataString);
+            http.onreadystatechange = function(){
+
+            if(this.readyState == 4 && this.status == 200){
+                alert(this.responseText);
+//document.getElementById('h3').innerHTML = this.responseText;;
+}
+}
+}
+}
+
+            
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

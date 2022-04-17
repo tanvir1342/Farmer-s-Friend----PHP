@@ -1,21 +1,23 @@
 <?php 
 session_start();
 require('../../../models/VetTreatment.php');
+$vet_username = $_SESSION['vet_username'];
 
 if(isset($_REQUEST['submit'])){
 	
-	$farmer_username = $_REQUEST['farmer_username'];
-	$vet_username = $_REQUEST['vet_username'];
-	$animal_type = $_REQUEST['animal_type'];
-	$treatment = $_REQUEST['treatment'];
+	$farmer_username = $_REQUEST['username'];
+	$animal_type = $_REQUEST['type'];
+	$description = $_REQUEST['description'];
+	$treatment = $_REQUEST['solve'];
 
 
-	if($farmer_username != null && $vet_username !=null && $animal_type != null && $treatment != null)
+	if($farmer_username != null && $description !=null && $animal_type != null && $treatment != null)
 	{
 
-		$status = vet_schedule($farmer_username,$vet_username,$animal_type,$treatment);
+		$status = quick_treatment($farmer_username,$vet_username,$animal_type,$description,$treatment);
 		if($status)
 		{
+			$del = delete($farmer_username,$description);
 			header('location: ../../../views/AdminViews/Veterinarian/treatment.php?msg=success');
 		}
 		else

@@ -4,77 +4,134 @@
     $username = $_SESSION['Blogger_username'];
     $user  = getoneuser($username);
 ?>
+
+
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Blogger</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Write a Post</title>
+    <link rel="stylesheet" type="text/css" href="template.css">
+    <link rel="stylesheet" type="text/css" href="createUser.css">
+
+
 </head>
 <body>
+       <!--  menubar start from here -->
 
-<table border="1" width="100%">
-	<tr height="100px" style="background-color:#C1BCBC">
-		<td width="10%" align="center">
-			<img width="100px" height="100px" src="logo.png">
-		</td>
-		<td align="right">
-			<a href="bloggerHome.php">Home</a>
-			<a href="0">| About Us</a>
-			<a href="../../controllers/bloggerControllers/logout.php">">| Logout</a>
-		</td>
-		
+    <div class="menubar">
+        <div class="menubar-icon">
+            <img src="logo.png">
+        </div>
+        <div class="menubar-link">
+            <a href="farmerHome.php">Home |</a>
+            <a href="#"> About us |</a>
+            <a href="#"> Contact us |</a>
+            <a href="../../controllers/bloggerControllers/logout.php"> Logout </a>
+        </div>
+        
+    </div>
 
-	</tr>
-	<tr height="700px"> 
-		<td width="10%" valign="top" align="center" bgcolor="C1BCBC">
-		
-		<a href="EditAccount.php">Edit Account</a><br><br>
-		<a href="WritePost.php">Write a Post</a><br><br>
-		<a href="ReadPost.php">Read Posts</a><br><br>
-		<a href="PublishResearchPaper.php">Research Paper</a><br><br>
-		
-		</td>
-		<td valign="top">
-			<h1 align="center">Write content about farming</h1><hr>
-			<form method="POST" action="../../controllers/bloggerControllers/BloggerPostPendingCheck.php">
+       <!--  main panel -->
+    <div height="100%" class="main_panle">
+       <!--  side panel div start from here -->
+       <div  class="side_panel">      
+        
+            <div class="button_area_of_2nd_side_panel">
+            <button onclick="location.href='EditAccount.php';">Edit Profile</button>
+            <button onclick="location.href='WritePost.php';">Write a Post</button>
+            <button onclick="location.href='ReadPost.php';">Read Posts</button>
+            <button onclick="location.href='PublishResearchPaper.php';">Research Paper</button>
+            
 
-			<label>Username:</label><br>
-			<input type="username" name="username" value="<?=$user['username']?>"><br>
-			<label>Blogger Name:</label><br>
-			<input type="blogger_name" name="blogger_name" value="<?=$user['name']?>"><br><br>
-			
+        </div>
+    </div>
 
+    <!-- feature page -->
 
-			<label for="fname"><b>Write a Post:</b></label><br>
-			<textarea name="post" rows="8" cols="100">
-				
-			</textarea><hr>
-			
-			
-				<input type="submit" name="submit" value="Post">   
-                <input type="reset" name="reset" value="Cancel">
-
-            </form>
-			
-
-	
-
-
-
-
-
-
-
-
-		</td>
-		
-
-	</tr>
-    <!-- Footer Part -->
-    <tr  height = 100px;>
-        <td colspan="2" style ="background-color:black; color:white;align = center "; align = center>
-           All Copyrights @2022 Reserved by Gallant ltd.
-        </td>
-    </tr>
-</table>
+    <div class="daynamic_area">
+        <h2 class="daynamic_area_heading_text">Write Content about Agriculture</h2><hr>
+               <table align="center" style="font-size:20px;" class="create_user">
+                <form method="POST">
+                    <tr>
+                        <td>Username</td>
+                        <td><input class="input"  type="username" id="username" name="username" value="<?=$user['username']?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Blogger name</td>
+                        <td><input class="input" type="text" id="blogger_name" name="blogger_name" value="<?=$user['name']?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Write a Post</td>
+                        <td><textarea class="input" id="post" name="post" rows="10" cols="100"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" class="submit_button" onclick="ajaxinsertdata()" value="Submit"></td>
+                    </tr>
+                </form>
+                
+            </table>
 
 
-</html>
+
+
+
+        <script>
+
+            function ajaxinsertdata(){
+            let username = document.getElementById('username').value;
+            let blogger_name = document.getElementById('blogger_name').value;
+            let post = document.getElementById('post').value;
+            
+            var dataString = 'username1=' + username + '&blogger_name1=' + blogger_name + '&post1=' + post;
+            console.log (dataString);  
+            if (username == '' || blogger_name == '' || post == '') {
+            alert("Please Fill All Fields");
+            } else {
+// AJAX code to submit form.\
+
+            let http = new XMLHttpRequest();
+            http.open('POST', '../../controllers/bloggerControllers/BloggerPostPendingCheck.php', true);
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.send(dataString);
+            http.onreadystatechange = function(){
+
+            if(this.readyState == 4 && this.status == 200){
+                alert(this.responseText);
+//document.getElementById('h3').innerHTML = this.responseText;;
+}
+}
+}
+}
+
+            
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -112,9 +112,9 @@
       <!--  main panel daynamic area star from here -->
       <div class="daynamic_area">
         <h2 class="daynamic_area_heading_text">Welcome Veterinarian,<?=$user['name']?></h2><hr>
-            <div class="function_area" onclick="location.href='FarmerPost.php';">
+            <div class="function_area" onclick="location.href='treatment.php';">
                 <img src="farmer_post.png">
-                <p>Farmer Post</p>
+                <p>Farmer's Post</p>
            </div>
         
           <div class="function_area" onclick="location.href='history.php';">
