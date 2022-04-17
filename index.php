@@ -52,4 +52,19 @@
     function changeImage1(){
         document.getElementById('hero_area').style.backgroundImage = "url('models/img.jpg')";
     }
+
+    var image = document.getElementById("hero_area");
+    var img_array=["models/img.jpg","models/img2.jpg"];
+    var index=0;
+    function slide()
+    {
+
+    document.getElementById("hero_area").style.backgroundImage = "url("+img_array[index]+")";
+    index++;
+    if(index>=img_array.length)
+    {
+    index=0;
+    }
+    }
+setInterval("slide()",2000);
 </script>
