@@ -48,10 +48,10 @@
        <!--  side panel div start from here -->
        <div class="side_panel">
              <div class="button_area_of_2nd_side_panel">
-            <button>User info</button>
-            <button>Control deal</button>
-            <button>Post chehck</button>
-            <button>Edit profile</button>
+            <button onclick="location.href='executiveEditAccount.php';">Edit Profile</button>
+            <button onclick="location.href='listOfuser.php';">User Info</button>
+            <button onclick="location.href='controlDeaL.php';">Control Deal</button>
+            <button onclick="location.href='approvePost.php';">Post Check</button>
 
 
         </div>

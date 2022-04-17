@@ -55,17 +55,17 @@
         <h2 class="daynamic_area_heading_text">Welcome Executive,<?=$user['Name']?></h2><hr>
             <div class="function_area" onclick="location.href='listOfuser.php';">
                 <img src="image/user.png">
-                <p>User info</p>
+                <p>User Info</p>
            </div>
         
           <div class="function_area" onclick="location.href='controlDeaL.php';">
               <img src="image/control.png">
-                <p>control deal</p>
+                <p>Control Deal</p>
           </div>
 
           <div class="function_area" onclick="location.href='approvePost.php';">
               <img src="image/aprove.png">
-                <p>Post chehck</p>
+                <p>Post Check</p>
           </div>
           <!-- <br>
           <div class="function_area" onclick="location.href='BloggerPostForAll.php';">
