@@ -1,22 +1,22 @@
 <?php
+session_start();
 require('../../models/marketPrice.php');
-if (isset($_REQUEST['submit'])) {
+if (isset($_POST['name1'])&&isset($_POST['username1'])&&isset($_POST['product_name1'])&&isset($_POST['price1'])) {
 	
-	$retailer_name = $_REQUEST['retailer_name'];
-	$retailer_username = $_REQUEST['retailer_username'];
-	$product_name = $_REQUEST['product_name'];
-	$price = $_REQUEST['price'];
-	{
-		if ($product_name!=null && $price != null) {
-		    $status =  priceinsertion($retailer_name,$retailer_username,$product_name,$price);
-		    if ($status) {
-		    	header('location: ../../views/retailerViews/retailerUpdatePrice.php?msg=done');
-		    }
+	$retailer_name = $_POST['name1'];
+	$retailer_username = $_POST['username1'];
+	$product_name = $_POST['product_name1'];
+	$price = $_POST['price1'];
+	 
+	 $status =  priceinsertion($retailer_name,$retailer_username,$product_name,$price);
+		   if ($status) {
+			echo "success";
 		}
-	}
+		else
+		{
+			echo "failed";
+		}
+		}
 
-
-}
-
-
+		
 ?>

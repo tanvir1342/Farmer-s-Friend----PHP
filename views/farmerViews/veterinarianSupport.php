@@ -72,39 +72,71 @@
     </div>
     <div class="daynamic_area">
         <h2 class="daynamic_area_heading_text">Veterinarian Support</h2><hr>
-    <form name="validationn" method="POST" action="../../controllers/farmerControllers/vetSupportCheck.php">
+    <form name="validationn" method="POST">
                <table align="center" style="font-size:20px;" class="create_user">
                     <tr>
                         <td>Username:</td>
-                        <td width="300px "><input class="input" type="username" name="username" value="<?=$user['username']?>" placeholder="Enter Username"></td>
+                        <td width="300px "><input class="input" type="username" id ="username" name="username" value="<?=$user['username']?>" placeholder="Enter Username"></td>
                     </tr>
                     <br>
                     <tr>    
                         <td>Farmer Name:</td>
-                        <td width="300px "><input class="input" type="name" name="farmer_name" value="<?=$user['name']?>" placeholder="Enter Name"></td>
+                        <td width="300px "><input class="input" type="name" id ="farmer_name" name="farmer_name" value="<?=$user['name']?>" placeholder="Enter Name"></td>
                         <td></td><br>
 
                     </tr>
                     <br>
                     <tr>
                         <td>Animal Type:</td>                        
-                        <td width="300px "><input class="input" type="text" name="animal_type" value="" placeholder="Enter Animal Type"></td>               
+                        <td width="300px "><input class="input" type="text" id ="animal_type" name="animal_type" value="" placeholder="Enter Animal Type"></td>               
                     </tr>
                     <br>
                     <tr>
                         <td>Description :</td>
 
-                        <td><textarea id ="des" class="input" name="description" rows="12" cols="50"></textarea></td><br> 
+                        <td><textarea class="input" id ="des" name="description" rows="12" cols="50"></textarea></td><br> 
 
                     </tr>
                   
                 
 
                 </table>
-                            <div align="right"><input class="submit_button" id="submited" type="submit" name="submit" value="Submit"></div>
+                            <div align="right"><input type="button" class="submit_button" onclick="vetsupinsert()"  name="submit" value="Submit"></div>
                             
             </form>
 </div>
+    <script>
+        function vetsupinsert(){
+            let username = document.getElementById('username').value;
+            let farmer_name = document.getElementById('farmer_name').value;
+            let animal_type = document.getElementById('animal_type').value;
+            let description = document.getElementById('des').value;
+
+            
+            var dataString = 'username1=' + username + '&farmer_name1=' + farmer_name +  '&animal_type1=' + animal_type +  '&description1=' + description;
+            console.log (dataString);  
+            if (username == '' || farmer_name == '' || animal_type == '' || description == '') {
+            alert("Null Value is Not Allowed");
+            } else {
+            // AJAX code to submit form.\
+
+            let http = new XMLHttpRequest();
+            http.open('POST', '../../controllers/farmerControllers/vetSupportCheck.php', true);
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.send(dataString);
+            http.onreadystatechange = function(){
+
+            if(this.readyState == 4 && this.status == 200){
+                alert(this.responseText);
+            
+              }
+            }
+         }
+     }
+
+
+    </script>
+
 
 
 

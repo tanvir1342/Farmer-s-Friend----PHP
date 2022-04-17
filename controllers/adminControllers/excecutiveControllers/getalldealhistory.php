@@ -1,14 +1,11 @@
 <?php
 require('../../../models/pendingdeal.php');
-if ($status = getallpendingdeal()) {
+if ($status = getalldealhistory()) {
 	
 		echo json_encode($status);
 
 	
 }
-
-
-
 
 
 ?>

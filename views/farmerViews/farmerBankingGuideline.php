@@ -82,34 +82,67 @@
                <table align="center" style="font-size:20px;" class="create_user">
                     <tr>
                         <td>Username:</td>
-                        <td width="300px "><input class="input" type="name" name="username" value="<?=$user['username']?>" ></td>
+                        <td width="300px "><input class="input" type="name" id="username" name="username" value="<?=$user['username']?>" ></td>
                         <td>Farmer's Name:</td>
-                        <td width="300px "><input class="input" type="name" name="name" value="<?=$user['name']?>" ></td>
+                        <td width="300px "><input class="input" type="name" id="name" name="name" value="<?=$user['name']?>" ></td>
                     </tr>
                     <br>
                     <tr>
                         <td>Land Property:</td>
-                        <td width="300px "><input class="input" type="text" name="land_property" value="" ></td>
+                        <td width="300px "><input class="input" type="text" id="land_property" name="land_property" value="" ></td>
                         <td>Yearly Income:</td>
-                        <td width="300px "><input class="input" type="number" name="income" value="" ></td>
+                        <td width="300px "><input class="input" type="number" id="income" name="income" value="" ></td>
 
                     </tr>
 
                     <tr>
                         <td>Amount of Loan:</td>
-                        <td width="300px "><input class="input" type="number" name="amount" value="" ></td>
+                        <td width="300px "><input class="input" type="number" id="amount" name="amount" value="" ></td>
                         <td>Reason For Loan:</td>
-                        <td><textarea class="input" name="reason_for_loan" rows="10" cols="40"></textarea></td>
+                        <td><textarea class="input" id="reason_for_loan" name="reason_for_loan" rows="10" cols="40"></textarea></td>
                         <!-- <td width="300px "><input class="input" type="name" name="reason_for_loan" value="" ></td> -->
                     </tr>                    
                 
                 
 
                 </table>
-                                  <input class="submit_button" id="submited" type="submit" name="submit" value="Get Support">  
+                                  <input type="button" class="submit_button" onclick="banksupinsert()"value="Get Support">  
                     
             </form>
 </div>
+    <script>
+        function banksupinsert(){
+            let username = document.getElementById('username').value;
+            let farmer_name = document.getElementById('name').value;
+            let land_property = document.getElementById('land_property').value;
+            let income = document.getElementById('income').value;
+            let amount = document.getElementById('amount').value;
+            let reason_for_loan = document.getElementById('reason_for_loan').value;
+
+            
+            var dataString = 'username1=' + username + '&name1=' + farmer_name +  '&land_property1=' + land_property + '&income1=' + income + '&amount1=' + amount + '&reason_for_loan1=' + reason_for_loan;
+            console.log (dataString);  
+            if (username == '' || farmer_name == '' || land_property == '' || income == ''  || amount == ''  || reason_for_loan == '') {
+            alert("Null Value is Not Allowed");
+            } else {
+            // AJAX code to submit form.\
+
+            let http = new XMLHttpRequest();
+            http.open('POST', '../../controllers/farmerControllers/getSupportfromBankCheck.php', true);
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.send(dataString);
+            http.onreadystatechange = function(){
+
+            if(this.readyState == 4 && this.status == 200){
+                alert(this.responseText);
+            
+              }
+            }
+         }
+     }
+
+
+    </script>
 
 
 

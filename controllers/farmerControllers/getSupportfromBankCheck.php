@@ -1,32 +1,28 @@
 <?php 
 session_start();
 require('../../models/bank_support_database.php');
-
-if(isset($_REQUEST['submit'])){
+if(isset($_POST['username1']) && isset($_POST['name1']) && isset($_POST['land_property1']) && isset($_POST['income1']) && isset($_POST['amount1']) && isset($_POST['reason_for_loan1']))
+{
 	
-	$username = $_REQUEST['username'];
-	$farmer_name = $_REQUEST['name'];
-	$land_property = $_REQUEST['land_property'];
-	$yearly_income  = $_REQUEST['income'];
-	$Amount_of_loan  = $_REQUEST['amount'];
-	$reason_for_loan  = $_REQUEST['reason_for_loan'];
+	$username = $_POST['username1'];
+	$farmer_name = $_POST['name1'];
+	$land_property = $_POST['land_property1'];
+	$yearly_income  = $_POST['income1'];
+	$Amount_of_loan  = $_POST['amount1'];
+	$reason_for_loan  = $_POST['reason_for_loan1'];
 
-	if($username != null && $farmer_name !=null && $land_property != null && $yearly_income != null && $Amount_of_loan != null && $reason_for_loan != null )
 	{
 
 		$status = bankSupport ($username,$farmer_name,$land_property,$yearly_income,$Amount_of_loan,$reason_for_loan);
 		if($status)
 		{
-			header('location: ../../views/farmerViews/farmerBankingGuideline.php?msg=success');
-		}
-		else
-		{
-			header('location: ../../views/farmerBankingGuideline.php');
-		}
+            echo "You Request Is Submitted";
+        }
+        else
+        {
+            echo "Something Went Wrong!";
+        }
 
-
-	}else{
-		echo "null submission ....";
 	}
 }
 

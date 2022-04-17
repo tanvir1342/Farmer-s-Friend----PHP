@@ -78,27 +78,58 @@
     <div class="daynamic_area">
         <h2 class="daynamic_area_heading_text">Post Agriculture Related Problems</h2><hr>
                <table align="center" style="font-size:20px;" class="create_user">
-                <form method="POST" action="../../controllers/farmerControllers/postProblemCheckagri.php">
+                <form method="POST">
                     <tr>
                         <td>Username</td>
-                        <td><input class="input"  type="username" name="username" value="<?=$user['username']?>"></td>
+                        <td><input class="input"  type="username"  id="username" name="username" value="<?=$user['username']?>"></td>
                     </tr>
                     <tr>
                         <td>Farmer type</td>
-                        <td><input class="input" type="text" name="farmer_type" value="<?=$user['farmer_type']?>"></td>
+                        <td><input class="input" type="text" id="farmer_type" name="farmer_type" value="<?=$user['farmer_type']?>"></td>
                     </tr>
                     <tr>
                         <td>Problem</td>
-                        <td><textarea class="input" name="problem" rows="10" cols="100"></textarea></td>
+                        <td><textarea class="input" id="problem" name="problem" rows="10" cols="100"></textarea></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><input  class="submit_button" type="submit" name="submit" value="submit"></td>
+                        <td><input  type="button" class="submit_button" onclick="agriprobinsert()" value="submit"></td>
                     </tr>
                 </form>
                 
             </table>
+    </div>
 
+    <script>
+        function agriprobinsert(){
+            let username = document.getElementById('username').value;
+            let farmer_type = document.getElementById('farmer_type').value;
+            let problem = document.getElementById('problem').value;
+
+            
+            var dataString = 'username1=' + username + '&farmer_type1=' + farmer_type +  '&problem1=' + problem;
+            console.log (dataString);  
+            if (username == '' || farmer_type == '' || problem == '') {
+            alert("Null Value is Not Allowed");
+            } else {
+            // AJAX code to submit form.\
+
+            let http = new XMLHttpRequest();
+            http.open('POST', '../../controllers/farmerControllers/postProblemCheckagri.php', true);
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            http.send(dataString);
+            http.onreadystatechange = function(){
+
+            if(this.readyState == 4 && this.status == 200){
+                alert(this.responseText);
+            
+              }
+            }
+         }
+     }
+
+
+    </script>
 
 
 

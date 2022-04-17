@@ -2,33 +2,29 @@
 session_start();
 require('../../models/farmer_waterPayment.php');
 
-if(isset($_REQUEST['submit'])){
+if(isset($_POST['username1']) && isset ($_POST['payment_method1']) && isset ($_POST['Phone1']) && isset ($_POST['Amount1']) && isset ($_POST['city_district1']) && isset ($_POST['pin_pass1']) && isset ($_POST['code1']))
+{
 	
-	$username = $_REQUEST['username'];
-	$payment_method = $_REQUEST['payment_method'];
-	$Phone = $_REQUEST['Phone'];
-	$Amount = $_REQUEST['Amount'];
-	$city_district = $_REQUEST['city_district'];
-	$pin_pass = $_REQUEST['pin_pass'];
-	$code = $_REQUEST['code'];
+	$username = $_POST['username1'];
+	$payment_method = $_POST['payment_method1'];
+	$Phone = $_POST['Phone1'];
+	$Amount = $_POST['Amount1'];
+	$city_district = $_POST['city_district1'];
+	$pin_pass = $_POST['pin_pass1'];
+	$code = $_POST['code1'];
 
-
-	if($username != null && $payment_method !=null && $Phone != null && $Amount != null && $city_district != null && $pin_pass != null && $code != null)
 	{
-
 		$status = waterpayment ($username,$payment_method,$Phone,$Amount,$city_district,$pin_pass,$code);
 		if($status)
 		{
-			header('location: ../../views/farmerViews/farmerWaterPayments.php?msg=success');
-		}
-		else
-		{
-			header('location: ../../views/farmerViews/farmerWaterPayments.php');
-		}
+            echo "Payment Successful";
+        }
+        else
+        {
+            echo "Payment Failed";
+        }
 
 
-	}else{
-		echo "null submission ....";
 	}
 }
 

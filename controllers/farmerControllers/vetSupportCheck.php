@@ -2,30 +2,27 @@
 session_start();
 require('../../models/farmer_vet_support.php');
 
-if(isset($_REQUEST['submit'])){
+if(isset($_POST['username1']) && isset ($_POST['farmer_name1']) && isset ($_POST['animal_type1']) && isset ($_POST['description1']))
+{
 	
-	$username = $_REQUEST['username'];
-	$farmer_name = $_REQUEST ['farmer_name'];
-	$animal_type = $_REQUEST['animal_type'];
-	$description = $_REQUEST['description'];
+	$username = $_POST['username1'];
+	$farmer_name = $_POST ['farmer_name1'];
+	$animal_type = $_POST['animal_type1'];
+	$description = $_POST['description1'];
 
-
-	if($username != null && $farmer_name !=null && $animal_type != null && $description != null)
 	{
 
 		$status = support ($username,$farmer_name,$animal_type,$description);
 		if($status)
 		{
-			header('location: ../../views/farmerViews/veterinarianSupport.php?msg=success');
-		}
-		else
-		{
-			header('location: ../../views/farmerViews/veterinarianSupport.php');
-		}
+            echo "You Will Be Notified";
+        }
+        else
+        {
+            echo "Something is Wrong!";
+        }
 
 
-	}else{
-		echo "null submission ....";
 	}
 }
 
