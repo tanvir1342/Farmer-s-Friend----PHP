@@ -135,26 +135,37 @@
 
 <script>
         function generalpayinsert(){
-            let username = document.getElementById('username').value;
-            let payment_method = document.getElementById('payment_method').value;
-            let Phone = document.getElementById('Phone').value;
-            let Amount = document.getElementById('Amount').value;
-            let city_district = document.getElementById('city_district').value;
-            let pin_pass = document.getElementById('pin_pass').value;
-            let code = document.getElementById('code').value;
-            
-            var dataString = 'username1=' + username + '&payment_method1=' + payment_method +  '&Phone1=' + Phone
-            +'&Amount1=' + Amount + '&city_district1=' + city_district + '&pin_pass1=' + pin_pass + '&code1=' + code ;
-            console.log (dataString);  
-            if (username == '' || payment_method == '' || Phone == '' || Amount == '' || city_district == '' || pin_pass == '' || code == '') {
+            let username1 = document.getElementById('username').value;
+            let payment_method1 = document.getElementById('payment_method').value;
+            let Phone1 = document.getElementById('Phone').value;
+            let Amount1 = document.getElementById('Amount').value;
+            let city_district1 = document.getElementById('city_district').value;
+            let pin_pass1 = document.getElementById('pin_pass').value;
+            let code1 = document.getElementById('code').value;
+            let http = new XMLHttpRequest();
+            let json= {
+                'username': username1,
+                'payment_method': payment_method1,
+                'Phone': Phone1,
+                'Amount': Amount1,
+                'city_district': city_district1,
+                'pin_pass': pin_pass1,
+                'code': code1
+            };
+            let data = JSON.stringify(json);
+
+            // var dataString = 'username1=' + username + '&payment_method1=' + payment_method +  '&Phone1=' + Phone
+            // +'&Amount1=' + Amount + '&city_district1=' + city_district + '&pin_pass1=' + pin_pass + '&code1=' + code ;
+            // console.log (dataString);  
+            if (username1 == '' || payment_method1 == '' || Phone1 == '' || Amount1 == '' || city_district1 == '' || pin_pass1 == '' || code1 == '') {
             alert("Null Value is Not Allowed");
             } else {
             // AJAX code to submit form.\
 
-            let http = new XMLHttpRequest();
+           
             http.open('POST', '../../controllers/farmerControllers/generalPaymentCheck.php', true);
             http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            http.send(dataString);
+            http.send('data='+data);
             http.onreadystatechange = function(){
 
             if(this.readyState == 4 && this.status == 200){
@@ -167,6 +178,8 @@
 
 
     </script>
+
+
 
 
 

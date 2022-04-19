@@ -1,0 +1,100 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+.menubar{
+	position: relative;
+	background-color:#34495e;
+	width: 100%;
+	height: 70px;
+}
+
+.menubar-icon
+{
+	position: absolute;
+	left: 50px;
+	top:10px;
+}
+.menubar-icon img {
+	width: 50px;
+	height: 50px;
+}
+.menubar-link
+{
+	position: absolute;
+	right:30px;
+	top: 20px;
+}
+.menubar-link a{
+	text-decoration: none;
+	color: white;
+	font-size:20px;
+}
+.hero_section
+{   position: relative;
+	height: 900px;
+	width: 100%;
+	background-image:url(img.jpg);
+	
+}
+.hero_section_text
+{
+	position: absolute;
+	top:190px;
+	left: 100px;
+}
+.hero_section_text h1{
+	font-size: 70px;
+	color: #ecf0f1;
+}
+.hero_section_text  span{
+  color: #c0392b;
+}
+
+.button_hero{
+	position: absolute;
+	top: 430px;
+	left: 100px;
+
+}
+.button_hero button{
+	background-color: #A3CB38;
+	border: none;
+	
+	padding: 10px;
+	text-align: center;
+	font-size: 16px;
+	color: white;
+	cursor: pointer;
+}
+.change{
+	position: absolute;
+	width:100px;
+	height:20px;
+	top:850px;
+	left:1000px;
+	overflow: hidden;
+}
+.change img{
+	padding:10px;
+	cursor: pointer;
+
+}
+
+/*main part area start from here*/
+
+.mainpart{
+	width: 100%;
+	
+}
+.dashboard_button{
+	text-align: center;
+	background-color: #16a085;
+	color: white;
+	border: none;
+	width:150px;
+	height:50px;
+	padding: 10px;
+	margin:20px;
+	cursor: pointer;
+}
