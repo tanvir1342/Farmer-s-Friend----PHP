@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
   
-    <link rel="stylesheet" type="text/css" href="../homestyle.css">
+    <link rel="stylesheet" type="text/css" href="indexpage.css">
 </head>
 <body>
     <div class="menubar">

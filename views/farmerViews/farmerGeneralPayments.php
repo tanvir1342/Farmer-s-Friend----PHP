@@ -142,7 +142,9 @@
             let city_district1 = document.getElementById('city_district').value;
             let pin_pass1 = document.getElementById('pin_pass').value;
             let code1 = document.getElementById('code').value;
+
             let http = new XMLHttpRequest();
+            
             let json= {
                 'username': username1,
                 'payment_method': payment_method1,
