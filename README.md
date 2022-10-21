@@ -1,1 +1,2 @@
-# Project_of_webtech_section_K_2022
+This is a group Project.This web-site mainly focus on Farmer and seller.There are some excutive role who can maintain oparetion of this website.
+Further update will be come
